@@ -10,7 +10,7 @@ Create gorgeous and flexible email templates with Sendicate's own custom syntax.
 * [Variables](#variables)
 * [Link Tag](#link-tag)
 * [Images](#images)
-* [Custom Settings](#custom-settings)
+* [Custom Settings for Appearance](#custom-settings-for-appearance)
 
 
 ## Section Blocks
@@ -238,11 +238,23 @@ We follow's ImageMagick's geometry strings.  Here is a sample:
 | 400x300se | crop, with south-east gravity |
 | 400x300+50+100 | crop from the point 50,100 with width, height 400,300 |
 
-## Custom Settings
+## Custom Settings for Appearance
+
+Custom settings allow users to customize elements of the design without needing to know HTML.  The theme author is free to make any elements variables, such as logo, font, colors, etc 
+
+There are 4 types of custom settings attributes available:
+
+| Variable | Description |
+| :----- | :----- |
+| {color:name} | Edit colors with a color picker widget |
+| {text:name | Custom text settings |
+| {image:name | Image upload widget |
+| {font:name | Font picker widget |
 
 ### Initialization
 
 Design custom settings are initialized through meta tags, in the head section of design body:
+
     <meta name="color:block background" content="#eee"/>
     <meta name="text:greeting" content="Hello"/>
     <meta name="font:font" content="Arial, sans-serif"/>
@@ -264,6 +276,7 @@ In this case it will return same image but with different sizes
 #### Example of real usage:
 
 Template:
+
     <html>
       <head>
         <meta name="color:body_background" content="#fff"/>
@@ -287,6 +300,7 @@ Template:
     </html>
 
 Output:
+
     <html>
       <head>
         <style>
