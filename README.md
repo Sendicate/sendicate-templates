@@ -189,15 +189,18 @@ Assume that current time is Tuesday, 17 July 2012 09:54:45
 
 ## Link Tag
 
-{:column:link_tag} will replace with following content:
+Using the Link Tag is makes it easier to conditionallty wrap elements in <a> tags.  For example, instead of using an {if} statement to conditionally show a link:
 
-    {if :column:link_url}<a href="{:column:link_url}" alt="{:column:link_title}">{/if}
+    {if {column1:link_url}<a href="{column1:link_url}">{/if}
+        {column1:title}
+    {if column:link_url}</a>{/if}
 
-{:column:link_tag} will replace with following content:
+Just simply use
 
-    {if :column:link_url}</a>{/if}
+    {column1:link_tag}
+      {column1:title}
+    {/column1:link_tag}
 
-:column: - column identifier, e.g. {column1:link_tag}
 
 Sample for using with Image Block:
 
@@ -205,11 +208,6 @@ Sample for using with Image Block:
       {image(300x)}
     {/link_tag}
 
-Sample for using with OneColumn Block:
-
-    {column1:link_tag}
-      {column1:image(300x)}
-    {/column1:link_tag}
 
 ## Images
 
