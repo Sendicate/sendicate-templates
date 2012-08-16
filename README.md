@@ -162,6 +162,14 @@ All methods can be used with {if} - {/if} tags. Example:
 | {web_url} | view email in browser |
 | {mail_id} | identifier for email, each recipient has a unique id |
 | {message_id} | identifier for message, each message has a unique id |
+| company_name | Company name |
+| company_address_1 | Company address1 |
+| ompany_address_2 | Company address2 |
+| company_city | Company city |
+| company_state | Company state |
+| company_zip | Company zip |
+| unsubscribe_url | Unsubscribe URL |
+
 
 ### Date/Time variables
 
