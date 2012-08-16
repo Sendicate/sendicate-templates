@@ -143,8 +143,9 @@ The variables title, link_url, image, body are accessible wrapped in {block:vide
 All methods can be used with {if} - {/if} tags. Example:
 
     {block:one_column}
-      {if column1:image}
-        <img src="{column1:image}" />
+      {if column1:link_url}
+        <!-- show a link -->
+        <a href="{link_url}">{column1:link_title}</a>
       {/if}
     {/block:one_column}
 
@@ -201,13 +202,13 @@ Assume that current time is Tuesday, 17 July 2012 09:54:45
 Sample for using with Image Block:
 
     {link_tag}
-      <img alt="Email" src="{image}" style="border:none" width="680" />
+      {image(300x)}
     {/link_tag}
 
 Sample for using with OneColumn Block:
 
     {column1:link_tag}
-      <img alt="{column1:link_title}" src="{column1:image}" width="400" style="border:none" />
+      {column1:image(300x)}
     {/column1:link_tag}
 
 ## Images
@@ -215,7 +216,7 @@ Sample for using with OneColumn Block:
 Images can be dynamically resized or cropped by passing a geometry parameter:
 
     {image(400x)}
-    
+
 Outputs an image tag:
 
     <img src="path_to_url" alt="text from title" width="400" height="300">
@@ -240,16 +241,16 @@ We follow's ImageMagick's geometry strings.  Here is a sample:
 
 ## Custom Settings for Appearance
 
-Custom settings allow users to customize elements of the design without needing to know HTML.  The theme author is free to make any elements variables, such as logo, font, colors, etc 
+Custom settings allow users to customize elements of the design without needing to know HTML.  The theme author is free to make any elements variables, such as logo, font, colors, etc
 
 There are 4 types of custom settings attributes available:
 
 | Variable | Description |
 | :----- | :----- |
 | {color:name} | Edit colors with a color picker widget |
-| {text:name | Custom text settings |
-| {image:name | Image upload widget |
-| {font:name | Font picker widget |
+| {text:name} | Custom text settings |
+| {image:name} | Image upload widget |
+| {font:name} | Font picker widget |
 
 ### Initialization
 
