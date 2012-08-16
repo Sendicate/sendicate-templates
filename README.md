@@ -278,6 +278,9 @@ NOTE: For images also can be set dimensions. For example
     {image:logo(30x40)}
 In this case it will return same image but with different sizes
 
+To get the URL of the original image use:
+    {image_url:logo} 
+
 #### Example of real usage:
 
 Template:
