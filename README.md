@@ -271,14 +271,19 @@ Content attribute is an optional. Its value set default value for a widget. Imag
 
 ### Usage
 
-Just put variable same as in name attribute like
+Just put variable same as in name attribute like:
+
     {text:greeting}
+
 NOTE: For images also can be set dimensions. For example
+
     {image:logo(100x100!)}
     {image:logo(30x40)}
+
 In this case it will return same image but with different sizes
 
 To get the URL of the original image use:
+
     {image_url:logo} 
 
 #### Example of real usage:
