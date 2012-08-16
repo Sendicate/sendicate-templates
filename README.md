@@ -213,13 +213,19 @@ Sample for using with OneColumn Block:
 
 ## Images
 
-Images can be dynamically resized or cropped by passing a geometry parameter:
+Image tags and image URL's can be output in the following ways:
 
-    {image(400x)}
+    {image} #outputs a full image tag at default 400px wide
+    {image_url} #outputs the path to the URL of the original uploaded image.
+    {image(400x)} #resizes the image.  See below for options
+    
+When an image tag is rendered the heigh and width are calculated automatically, and style attributes such as border:none are added.
 
-Outputs an image tag:
+### Resizing
 
-    <img src="path_to_url" alt="text from title" width="400" height="300">
+Images can be dynamically resized or cropped by passing a geometry parameter
+
+    {image(400x400^)} #crops image to a 400px x 400px square
 
 We follow's ImageMagick's geometry strings.  Here is a sample:
 
