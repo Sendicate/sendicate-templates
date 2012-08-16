@@ -300,15 +300,15 @@ Template:
         <meta name="image:logo" content="http://www.google.com/images/logo.png"/>
         <style>
             html,body{margin:0;padding:0}
-            body { background: {color:body_background}; font-family: {font:font} }
+            body { background: {color:body_background} url({image_url:logo}); font-family: {font:font} }
             .header { width:100%;overflow:hidden; background: {color:header background}; }
             a { color: {color:link}; background: inherit;}
         </style>
       </head>
       <body>
         <div class="header">
-          <p><img src="{image:logo}"/></p>
           <p>{text:greeting}</p>
+          <p>{image:logo}</p>
         </div>
     </html>
 
@@ -318,14 +318,14 @@ Output:
       <head>
         <style>
             html,body{margin:0;padding:0}
-            body { background: #fff; font-family: Arial, sans-serif }
+            body { background: #fff url(http://www.google.com/images/logo.png); font-family: Arial, sans-serif }
             .header { width:100%;overflow:hidden; background: #bbd9ee; }
             a { color: #0066b3; background: inherit;}
         </style>
       </head>
       <body>
         <div class="header">
-          <p><img src="http://www.google.com/images/logo.png"/></p>
           <p>Hello World!</p>
+          <p><img alt="logo" src="http://www.google.com/images/logo.png" /></p>
         </div>
     </html>
