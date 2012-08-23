@@ -6,7 +6,7 @@ Create gorgeous and flexible email templates with Sendicate's own custom syntax.
 
 * [Section Blocks](#section-blocks)
 * [Block Types](#block-types)
-* [If Statements](#if-statements)
+* [If/Else Statements](#if-else-statements)
 * [Variables](#variables)
 * [Link Tag](#link-tag)
 * [Images](#images)
@@ -138,7 +138,7 @@ The variables title, link_url, image, body are accessible wrapped in {block:vide
 | {link_url} | URL to hosted video |
 
 
-## IF statements
+## If/Else statements
 
 All methods can be used with {if} - {/if} tags. Example:
 
@@ -148,6 +148,15 @@ All methods can be used with {if} - {/if} tags. Example:
         <a href="{link_url}">{column1:link_title}</a>
       {/if}
     {/block:one_column}
+    
+Else statements give you some more options when used with IF tags.  For example, show the company name if there is no logo:
+
+    {if logo}
+        {logo}
+    {else}
+        <h1>{company_name}</h1>
+    {/if}
+
 
 ## Variables
 
