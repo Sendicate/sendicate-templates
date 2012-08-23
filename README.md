@@ -6,7 +6,7 @@ Create gorgeous and flexible email templates with Sendicate's own custom syntax.
 
 * [Section Blocks](#section-blocks)
 * [Block Types](#block-types)
-* [If/Else Statements](#if-else-statements)
+* [If/Else Statements](#ifelse-statements)
 * [Variables](#variables)
 * [Link Tag](#link-tag)
 * [Images](#images)
