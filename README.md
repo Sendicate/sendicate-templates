@@ -235,7 +235,7 @@ Image tags and image URL's can be output in the following ways:
 
     {image} #outputs a full image tag at default 400px wide
     {image_url} #outputs the path to the URL of the original uploaded image.
-    {image(400x)} #resizes the image.  See below for options
+    {image(400x)} #resizes the image to 400 pixels wide.  See below for options
     
 When an image tag is rendered the heigh and width are calculated automatically, and style attributes such as border:none are added.
 
@@ -243,7 +243,7 @@ When an image tag is rendered the heigh and width are calculated automatically, 
 
 Images can be dynamically resized or cropped by passing a geometry parameter
 
-    {image(400x400^)} #crops image to a 400px x 400px square
+    {image(400x400#)} #crops image to a 400px x 400px square
 
 We follow's ImageMagick's geometry strings.  Here is a sample:
 
