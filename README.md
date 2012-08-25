@@ -112,6 +112,7 @@ The variables heading, subheading, link_url are accessible wrapped in {block:hea
 | {block:headline} {/block:headline}  | Defines section |
 | {heading} | Heading text |
 | {subheading} | body text |
+| {image} | Image tag.  {heading} is used for alt text |
 | {link_url} | URL |
 
 #### Image
