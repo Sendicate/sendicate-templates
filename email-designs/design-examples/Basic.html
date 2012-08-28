@@ -1,0 +1,330 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="color:Page_Background" content="#ffffff"/>
+<meta name="font:Headline_Font" content="Times New Roman', Times, serif;"/>
+<meta name="color:Headline_Color" content="#000000"/>
+<meta name="font:Body_Font" content="Times New Roman', Times, serif;"/>
+<meta name="color:Body_Color" content="#000000"/>
+<meta name="font:Button_Font" content="Times New Roman', Times, serif;"/>
+<meta name="color:Button_Text" content="#ffffff"/>
+<meta name="color:Button_Background" content="#000000"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sendicate</title>
+<style>
+  #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+  body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+  .ExternalClass {width:100%;} 
+  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} 
+  #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+  img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
+  a img {border:none;}
+
+
+  table, table td {border-collapse: collapse;}
+
+
+  /* SENDICATE GOES HERE */
+
+  body, h1, h2, .content-body {
+    color: {color:Headline_Color};
+    font-family: Georgia, Times, "Times New Roman", serif;
+  }
+
+  h1,h2,h1 a,h2 a,h1 span,h2 span{margin: 0;color:{color:Headline_Color} !important;font-weight:normal;text-decoration:none}
+  h1{font-size:44px;line-height:50px;}
+
+  h1 a:hover,h2 a:hover,h3 a:hover{text-decoration:underline;}
+
+  .header td,.footer td{padding:10px 0;}
+  .header *,.footer *{font-family:sans-serif;font-size:11px;line-height:20px;color:{color:Headline_Color};text-decoration:none;}
+
+
+  .divider td{border-top:1px solid #cccccc;}
+
+  /***  CONTENT BLOCKS ***/
+  .content h2,.content h2 *{color:{color:Headline_Color};font-size:30px;line-height:1;}
+  .content h2 a:hover,.content h2:focus{text-decoration:underline;}
+  .content-body{margin:0 0 20px;font-size:12px;line-height:1.5;}
+  .content-body a,.content-body a:visited{color:black !important;text-decoration:underline;}
+  .content .image{display:block;}
+  .content .image img{display:block;}
+  
+  .content-body p {margin: 1.12em 0;}
+
+  .lede .content-body{font-size:14px;line-height:1.5;}
+
+  .more{margin:0;}
+  .more td{padding:0;}
+  .more td,.more td a{font-size:12px;line-height:16px;font-family:{font:Button_Font};font-weight:bold;text-decoration:none;color:{color:Button_Text}; !important;}
+  .more td div{border:1px solid #ebb496;padding:5px 19px;}
+  .more a:link, .more a:visited{color: {color:Button_Text} !important;}
+
+  </style>
+</head>
+<body style="width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: {color:Headline_Color}; font-family: {font:Headline_Font}; margin: 0; padding: 0;">
+	<table bgcolor="{color:Page_Background}" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" style="width: 100% !important; line-height: 100% !important; border-collapse: collapse; margin: 0; padding: 0;"><tr><td style="border-collapse: collapse;">
+		<table cellpadding="0" cellspacing="0" border="0" align="center" width="720" style="border-collapse: collapse;"><tr>
+<td width="20" valign="top" class="gutter" style="border-collapse: collapse;"></td>
+				<td valign="top" style="border-collapse: collapse;">
+
+<!--  MASTHEAD STARTS --><table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr height="25" class="gutter"><td style="border-collapse: collapse;"> </td></tr>
+<tr>
+<td valign="top" align="center" style="border-collapse: collapse;">
+				        {if logo}
+                        	{logo(300x}
+                        {else}
+                        	<h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px;  margin: 0;">{company_name}</h1>
+                        {/if}
+			        </td>			        
+		        </tr>
+<tr height="25" class="gutter"><td style="border-collapse: collapse;"> </td></tr>
+<tr height="25" class="divider"><td style="border-collapse: collapse; border-top-width: 1px; border-top-color: #cccccc; border-top-style: solid;"> </td></tr>
+</table>
+<!-- SENDICATE MASTHEAD ENDS -->
+
+{block:headline}
+  <!-- SENDICATE LEDE STARTS -->
+  <table class="lede" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+  <tr>
+  <td valign="top" align="left" style="border-collapse: collapse;">
+  				        {if link_url}
+                        	<h1 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 44px; line-height: 50px; margin: 0;"><a href="{link_url}" style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font};">{heading}</a></h1>
+                        {else}
+                        	<h1 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 44px; line-height: 50px; margin: 0;">{heading}</h1>
+                        {/if}
+  				      </td>
+  				    </tr>
+  <tr height="5"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>
+  <tr>
+  <td style="border-collapse: collapse;">
+  				        <div class="content-body" style="color: {color:Body_Color}; font-family: {font:Body_Font}; font-size: 18px; line-height: 1.5; margin: 0 0 20px;">
+                    {subheading}
+                  </div>
+  			        </td>
+  		        </tr>
+  <tr height="20" class="gutter"><td style="border-collapse: collapse;"> </td></tr>
+  <tr height="35" class="divider"><td style="border-collapse: collapse; border-top-width: 1px; border-top-color: #cccccc; border-top-style: solid;"> </td></tr>
+  </table>
+  <!-- SENDICATE LEDE ENDS -->
+{/block:headline}
+
+{block:image}
+  <!-- SENDICATE IMAGE STARTS -->
+  <table class="imagesection" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+  <tr>
+  <td class="content" valign="top" align="left" style="border-collapse: collapse;"><div class="image" style="display: block;">{image(680x)}</div></td>
+   </tr>
+<tr height="35" class="gutter"><td colspan="3" style="border-collapse: collapse;"> </td></tr>
+  <tr height="35" class="divider"><td colspan="3" style="border-collapse: collapse; border-top-width: 1px; border-top-color: #cccccc; border-top-style: solid;"> </td></tr>
+  </table>
+  <!-- SENDICATE IMAGE ENDS -->
+{/block:image}
+
+{block:one_column}
+  <!-- SENDICATE ONE COL STARTS -->
+  <table class="uno" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+  {if column1:image}<tr>
+  <td class="content" valign="top" align="left" style="border-collapse: collapse;"><div class="image" style="display: block;">{column1:link_tag}{column1:image(680x)}{/column1:link_tag}</div></td>
+   			      </tr>
+  <tr height="25"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>{/if}
+  <!-- ONE COL HED --><tr>
+  <td class="content" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family:{font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px; line-height: 1; margin: 0;">
+    {column1:title}
+     </h2></td>
+   			      </tr>
+  <tr height="5"><td class="gutter" style="border-collapse: collapse;"> </td></tr>
+  <!-- ONE COL BODY --><tr>
+  <td class="content" valign="top" align="left" style="border-collapse: collapse;">
+   				        <div class="content-body" style="color: {color:Body_Color}; font-family: {font:Body_Font}; font-size: 12px; line-height: 1.5; margin: 0 0 20px;">
+                    {column1:body}
+                  </div>
+   			        </td>
+   		        </tr>
+  <tr height="5"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>
+
+    {if column1:link_title}
+    <!-- ONE COL READ MORE --><tr>
+  <td class="content" valign="top" align="left" style="border-collapse: collapse;">
+
+               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important; padding: 0;"><div style="padding: 5px 19px; border: 1px solid #ebb496;">
+                                 <a href="{column1:link_url}" style="font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column1:link_title}</a>
+                               </div></td></tr></table>
+                  {/if}
+  <!-- ONE COL BOTTOM SPACING --><tr height="35" class="gutter"><td colspan="3" style="border-collapse: collapse;"> </td></tr>
+  <tr height="35" class="divider"><td colspan="3" style="border-collapse: collapse; border-top-width: 1px; border-top-color: #cccccc; border-top-style: solid;"> </td></tr>
+  </table>
+  <!-- SENDICATE ONE COL ENDS -->
+{/block:one_column}
+
+{block:two_column}
+<!-- SENDICATE TWO COL STARTS --><table class="duo" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<!-- TWO COL HED --><tr>
+<td class="content" width="324" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px; line-height: 1; margin: 0;">{column1:title}</span></h2></td>
+ 				      <td class="gutter" style="border-collapse: collapse;"> </td>
+ 			        <td class="content" width="324" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px; line-height: 1; margin: 0;">{column2:title}</span></h2></td>
+ 			      </tr>
+<tr height="5"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>
+<!-- TWO COL IMAGE --><tr>
+<td class="content" width="324" valign="top" align="left" style="border-collapse: collapse;">{if column1:image}<div class="image" style="display: block;">{column1:link_tag}{column1:image(322x)}{/column1:link_tag}</div>{/if}</td>
+ 				      <td class="gutter" style="border-collapse: collapse;"> </td>
+ 			        <td class="content" width="324" valign="top" align="left" style="border-collapse: collapse;">{if column2:image}<div class="image" style="display: block;">{column2:link_tag}{column2:image(322x)}{/column2:link_tag}</div>{/if}</td>
+ 			      </tr>
+<tr height="5"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>
+<!-- TWO COL BODY --><tr>
+<td class="content" width="324" valign="top" align="left" style="border-collapse: collapse;">
+ 				        <div class="content-body" style="color: {color:Body_Color}; font-family: {font:Body_Font}; font-size: 12px; line-height: 1.5; margin: 0 0 20px;">
+                  {column1:body}
+                </div>
+ 			        </td>
+ 			        <td class="gutter" style="border-collapse: collapse;"> </td>
+ 			        <td class="content" width="324" valign="top" align="left" style="border-collapse: collapse;">
+ 			          <div class="content-body" style="color: {color:Body_Color}; font-family: {font:Body_Font}; font-size: 12px; line-height: 1.5; margin: 0 0 20px;">
+                  {column2:body}
+                </div>
+ 			        </td>   
+ 		        </tr>
+<tr height="5"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>
+<!-- TWO COL READ MORE --><tr>
+<td class="content" width="324" valign="top" align="left" style="border-collapse: collapse;">
+  
+    {if column1:link_title}
+
+               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important; padding: 0;"><div style="padding: 5px 19px; border: 1px solid #ebb496;">
+                                 <a href="{column1:link_url}" style="font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column1:link_title}</a>
+                               </div></td></tr></table>
+                  {/if}
+</td>
+ 				      <td class="gutter" style="border-collapse: collapse;"> </td>
+ 			        <td class="content" width="324" valign="top" align="left" style="border-collapse: collapse;">
+           {if column2:link_title}
+
+               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important; padding: 0;"><div style="padding: 5px 19px; border: 1px solid #ebb496;">
+                                 <a href="{column2:link_url}" style="font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column2:link_title}</a>
+                               </div></td></tr></table>
+                  {/if}
+</td>
+ 			      </tr>
+<!-- TWO COL BOTTOM SPACING --><tr height="35" class="gutter"><td colspan="3" style="border-collapse: collapse;"> </td></tr>
+<tr height="35" class="divider"><td colspan="3" style="border-collapse: collapse; border-top-width: 1px; border-top-color: #cccccc; border-top-style: solid;"> </td></tr>
+</table>
+<!-- SENDICATE TWO COL ENDS -->
+{/block:two_column}
+{block:three_column}
+<!-- SENDICATE THREE COL STARTS --><table class="trio" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<!-- THREE COL HED --><tr>
+<td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px; line-height: 1; margin: 0;">{column1:title}</span></h2></td>
+  				      <td class="gutter" style="border-collapse: collapse;"> </td>
+  			        <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px; line-height: 1; margin: 0;">{column2:title}</span></h2></td>
+
+  				      <td class="gutter" style="border-collapse: collapse;"> </td>
+  			        <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px; line-height: 1; margin: 0;">{column3:title}</span></h2></td>
+  			      </tr>
+<tr height="20"><td class="gutter" colspan="5" style="border-collapse: collapse;"> </td></tr>
+<!-- THREE COL IMAGE --><tr>
+<td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;">{if column1:image}<div class="image" style="display: block; border: 1px solid #dedede;">{column1:link_tag}{column1:image(202x)}{/column1:link_tag}</div>{/if}</td>
+  				      <td class="gutter" style="border-collapse: collapse;"> </td>
+  			        <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;">{if column2:image}<div class="image" style="display: block; border: 1px solid #dedede;">{column2:link_tag}{column2:image(202x)}{/column2:link_tag}</div>{/if}</td>
+  				      <td class="gutter" style="border-collapse: collapse;"> </td>
+  			        <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;">{if column3:image}<div class="image" style="display: block; border: 1px solid #dedede;">{column3:link_tag}{column3:image(202x)}{/column3:link_tag}</div>{/if}</td>
+  			      </tr>
+<tr height="5"><td class="gutter" colspan="5" style="border-collapse: collapse;"> </td></tr>
+<!-- THREE COL BODY --><tr>
+<td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;">
+  				        <div class="content-body" style="color: {color:Body_Color}; font-family: {font:Body_Font}; font-size: 12px; line-height: 1.5; margin: 0 0 20px;">
+                   {column1:body}
+                 </div>
+  			        </td>
+  			        <td class="gutter" style="border-collapse: collapse;"> </td>
+  				      <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;">
+  				        <div class="content-body" style="color: {color:Body_Color}; font-family: {font:Body_Font}; font-size: 12px; line-height: 1.5; margin: 0 0 20px;">
+                   {column2:body}
+                 </div>
+  			        </td>
+  			        <td class="gutter" style="border-collapse: collapse;"> </td>
+  			        <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;">
+  			          <div class="content-body" style="color: {color:Body_Color}; font-family: {font:Body_Font}; font-size: 12px; line-height: 1.5; margin: 0 0 20px;">
+                   {column3:body}
+                 </div>
+  			        </td>   
+  		        </tr>
+<tr height="5"><td class="gutter" colspan="5" style="border-collapse: collapse;"> </td></tr>
+<!-- THREE COL READ MORE --><tr>
+<td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;">
+  				        {if column1:link_title}
+
+               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: 12px; line-height: 16px; font-family: 'Gotham',sans-serif; font-weight: bold; text-decoration: none; color: #d45e1d !important; padding: 0;"><div style="padding: 5px 19px; border: 1px solid #ebb496;">
+                                 <a href="{column1:link_url}" style="font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column1:link_title}</a>
+                               </div></td></tr></table>
+                  {/if}
+</td>
+  				      <td class="gutter" style="border-collapse: collapse;"> </td>
+  			        <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;">
+  			                 {if column2:link_title}
+
+               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important; padding: 0;"><div style="padding: 5px 19px; border: 1px solid #ebb496;">
+                                 <a href="{column2:link_url}" style="font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column2:link_title}</a>
+                               </div></td></tr></table>
+                  {/if}
+</td>
+<td class="gutter" style="border-collapse: collapse;"> </td>
+  			        <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;">
+                             {if column3:link_title}
+
+               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important; padding: 0;"><div style="padding: 5px 19px; border: 1px solid #ebb496;">
+                                 <a href="{column3:link_url}" style="font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column3:link_title}</a>
+                               </div></td></tr></table>
+                  {/if}
+</td>
+  			      </tr>
+<!-- THREE COL BOTTOM SPACING --><tr height="35" class="gutter"><td colspan="5" style="border-collapse: collapse;"> </td></tr>
+<tr height="15" class="divider"><td colspan="5" style="border-collapse: collapse; border-top-width: 1px; border-top-color: #cccccc; border-top-style: solid;"> </td></tr>
+</table>
+<!-- THREE COL ENDS -->
+{/block:three_column}
+
+{block:video}
+  <!-- SENDICATE Video STARTS -->
+  <table class="video" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+ <tr>
+  <td class="content" valign="top" align="left" style="border-collapse: collapse;"><div class="image" style="display: block; border: 1px solid #dedede;">{link_tag}{image(680x)}{/link_tag}</div></td>
+   			      </tr>
+  <tr height="25"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>
+  <!-- VIDEO HED --><tr>
+  <td class="content" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px; line-height: 1; margin: 0;">
+    {title}
+    </h2></td>
+   			      </tr>
+  <tr height="5"><td class="gutter" style="border-collapse: collapse;"> </td></tr>
+  <!-- VIDEO BODY --><tr>
+  <td class="content" valign="top" align="left" style="border-collapse: collapse;">
+   				        <div class="content-body" style="color: {color:Body_Color}; font-family: {font:Body_Font}; font-size: 12px; line-height: 1.5; margin: 0 0 20px;">
+                    {body}
+                  </div>
+   			        </td>
+   		        </tr>
+  <tr height="5"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>
+
+  
+  <!-- VIDEO READ MORE --><tr>
+  <td class="content" valign="top" align="left" style="border-collapse: collapse;">
+   				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: 12px; line-height: 16px; font-family: 'Gotham',sans-serif; font-weight: bold; text-decoration: none; color: #d45e1d !important; padding: 0;"><div style="padding: 5px 19px; border: 1px solid #ebb496;">
+                     <a href="{link_url}" style="font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">Watch Now</a>
+                   </div></td></tr></table>
+  </td>
+   			      </tr>
+  
+  <!-- VIDEO BOTTOM SPACING --><tr height="35" class="gutter"><td colspan="3" style="border-collapse: collapse;"> </td></tr>
+  <tr height="35" class="divider"><td colspan="3" style="border-collapse: collapse; border-top-width: 1px; border-top-color: #cccccc; border-top-style: solid;"> </td></tr>
+  </table>
+  <!-- SENDICATE VIDEO  ENDS -->
+{/block:video}
+
+</td>
+				<td width="20" valign="top" class="gutter" style="border-collapse: collapse;"></td>
+			</tr></table>
+</td></tr></table>
+</body>
+</html>
