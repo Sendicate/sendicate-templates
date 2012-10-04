@@ -11,7 +11,7 @@ Create gorgeous and flexible email templates with Sendicate's own custom syntax.
 * [Link Tag](#link-tag)
 * [Images](#images)
 * [Custom Settings for Appearance](#custom-settings-for-appearance)
-* [Design Examples]{#design-examples)
+* [Design Examples](#design-examples)
 
 
 ## Section Blocks
