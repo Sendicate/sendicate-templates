@@ -11,6 +11,7 @@ Create gorgeous and flexible email templates with Sendicate's own custom syntax.
 * [Link Tag](#link-tag)
 * [Images](#images)
 * [Custom Settings for Appearance](#custom-settings-for-appearance)
+* [Design Examples]{#design-examples)
 
 
 ## Section Blocks
@@ -350,3 +351,7 @@ Output:
           <p><img alt="logo" src="http://www.google.com/images/logo.png" /></p>
         </div>
     </html>
+
+#Design Examples
+
+[See some examples](https://github.com/Sendicate/sendicate-docs/blob/master/email-designs/README.md#design-examples)
