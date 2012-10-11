@@ -182,6 +182,7 @@ These variables can be used anywhere in the the template code.
 | {company_city} | Company city |
 | {company_state} | Company state |
 | {company_zip} | Company zip |
+| {company_website_url} | 'Website' on account page |
 | {unsubscribe_url} | Unsubscribe URL |
 
 
