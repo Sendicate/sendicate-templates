@@ -270,14 +270,16 @@ We follow's ImageMagick's geometry strings.  Here is a sample:
 
 Custom settings allow users to customize elements of the design without needing to know HTML.  The theme author is free to make any elements variables, such as logo, font, colors, etc
 
-There are 4 types of custom settings attributes available:
+There are 6 types of custom settings attributes available:
 
 | Variable | Description |
 | :----- | :----- |
 | {color:name} | Edit colors with a color picker widget |
-| {text:name} | Custom text settings |
+| {text:name} | Custom text field.  Single line |
+| {textarea:name} | Custom long text field.  Multi line |
 | {image:name} | Image upload widget |
 | {font:name} | Font picker widget |
+| {dropdown:name} | Drop down widget with multiple items |
 
 ### Initialization
 
@@ -285,10 +287,12 @@ Design custom settings are initialized through meta tags, in the head section of
 
     <meta name="color:block background" content="#eee"/>
     <meta name="text:greeting" content="Hello"/>
+	<meta name="textarea:long_text" content="Lorem ipsum dolores sit amet"/>
     <meta name="font:font" content="Arial, sans-serif"/>
     <meta name="image:logo" content="http://www.google.com/images/logo.png"/>
+	<meta name="dropdown:title" content="Mr, Mrs, Sir, Madam"/>
 
-First part of name attribute is a widget type. There are four types of settings: image, color, text and font. Last part of name is a unique name for widget. It is important that name attribute of meta tag was formed by the rules above.
+First part of name attribute is a widget type. There are six types of settings: image, color, text, textarea, font and dropdown. Last part of name is a unique name for widget. It is important that name attribute of meta tag was formed by the rules above.
 
 Content attribute is an optional. Its value set default value for a widget. Image widgets accepts remote url to image file. And returns url for image file
 
