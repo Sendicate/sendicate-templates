@@ -47,7 +47,7 @@ Each variable corresponds to a field in the Compose section.
 
 In this Headline section example the variables are heading, subheading, link_url.
 
-![Section Heading](https://github.com/Sendicate/sendicate-docs/raw/master/src/section-heading.png)
+![Section Heading](https://github.com/Sendicate/sendicate-docs/raw/master/design-docs/src/section-heading.png)
 
 #### One Column
 
