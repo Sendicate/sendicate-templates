@@ -1,9 +1,14 @@
 # Sendicate Documentation & Examples
 
-Learn more about extending Sendicate.
+Learn more about extending [Sendicate](http://www.sendicate.net).
 
 ## Sections
 
-* [Email design documentation and examples](/Sendicate/sendicate-docs/tree/master/email-designs)
-* Embed & Signup forms
+* [Email template & design documentation](/Sendicate/sendicate-docs/tree/master/design-docs)
+* [Email design examples](/Sendicate/sendicate-docs/tree/master/design-docs/design-examples)
+* [Embed & Signup forms](/Sendicate/sendicate-docs/tree/master/embed-signup-forms)
 * API (coming soon)
+
+## Support
+
+Contact us at support@sendicate.net
