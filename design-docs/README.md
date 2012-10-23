@@ -39,7 +39,7 @@ There are 6 types of blocks for use in templates and composing.  Each section ca
 * [Image](#image)
 * [Video](#video)
 
-![Sections](https://github.com/Sendicate/sendicate-docs/raw/master/email-designs/design-docs/src/sections.png)
+![Sections](https://github.com/Sendicate/sendicate-docs/raw/master/design-docs/src/sections.png)
 
 ### Block Variables
 
@@ -47,7 +47,7 @@ Each variable corresponds to a field in the Compose section.
 
 In this Headline section example the variables are heading, subheading, link_url.
 
-![Section Heading](https://github.com/Sendicate/sendicate-docs/raw/master/email-designs/design-docs/src/section-heading.png)
+![Section Heading](https://github.com/Sendicate/sendicate-docs/raw/master/email-designs/src/section-heading.png)
 
 #### One Column
 
@@ -359,4 +359,4 @@ Output:
 
 #Design Examples
 
-[See some examples](https://github.com/Sendicate/sendicate-docs/blob/master/email-designs/README.md#design-examples)
+[See some examples](https://github.com/Sendicate/sendicate-docs/tree/master/design-docs/design-examples)
