@@ -1,0 +1,401 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color:text" content="#111111"/>
+<meta name="color:headings" content="#111111"/>
+<meta name="color:dividing_lines" content="#000000"/>
+<meta name="color:circles" content="#000000"/>
+<meta name="color:read_more_circles" content="#ffffff"/>
+<meta name="color:read_more_text" content="#ffffff"/>
+<meta name="color:read_more_background" content="#000000"/>
+<meta name="font:body" content="sans-serif"/>
+<meta name="font:headings" content="sans-serif"/>
+<title>{subject} - {company_name}</title>
+<style>
+  #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+  body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+  .ExternalClass {width:100%;}
+  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+  .ExternalClass p { line-height: 1.5;}
+  .content-body span, .content-body .yshortcuts { color:{color:text} !important; border: 0; text-decoration: none; }
+  .more span { color:{color:read_more_text} !important; border: 0; text-decoration: none; }
+  #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+  </style>
+</head>
+<body style="width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: {color:text}; background-color: #ffffff font-family: {font:body}; margin: 0; padding: 0;" bgcolor="#ffffff">
+  <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" align="center" style="width: 100% !important; line-height: 100% !important; border-collapse: collapse; margin: 0; padding: 0; background-color: #ffffff" bgcolor="#ffffff"><tr><td align="center" style="border-collapse: collapse;" bgcolor="#ffffff">
+    <table cellpadding="0" cellspacing="0" border="0" align="center" width="714" style="border-collapse: collapse;"><tr>
+<td class="gutter" width="20" style="border-collapse: collapse;"> </td>
+        <td valign="top" style="border-collapse: collapse;">
+
+          <!-- SENDICATE HEADER STARTS -->
+          <table class="header" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr height="40" class="gutter"><td style="border-collapse: collapse; font-size: 18px; line-height: 18px; font-weight: bold; color: {color:text};"> </td></tr>
+<tr height="18">
+<td style="border-collapse: collapse; font-size: 18px; line-height: 18px; font-weight: bold; color: {color:text};">
+                <table align="center" bgcolor="#ffffff" style="border-collapse: collapse;"><tr>
+                  <td valign="middle" align="right" bgcolor="#ffffff" style="border-collapse: collapse; font-size: 18px; line-height: 18px; font-weight: bold; color: {color:text};">
+                    <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/171/original/bullet-single-alpha.gif" alt="•" width="20" height="18" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+                  </td>
+                  <td valign="middle" align="center" style="border-collapse: collapse; font-size: 18px; line-height: 18px; font-weight: bold; color: {color:text};">
+
+                    {if logo}
+                      <a href="{company_website_url}">
+                        {logo(600x120>)}
+                      </a>
+                    {else}
+                      <a href="{company_website_url}" style="font-size: 18px; line-height: 18px; font-weight: bold; color: {color:headings}; font-family: {font:headings};">
+                        <span style="font-size: 18px; line-height: 18px; font-weight: bold; color: {color:headings}; font-family: {font:headings};">
+                          {company_name}
+                        </span>
+                      </a>
+                    {/if}
+
+                  </td>
+                  <td valign="middle" align="left" style="border-collapse: collapse; font-size: 18px; line-height: 18px; font-weight: bold; color: {color:text};">
+                    <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/171/original/bullet-single-alpha.gif" alt="•" width="20" height="18" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+                  </td>
+                </tr></table>
+</td>
+            </tr>
+<tr height="35" class="gutter"><td style="border-collapse: collapse; font-size: 18px; line-height: 18px; font-weight: bold; color: {color:text};"> </td></tr>
+</table>
+<!-- SENDICATE MASTHEAD ENDS -->
+
+
+{block:headline}
+<!-- SENDICATE LEDE STARTS -->
+<table class="lede" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr height="35" class="divider"><td bgcolor="{color:dividing_lines}" style="border-collapse: collapse;"> </td></tr>
+<tr>
+<td valign="top" align="left" style="border-collapse: collapse;">
+                <h1 style="color: {color:headings}; font-family: {font:headings}; font-size: 84px; line-height: 1; margin: 10px 0 10px;">
+                  {if link_url}
+                    <a href="{link_url}" style="color: {color:headings}; font-family: {font:headings}; text-decoration: none;">
+                      <span style="color: {color:headings}; font-family: {font:headings}; text-decoration: none;">{heading}</span>
+                    </a>
+                  {else}
+                  {heading}
+                  {/if}
+                </h1>
+              </td>
+            </tr>
+<tr height="35" class="divider"><td bgcolor="{color:dividing_lines}" style="border-collapse: collapse;"> </td></tr>
+<tr height="35" class="gutter"><td style="border-collapse: collapse;"> </td></tr>
+</table>
+<!-- SENDICATE LEDE ENDS -->
+{/block:headline}
+{block:one_column}
+<!-- SENDICATE ONE COL STARTS -->
+<table class="uno" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr>
+<td class="content" valign="top" align="center" style="border-collapse: collapse;">
+
+      {if column1:image}
+      <div class="image" style="display: block; margin-bottom: 10px; border: 1px solid #dedede;">
+        {column1:link_tag}<span style="color:{color:text}">{column1:image(672x)}</span>{/column1:link_tag}
+      </div>
+      {/if}
+
+      <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/172/original/bullets-1col-alpha.gif" width="674" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+
+
+      <h2 style="color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px; padding-left: 60px; padding-right: 60px; margin: 5px 0;">
+        {if column1:link_url}
+          <a href="{column1:link_url}" style="text-decoration: none; color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;"><span style="color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;">{column1:title}</span></a>
+        {else}
+          {column1:title}
+        {/if}
+      </h2>
+
+
+      <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/172/original/bullets-1col-alpha.gif" width="674" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+      <div class="content-body" style="color: {color:text}; font-family: {font:body}; font-size: 14px; line-height: 1.5;">
+        {column1:body}
+      </div>
+      <br>
+
+      {if column1:link_url}
+      <table class="more" cellspacing="0" border="0" align="center" bgcolor="{color:read_more_background}" style="border-collapse: collapse;">
+        <tr height="32">
+          <td valign="middle" style="border-collapse: collapse; font-family: {font:body}; padding-left: 10px; padding-right: 10px;"><a href="{column1:link_url}" style="font-size: 14px; line-height: 32px; font-weight: bold; text-decoration: none; color: {color:read_more_text} !important; vertical-align: middle;"><span style="color: {color:read_more_text}; font-family: {font:body}; font-size: 12px; line-height: 32px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">&#9679;&nbsp;&nbsp;{column1:link_title}</span></a></td>
+        </tr>
+      </table>
+      {/if}
+</td>
+            </tr>
+<!-- ONE COL BOTTOM SPACING -->
+<tr height="25" class="gutter"><td style="border-collapse: collapse;"> </td></tr>
+<tr height="35" class="divider"><td bgcolor="{color:dividing_lines}" style="border-collapse: collapse;"> </td></tr>
+<tr height="25" class="gutter"><td style="border-collapse: collapse;"> </td></tr>
+</table>
+<!-- SENDICATE ONE COL ENDS -->
+{/block:one_column}
+{block:two_column}
+<!-- SENDICATE TWO COL STARTS -->
+<table class="duo" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr>
+<td class="content" width="320" valign="top" align="left" style="border-collapse: collapse;">
+      {if column1:image}
+      <div class="image" style="display: block; margin-bottom: 10px; border: 1px solid #dedede;">
+        {column1:link_tag}<span style="color:{color:text}">{column1:image(318x)}</span>{/column1:link_tag}
+      </div>
+      {/if}
+
+
+    <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/173/original/bullets-2col-alpha.gif" width="320" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+    <h2 style="color: {color:headings}; font-family: {font:headings}; margin-top: 0; margin-bottom: 0; font-size: 24px; line-height: 30px; padding: 0 2px;">
+        {if column1:link_url}
+          <a href="{column1:link_url}" style="text-decoration: none; color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;"><span style="color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;">{column1:title}</span></a>
+        {else}
+          {column1:title}
+        {/if}
+    </h2>
+    <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/173/original/bullets-2col-alpha.gif" width="320" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+
+    <div class="content-body" style="color: {color:text}; font-family: {font:body}; font-size: 14px; line-height: 1.5;">
+      {column1:body}
+    </div>
+    <br>
+
+    {if column1:link_url}
+      <table class="more" cellspacing="0" border="0" align="left" bgcolor="{color:read_more_background}" style="border-collapse: collapse;">
+        <tr height="32">
+          <td valign="middle" style="border-collapse: collapse; font-family: {font:body}; padding-left: 10px; padding-right: 10px;"><a href="{column1:link_url}" style="font-size: 14px; line-height: 32px; font-weight: bold; text-decoration: none; color: {color:read_more_text} !important; vertical-align: middle;"><span style="color: {color:read_more_text}; font-family: {font:body}; font-size: 12px; line-height: 32px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">&#9679;&nbsp;&nbsp;{column1:link_title}</span></a></td>
+        </tr>
+      </table>
+    {/if}
+</td>
+<td class="gutter" style="border-collapse: collapse;"> </td>
+<td class="content" width="320" valign="top" align="left" style="border-collapse: collapse;">
+      {if column2:image}
+      <div class="image" style="display: block; margin-bottom: 10px; border: 1px solid #dedede;">
+        {column2:link_tag}<span style="color:{color:text}">{column2:image(318x)}</span>{/column2:link_tag}
+      </div>
+      {/if}
+
+      <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/173/original/bullets-2col-alpha.gif" width="320" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+      <h2 style="color: {color:headings}; font-family: {font:headings}; margin-top: 0; margin-bottom: 0; font-size: 24px; line-height: 30px; padding: 0 2px;">
+        {if column2:link_url}
+          <a href="{column2:link_url}" style="text-decoration: none; color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;"><span style="color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;">{column2:title}</span></a>
+        {else}
+          {column2:title}
+        {/if}
+      </h2>
+      <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/173/original/bullets-2col-alpha.gif" width="320" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+
+      <div class="content-body" style="color: {color:text}; font-family: {font:body}; font-size: 14px; line-height: 1.5;">
+        {column2:body}
+      </div>
+      <br>
+
+    {if column2:link_url}
+      <table class="more" cellspacing="0" border="0" align="left" bgcolor="{color:read_more_background}" style="border-collapse: collapse;">
+        <tr height="32">
+          <td valign="middle" style="border-collapse: collapse; font-family: {font:body}; padding-left: 10px; padding-right: 10px;"><a href="{column2:link_url}" style="font-size: 14px; line-height: 32px; font-weight: bold; text-decoration: none; color: {color:read_more_text} !important; vertical-align: middle;"><span style="color: {color:read_more_text}; font-family: {font:body}; font-size: 12px; line-height: 32px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">&#9679;&nbsp;&nbsp;{column2:link_title}</span></a></td>
+        </tr>
+      </table>
+    {/if}
+</td>
+            </tr>
+<!-- TWO COL BOTTOM SPACING --><tr height="35" class="gutter"><td colspan="3" style="border-collapse: collapse;"> </td></tr>
+<tr height="35" class="divider"><td colspan="3" bgcolor="{color:dividing_lines}" style="border-collapse: collapse;"> </td></tr>
+<tr height="35" class="gutter"><td colspan="3" style="border-collapse: collapse;"> </td></tr>
+</table>
+<!-- SENDICATE TWO COL ENDS -->
+{/block:two_column}
+
+
+
+{block:three_column}
+<!-- SENDICATE THREE COL STARTS -->
+<table class="duo" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr>
+<td class="content" width="200" valign="top" align="left" style="border-collapse: collapse;">
+      {if column1:image}
+      <div class="image" style="display: block; margin-bottom: 10px; border: 1px solid #dedede;">
+        {column1:link_tag}<span style="color:{color:text}">{column1:image(198x)}</span>{/column1:link_tag}
+      </div>
+      {/if}
+
+
+    <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/174/original/bullets-3col-alpha.gif" width="200" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+    <h2 style="color: {color:headings}; font-family: {font:headings}; margin-top: 0; margin-bottom: 0; font-size: 24px; line-height: 30px; padding: 0 2px;">
+        {if column1:link_url}
+          <a href="{column1:link_url}" style="text-decoration: none; color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;"><span style="color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;">{column1:title}</span></a>
+        {else}
+          {column1:title}
+        {/if}
+    </h2>
+    <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/174/original/bullets-3col-alpha.gif" width="200" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+
+    <div class="content-body" style="color: {color:text}; font-family: {font:body}; font-size: 14px; line-height: 1.5;">
+      {column1:body}
+    </div>
+    <br>
+
+      {if column1:link_url}
+      <table class="more" cellspacing="0" border="0" align="left" bgcolor="{color:read_more_background}" style="border-collapse: collapse;">
+        <tr height="32">
+          <td valign="middle" style="border-collapse: collapse; font-family: {font:body}; padding-left: 10px; padding-right: 10px;"><a href="{column1:link_url}" style="font-size: 14px; line-height: 32px; font-weight: bold; text-decoration: none; color: {color:read_more_text} !important; vertical-align: middle;"><span style="color: {color:read_more_text}; font-family: {font:body}; font-size: 12px; line-height: 32px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">&#9679;&nbsp;&nbsp;{column1:link_title}</span></a></td>
+        </tr>
+      </table>
+      {/if}
+</td>
+<td class="gutter" style="border-collapse: collapse;"> </td>
+<td class="content" width="200" valign="top" align="left" style="border-collapse: collapse;">
+      {if column2:image}
+      <div class="image" style="display: block; margin-bottom: 10px; border: 1px solid #dedede;">
+        {column2:link_tag}<span style="color:{color:text}">{column2:image(198x)}</span>{/column2:link_tag}
+      </div>
+      {/if}
+
+      <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/174/original/bullets-3col-alpha.gif" width="200" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+      <h2 style="color: {color:headings}; font-family: {font:headings}; margin-top: 0; margin-bottom: 0; font-size: 24px; line-height: 30px; padding: 0 2px;">
+        {if column2:link_url}
+          <a href="{column2:link_url}" style="text-decoration: none; color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;"><span style="color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;">{column2:title}</span></a>
+        {else}
+          {column2:title}
+        {/if}
+      </h2>
+      <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/174/original/bullets-3col-alpha.gif" width="200" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+
+      <div class="content-body" style="color: {color:text}; font-family: {font:body}; font-size: 14px; line-height: 1.5;">
+        {column2:body}
+      </div>
+      <br>
+
+      {if column2:link_url}
+      <table class="more" cellspacing="0" border="0" align="left" bgcolor="{color:read_more_background}" style="border-collapse: collapse;">
+        <tr height="32">
+          <td valign="middle" style="border-collapse: collapse; font-family: {font:body}; padding-left: 10px; padding-right: 10px;"><a href="{column2:link_url}" style="font-size: 14px; line-height: 32px; font-weight: bold; text-decoration: none; color: {color:read_more_text} !important; vertical-align: middle;"><span style="color: {color:read_more_text}; font-family: {font:body}; font-size: 12px; line-height: 32px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">&#9679;&nbsp;&nbsp;{column2:link_title}</span></a></td>
+        </tr>
+      </table>
+      {/if}
+</td>
+<td class="gutter" style="border-collapse: collapse;"> </td>
+<td class="content" width="200" valign="top" align="left" style="border-collapse: collapse;">
+      {if column3:image}
+      <div class="image" style="display: block; margin-bottom: 10px; border: 1px solid #dedede;">
+        {column3:link_tag}<span style="color:{color:text}">{column3:image(198x)}</span>{/column3:link_tag}
+      </div>
+      {/if}
+
+      <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/174/original/bullets-3col-alpha.gif" width="200" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+      <h2 style="color: {color:headings}; font-family: {font:headings}; margin-top: 0; margin-bottom: 0; font-size: 24px; line-height: 30px; padding: 0 2px;">
+        {if column3:link_url}
+          <a href="{column3:link_url}" style="text-decoration: none; color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;"><span style="color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;">{column3:title}</span></a>
+        {else}
+          {column3:title}
+        {/if}
+      </h2>
+      <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/174/original/bullets-3col-alpha.gif" width="200" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+
+      <div class="content-body" style="color: {color:text}; font-family: {font:body}; font-size: 14px; line-height: 1.5;">
+        {column3:body}
+      </div>
+      <br>
+
+      {if column3:link_url}
+      <table class="more" cellspacing="0" border="0" align="left" bgcolor="{color:read_more_background}" style="border-collapse: collapse;">
+        <tr height="32">
+          <td valign="middle" style="border-collapse: collapse; font-family: {font:body}; padding-left: 10px; padding-right: 10px;"><a href="{column3:link_url}" style="font-size: 14px; line-height: 32px; font-weight: bold; text-decoration: none; color: {color:read_more_text} !important; vertical-align: middle;"><span style="color: {color:read_more_text}; font-family: {font:body}; font-size: 12px; line-height: 32px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">&#9679;&nbsp;&nbsp;{column3:link_title}</span></a></td>
+        </tr>
+      </table>
+      {/if}
+</td>
+
+
+
+
+
+
+            </tr>
+<!-- THREE COL BOTTOM SPACING -->
+<tr height="35" class="gutter"><td colspan="5" style="border-collapse: collapse;"> </td></tr>
+<tr height="35" class="divider"><td colspan="5" bgcolor="{color:dividing_lines}" style="border-collapse: collapse;"> </td></tr>
+<tr height="35" class="gutter"><td colspan="5" style="border-collapse: collapse;"> </td></tr>
+</table>
+<!-- SENDICATE THREE COL ENDS -->
+{/block:three_column}
+
+
+
+{block:image}
+<!-- SENDICATE IMAGE COL STARTS -->
+<table class="uno" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr>
+<td class="content" valign="top" align="center" style="border-collapse: collapse;">
+
+      {if image}
+      <div class="image" style="display: block; margin-bottom: 10px; border: 1px solid #dedede;">
+        {link_tag}<span style="color:{color:text}">{image(672x)}</span>{/link_tag}
+      </div>
+      {/if}
+
+      <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/172/original/bullets-1col-alpha.gif" width="674" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+      <h2 style="color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px; padding-left: 60px; padding-right: 60px; margin: 5px 0;">
+        {if link_url}
+          <a href="{link_url}" style="text-decoration: none; color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;"><span style="color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;">{title}</span></a>
+        {else}
+          {title}
+        {/if}
+      </h2>
+
+      <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/172/original/bullets-1col-alpha.gif" width="674" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+</td>
+            </tr>
+<!-- IMAGE COL BOTTOM SPACING -->
+<tr height="25" class="gutter"><td style="border-collapse: collapse;"> </td></tr>
+<tr height="35" class="divider"><td bgcolor="{color:dividing_lines}" style="border-collapse: collapse;"> </td></tr>
+<tr height="25" class="gutter"><td style="border-collapse: collapse;"> </td></tr>
+</table>
+<!-- SENDICATE IMAGE COL ENDS -->
+{/block:image}
+
+
+{block:video}
+<!-- SENDICATE VIDEO COL STARTS -->
+<table class="uno" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr>
+<td class="content" valign="top" align="center" style="border-collapse: collapse;">
+
+      {if image}
+      <div class="image" style="display: block; margin-bottom: 10px; border: 1px solid #dedede;">
+        {link_tag}<span style="color:{color:text}">{image(672x)}</span>{/link_tag}
+      </div>
+      {/if}
+
+      <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/172/original/bullets-1col-alpha.gif" width="674" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+      <h2 style="color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px; padding-left: 60px; padding-right: 60px; margin: 5px 0;">
+        {if link_url}
+          <a href="{link_url}" style="text-decoration: none; color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;"><span style="color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;">{title}</span></a>
+        {else}
+          {title}
+        {/if}
+      </h2>
+
+      <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/172/original/bullets-1col-alpha.gif" width="674" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
+
+      <div class="content-body" style="color: {color:text}; font-family: {font:body}; font-size: 14px; line-height: 1.5;">
+        {body}
+      </div>
+      <br>
+</td>
+            </tr>
+<!-- VIDEO COL BOTTOM SPACING -->
+<tr height="25" class="gutter"><td style="border-collapse: collapse;"> </td></tr>
+<tr height="35" class="divider"><td bgcolor="{color:dividing_lines}" style="border-collapse: collapse;"> </td></tr>
+<tr height="25" class="gutter"><td style="border-collapse: collapse;"> </td></tr>
+</table>
+<!-- SENDICATE VIDEO COL ENDS -->
+{/block:video}
+
+</td>
+        <td class="gutter" width="20" style="border-collapse: collapse;"> </td>
+      </tr></table>
+</td></tr></table>
+</body>
+</html>

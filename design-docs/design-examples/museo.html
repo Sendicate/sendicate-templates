@@ -1,0 +1,412 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color:text" content="#111111"/>
+<meta name="color:background" content="#ffffff"/>
+<meta name="color:reversed text" content="#ffffff"/>
+<meta name="color:reversed background" content="#000000"/>
+<meta name="color:dividing_line" content="#000000"/>
+<meta name="color:dotted_line" content="#000000"/>
+<meta name="font:body" content="Times, serif"/>
+<title>{subject} - {company_name}</title>
+<style>
+  #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+  body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; font-family: {font:body};}
+  .ExternalClass {width:100%;}
+  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+  .ExternalClass p { line-height: 1.5;}
+  #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+  img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
+  .yshortcuts { color: {color:text}; }
+  .yshortcuts a span { color: {color:text}; }
+  </style>
+</head>
+<body style="width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: {color:text}; font-family: {font:body}; margin: 0; padding: 0; background-color: {color:background};" bgcolor="{color:background}">
+  <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" align="center" style="width: 100% !important; line-height: 100% !important; border-collapse: collapse; margin: 0; padding: 0; background-color: {color:background};" bgcolor="{color:background}"><tr><td align="center" style="border-collapse: collapse; font-family: {font:body};" bgcolor="{color:background}">
+    <table cellpadding="0" cellspacing="0" border="0" align="center" width="694" style="border-collapse: collapse;"><tr>
+<td class="gutter" width="20" style="border-collapse: collapse;"> </td>
+        <td valign="top" style="border-collapse: collapse;">
+
+          <!-- SENDICATE HEADER STARTS -->
+          <table class="header" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr height="40" class="gutter"><td style="border-collapse: collapse; font-size: 1px; line-height: 1px; color: {color:text}"> </td></tr>
+<tr height="18">
+<td valign="middle" align="center" style="border-collapse: collapse; font-size: 16px; line-height: 16px; color: {color:text}">
+                <a class="header-logo" href="{company_website_url}" target="_blank" style="font-size: 16px; line-height: 16px; color: {color:text}; text-decoration: none;">
+                  {if logo}
+                    {logo(600x200>)}
+                  {else}
+                  <img src="bullet-single.gif" alt="•" width="7" height="10" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none;">  <span style="font-size: 16px; line-height: 16px; color: {color:text}; font-family: {font:body};">{company_name}</span>  <img src="bullet-single.gif" alt="•" width="7" height="10" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none;"></a>
+                  {/if}
+              </td>
+            </tr>
+<tr height="15" class="gutter"><td style="border-collapse: collapse; font-size: 1px; line-height: 1px; color: {color:text}"> </td></tr>
+<tr height="5" class="divider"><td bgcolor="{color:dividing_line}" style="border-collapse: collapse; font-size: 1px; line-height: 1px; color: {color:text}"> </td></tr>
+<tr height="4" class="gutter"><td style="border-collapse: collapse; font-size: 1px; line-height: 1px; color: {color:text}"> </td></tr>
+<tr height="1" class="dotted" style="border-top-style: dotted; border-top-color: {color:dotted_line}; border-top-width: 1px; font-size: 1px; line-height: 1px;"><td style="border-collapse: collapse; font-size: 16px; line-height: 16px; color: {color:text}"> </td></tr>
+</table>
+<!-- SENDICATE MASTHEAD ENDS -->
+
+{block:headline}
+<!-- SENDICATE LEDE STARTS --><table class="content lede" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr height="10"><td class="gutter" style="border-collapse: collapse;"> </td></tr>
+<tr>
+<td valign="top" align="center" style="border-collapse: collapse;">
+  {if image}
+    <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
+      {if link_url}
+      <a href="{link_url}">{image(672x)}</a>
+      {else}
+      {image(672x)}
+      {/if}
+    </div>
+  {/if}
+  <h1 style="color: {color:text}; font-family: {font:body}; font-size: 36px; line-height: 40px; font-weight: normal; text-transform: uppercase; margin: 0 40px;">
+    {if link_url}
+    <a href="{link_url}" style="text-decoration: none; color: {color:text}"><span style="color: {color:text}; font-family: {font:body};">{heading}</span></a>
+    {else}
+    {heading}
+    {/if}
+  </h1>
+              </td>
+            </tr>
+<tr height="30"><td class="gutter" style="border-collapse: collapse;"> </td></tr>
+<tr>
+<td valign="middle" align="center" bgcolor="{color:reversed background}" style="border-collapse: collapse;">
+                <table cellpadding="30" style="border-collapse: collapse;"><tr><td align="center" class="content-body" style="border-collapse: collapse; color: {color:reversed text}; font-family: {font:body}; font-size: 38px; line-height: 56px; margin: 0;">{subheading}</td></tr></table>
+</td>
+            </tr>
+<tr height="35" class="gutter"><td style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+</table>
+<!-- SENDICATE LEDE ENDS -->
+{/block:headline}
+
+
+{block:one_column}
+<!-- SENDICATE ONE COL STARTS --><table class="uno" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr><td valig="top" align="center" class="content" color="{color:text}" style="border-collapse: collapse;">
+
+{if column1:image}
+  <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
+    {if column1:link_url}
+    <a href="{column1:link_url}">{column1:image(672x)}</a>
+    {else}
+    {column1:image(672x)}
+    {/if}
+  </div>
+{/if}
+
+              <h2 style="color: {color:text}; font-family: {font:body}; padding-bottom: 10px; border-bottom-color: {color:dotted_line}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: 22px; line-height: 25px; font-weight: normal; padding-left: 60px; padding-right: 60px; margin-top: 0; margin-bottom: 20px;">
+                {if column1:link_url}
+                <a href="{column1:link_url}" style="text-decoration: none; font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text}"><span style="font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text}; font-family: {font:body};">{column1:title}</span></a>
+                {else}
+                {column1:title}
+                {/if}
+
+              </h2>
+
+              <div class="content-body" style="color: {color:text}; font-family: {font:body}; font-size: 14px; line-height: 1.5;">
+                {column1:body}
+              </div>
+
+              {if column1:link_url}
+              <br>
+  <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed background}" style="border-collapse: collapse;"><tr>
+<td valign="top" style="border-collapse: collapse;"><a href="{column1:link_url}" style="display: block; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-decoration: none; color: {color:reversed text} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body}; color: {color:reversed text};">{column1:link_title}</span></a></td>
+  </tr></table>
+              {/if}
+</td></tr>
+<!-- ONE COL BOTTOM SPACING --><tr height="25" class="gutter"><td colspan="3" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+<tr height="5" class="divider"><td colspan="3" bgcolor="{color:dividing_line}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+<tr height="25" class="gutter"><td colspan="3" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+</table>
+<!-- SENDICATE ONE COL ENDS -->
+{/block:one_column}
+
+{block:two_column}
+<!-- SENDICATE TWO COL STARTS -->
+<table class="duo" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr>
+<!-- COL ONE --><td width="320" valign="top" align="center" class="content" color="{color:text}" style="border-collapse: collapse;">
+  {if column1:image}
+    <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
+      {if column1:link_url}
+      <a href="{column1:link_url}">{column1:image(318x)}</a>
+      {else}
+      {column1:image(318x)} 
+      {/if}
+    </div>
+  {/if}
+
+  <h2 style="color: {color:text}; font-family: {font:body}; padding-bottom: 10px; border-bottom-color: {color:dotted_line}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: 22px; line-height: 25px; font-weight: normal; padding-left: 2px; padding-right: 2px; margin-top: 0; margin-bottom: 20px;">
+  {if column1:link_url}
+  <a href="{column1:link_url}" style="text-decoration: none; font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text}"><span style="font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text}; font-family: {font:body};">{column1:title}</span></a>
+  {else}
+  {column1:title}
+  {/if}
+  </h2>
+
+  <div class="content-body" style="color: {color:text}; font-family: {font:body}; font-size: 14px; line-height: 1.5;">
+    {column1:body}
+  </div>
+
+  {if column1:link_url}
+  <br>
+  <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed background}" style="border-collapse: collapse;"><tr>
+<td valign="top" style="border-collapse: collapse;"><a href="{column1:link_url}" style="display: block; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-decoration: none; color: {color:reversed text} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body}; color: {color:reversed text};">{column1:link_title}</span></a></td>
+  </tr></table>
+  {/if}
+</td>
+
+              <td class="gutter" style="border-collapse: collapse;"> </td>
+              <td class="vdotted" style="border-collapse: collapse; border-left-style: dotted; border-left-color: {color:dotted_line}; border-left-width: 1px; font-size: 1px; line-height: 1px;"> </td>
+              <td class="gutter" style="border-collapse: collapse;"> </td>
+
+              <!-- COL TWO -->
+              <td width="320" valign="top" align="center" class="content" color="{color:text}" style="border-collapse: collapse;">
+
+
+  {if column2:image}
+    <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
+      {if column2:link_url}
+      <a href="{column2:link_url}">{column2:image(318x)}</a>
+      {else}
+      {column2:image(318x)}
+      {/if}
+    </div>
+  {/if}
+
+  <h2 style="color: {color:text}; font-family: {font:body}; padding-bottom: 10px; border-bottom-color: {color:dotted_line}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: 22px; line-height: 25px; font-weight: normal; padding-left: 2px; padding-right: 2px; margin-top: 0; margin-bottom: 20px;">
+  {if column2:link_url}
+  <a href="{column2:link_url}" style="text-decoration: none; font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text}"><span style="font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text};  font-family: {font:body};">{column2:title}</span></a>
+  {else}
+  {column2:title}
+  {/if}
+  </h2>
+
+  <div class="content-body" style="color: {color:text}; font-family: {font:body}; font-size: 14px; line-height: 1.5;">
+    {column2:body}
+  </div>
+
+  {if column2:link_url}
+  <br>
+  <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed background}" style="border-collapse: collapse;"><tr>
+<td valign="top" style="border-collapse: collapse;"><a href="{column2:link_url}" style="display: block; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-decoration: none; color: {color:reversed text} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body}; color: {color:reversed text};">{column2:link_title}</span></a></td>
+  </tr></table>
+  {/if}
+
+
+
+</td>
+            </tr>
+<!-- TWO COL BOTTOM SPACING --><tr height="35" class="gutter"><td colspan="5" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+<tr height="5" class="divider"><td colspan="5" bgcolor="{color:dividing_line}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+<tr height="25" class="gutter"><td colspan="5" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+</table>
+<!-- SENDICATE TWO COL ENDS -->
+{/block:two_column}
+
+{block:three_column}
+<!-- SENDICATE THREE COL STARTS -->
+<table class="trio" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr>
+<!-- COL ONE --><td width="180" valign="top" align="center" class="content" color="{color:text}" style="border-collapse: collapse;">
+
+ {if column1:image}
+    <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
+      {if column1:link_url}
+      <a href="{column1:link_url}">{column1:image(178x)}</a>
+      {else}
+      {column1:image(178x)}
+      {/if}
+    </div>
+  {/if}
+
+  <h2 style="color: {color:text}; font-family: {font:body}; padding-bottom: 10px; border-bottom-color: {color:dotted_line}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: 22px; line-height: 25px; font-weight: normal; padding-left: 2px; padding-right: 2px; margin-top: 0; margin-bottom: 20px;">
+  {if column1:link_url}
+  <a href="{column1:link_url}" style="text-decoration: none; font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text}"><span style="font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text};  font-family: {font:body};">{column1:title}</span></a>
+  {else}
+  {column1:title}
+  {/if}
+  </h2>
+
+  <div class="content-body" style="color: {color:text}; font-family: {font:body}; font-size: 14px; line-height: 1.5;">
+    {column1:body}
+  </div>
+
+  {if column1:link_url}
+  <br>
+  <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed background}" style="border-collapse: collapse;"><tr>
+<td valign="top" style="border-collapse: collapse;"><a href="{column1:link_url}" style="display: block; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-decoration: none; color: {color:reversed text} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body}; color: {color:reversed text};">{column1:link_title}</span></a></td>
+  </tr></table>
+  {/if}
+
+
+</td>
+
+              <td class="gutter" style="border-collapse: collapse;"> </td>
+              <td class="vdotted" style="border-collapse: collapse; border-left-style: dotted; border-left-color: {color:dotted_line}; border-left-width: 1px; font-size: 1px; line-height: 1px;"> </td>
+              <td class="gutter" style="border-collapse: collapse;"> </td>
+
+              <!-- COL TWO -->
+              <td width="180" valign="top" align="center" class="content" color="{color:text}" style="border-collapse: collapse;">
+
+  {if column2:image}
+    <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
+      {if column2:link_url}
+      <a href="{column2:link_url}">{column2:image(178x)}</a>
+      {else}
+      {column2:image(178x)}
+      {/if}
+    </div>
+  {/if}
+
+  <h2 style="color: {color:text}; font-family: {font:body}; padding-bottom: 10px; border-bottom-color: {color:dotted_line}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: 22px; line-height: 25px; font-weight: normal; padding-left: 2px; padding-right: 2px; margin-top: 0; margin-bottom: 20px;">
+  {if column2:link_url}
+  <a href="{column2:link_url}" style="text-decoration: none; font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text}"><span style="font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text}; font-family: {font:body};">{column2:title}</span></a>
+  {else}
+  {column2:title}
+  {/if}
+  </h2>
+
+  <div class="content-body" style="color: {color:text}; font-family: {font:body}; font-size: 14px; line-height: 1.5;">
+    {column1:body}
+  </div>
+
+  {if column2:link_url}
+  <br>
+  <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed background}" style="border-collapse: collapse;"><tr>
+<td valign="top" style="border-collapse: collapse;"><a href="{column2:link_url}" style="display: block; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-decoration: none; color: {color:reversed text} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body}; color: {color:reversed text};">{column2:link_title}</span></a></td>
+  </tr></table>
+  {/if}
+
+
+
+</td>
+
+
+              <td class="gutter" style="border-collapse: collapse;"> </td>
+              <td class="vdotted" style="border-collapse: collapse; border-left-style: dotted; border-left-color: {color:dotted_line}; border-left-width: 1px; font-size: 1px; line-height: 1px;"> </td>
+              <td class="gutter" style="border-collapse: collapse;"> </td>
+
+              <!-- COL THREE -->
+              <td width="180" valign="top" align="center" class="content" color="{color:text}" style="border-collapse: collapse;">
+
+  {if column3:image}
+    <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
+      {if column3:link_url}
+      <a href="{column3:link_url}">{column3:image(178x)}</a>
+      {else}
+      {column3:image(178x)}
+      {/if}
+    </div>
+  {/if}
+
+  <h2 style="color: {color:text}; font-family: {font:body}; padding-bottom: 10px; border-bottom-color: {color:dotted_line}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: 22px; line-height: 25px; font-weight: normal; padding-left: 2px; padding-right: 2px; margin-top: 0; margin-bottom: 20px;">
+  {if column3:link_url}
+  <a href="{column2:link_url}" style="text-decoration: none; font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text}"><span style="font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text};  font-family: {font:body};">{column3:title}</span></a>
+  {else}
+  {column3:title}
+  {/if}
+  </h2>
+
+  <div class="content-body" style="color: {color:text}; font-family: {font:body}; font-size: 14px; line-height: 1.5;">
+    {column3:body}
+  </div>
+
+  {if column3:link_url}
+  <br>
+  <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed background}" style="border-collapse: collapse;"><tr>
+<td valign="top" style="border-collapse: collapse;"><a href="{column3:link_url}" style="display: block; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-decoration: none; color: {color:reversed text} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body}; color: {color:reversed text};">{column3:link_title}</span></a></td>
+  </tr></table>
+  {/if}
+
+
+
+
+
+</td>
+
+
+            </tr>
+<!-- THREE COL BOTTOM SPACING --><tr height="25" class="gutter"><td colspan="9" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+<tr height="5" class="divider"><td colspan="9" bgcolor="{color:dividing_line}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+<tr height="25" class="gutter"><td colspan="9" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+</table>
+<!-- THREE COL ENDS -->
+{/block:three_column}
+
+
+
+{block:image}
+<!-- SENDICATE IMAGE COL STARTS -->
+<table class="uno imagecol" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr>
+<td class="content" color="{color:text}" valign="top" align="center" style="border-collapse: collapse;">
+                <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
+                {if link_url}
+                  <a href="{link_url}">{image(672x)}</a>
+                {else}
+                  {image(672x)}
+                {/if}
+                </div>
+                <h2 style="color: {color:text}; font-family: {font:body}; padding-bottom: 10px; border-bottom-color: {color:dotted_line}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: 22px; line-height: 25px; font-weight: normal; padding-left: 60px; padding-right: 60px; margin-top: 0; margin-bottom: 20px;">
+
+                {if link_url}
+                  <a href="{link_url}" style="text-decoration: none; font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text}"><span style="font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text};  font-family: {font:body};">{title}</span></a>
+                {else}
+                  {title}
+                {/if}
+                </h2>
+              </td>
+            </tr>
+<!-- IMAGE COL BOTTOM SPACING --><tr height="25" class="gutter"><td colspan="3" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+<tr height="5" class="divider"><td colspan="3" bgcolor="{color:dividing_line}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+<tr height="25" class="gutter"><td colspan="3" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+</table>
+<!-- SENDICATE IMAGE COL ENDS -->
+{/block:image}
+
+
+
+{block:video}
+<!-- SENDICATE VIDEO COL STARTS -->
+<table class="uno video" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr>
+<td class="content" color="{color:text}" valign="top" align="center" style="border-collapse: collapse;">
+                <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
+                {if link_url}
+                  <a href="{link_url}">{image(672x)}</a>
+                {else}
+                  {image(672x)}
+                {/if}
+                </div>
+                <h2 style="color: {color:text}; font-family: {font:body}; padding-bottom: 10px; border-bottom-color: {color:dotted_line}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: 22px; line-height: 25px; font-weight: normal; padding-left: 60px; padding-right: 60px; margin-top: 0; margin-bottom: 20px;">
+
+                {if link_url}
+                  <a href="{link_url}" style="text-decoration: none; font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text}"><span style="font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text}; font-family: {font:body};">{title}</span></a>
+                {else}
+                  {title}
+                {/if}
+                </h2>
+
+                <div class="content-body" style="color: {color:text}; font-family: {font:body}; font-size: 14px; line-height: 1.5;">
+                  {body}
+                </div>
+              </td>
+            </tr>
+<!-- VIDEO COL BOTTOM SPACING --><tr height="25" class="gutter"><td colspan="3" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+<tr height="5" class="divider"><td colspan="3" bgcolor="{color:dividing_line}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+<tr height="25" class="gutter"><td colspan="3" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+</table>
+<!-- SENDICATE VIDEO COL ENDS -->
+{/block:video}
+
+</td>
+        <td class="gutter" width="20" style="border-collapse: collapse;"> </td>
+      </tr></table>
+</td></tr></table>
+</body>
+</html>
