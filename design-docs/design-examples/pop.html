@@ -46,8 +46,8 @@
                         {logo(600x120>)}
                       </a>
                     {else}
-                      <a href="{company_website_url}" style="font-size: 18px; line-height: 18px; font-weight: bold; color: {color:headings}; font-family: {font:headings};">
-                        <span style="font-size: 18px; line-height: 18px; font-weight: bold; color: {color:headings}; font-family: {font:headings};">
+                      <a href="{company_website_url}" style="font-size: 18px; line-height: 18px; font-weight: bold; color: {color:headings}; font-family: {font:headings};text-decoration: none;">
+                        <span style="font-size: 18px; line-height: 18px; font-weight: bold; color: {color:headings}; font-family: {font:headings};text-decoration: none;">
                           {company_name}
                         </span>
                       </a>
@@ -80,8 +80,16 @@
                   {heading}
                   {/if}
                 </h1>
-              </td>
-            </tr>
+</td>
+</tr>
+<tr height="35" class="divider"><td bgcolor="{color:dividing_lines}" style="border-collapse: collapse;"> </td></tr>
+<tr>
+<td valign="top" align="left" style="border-collapse: collapse;">
+                <h4 style="color: {color:headings}; font-family: {font:headings}; font-size: 28px; line-height: 1; margin: 10px 0 10px;">
+                  {subheading}
+                </h4>
+</td>
+</tr>
 <tr height="35" class="divider"><td bgcolor="{color:dividing_lines}" style="border-collapse: collapse;"> </td></tr>
 <tr height="35" class="gutter"><td style="border-collapse: collapse;"> </td></tr>
 </table>
@@ -334,17 +342,6 @@
         {link_tag}<span style="color:{color:text}">{image(672x)}</span>{/link_tag}
       </div>
       {/if}
-
-      <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/172/original/bullets-1col-alpha.gif" width="674" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
-      <h2 style="color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px; padding-left: 60px; padding-right: 60px; margin: 5px 0;">
-        {if link_url}
-          <a href="{link_url}" style="text-decoration: none; color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;"><span style="color: {color:headings}; font-family: {font:headings}; font-size: 24px; line-height: 30px;">{title}</span></a>
-        {else}
-          {title}
-        {/if}
-      </h2>
-
-      <div class="dot-wrapper" style="outline: 1px solid #ffffff; line-height: 1px; background-color: {color:circles};"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/172/original/bullets-1col-alpha.gif" width="674" height="40" alt="• • • • • • • • •" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; line-height: 1px;"></div>
 </td>
             </tr>
 <!-- IMAGE COL BOTTOM SPACING -->

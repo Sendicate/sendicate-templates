@@ -8,6 +8,7 @@
 <meta name="color:dividing_lines" content="#b6b6b6"/>
 <meta name="color:background_second" content="#ee1c25"/>
 <meta name="color:text_second" content="#ffffff"/>
+<meta name="font:text_font" content="Trebuchet, 'Trebuchet MS', serif"/>
 <title>{subject} - {company_name}</title>
 <style type="text/css">
   #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
@@ -21,7 +22,7 @@
   table, table td {border-collapse: collapse;}
   </style>
 </head>
-<body style="width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: white; font-family: Trebuchet, 'Trebuchet MS', serif; background-color: {color:background}; margin: 0; padding: 0;" bgcolor="{color:background}">
+<body style="width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: white; font-family: {font:text_font}; background-color: {color:background}; margin: 0; padding: 0;" bgcolor="{color:background}">
 
 <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" align="center" style="width: 100% !important; line-height: 100% !important; border-collapse: collapse; background-color: {color:background}; margin: 0; padding: 0;" bgcolor="{color:background}">
   <tr>
@@ -38,7 +39,7 @@
                   {if logo}
                     {logo(659x120>)}
                   {else}
-                    <a class="header-logo" href="#" target="_blank" style="font-size: 28px; line-height: 1; color: white; text-decoration: none;"><span style="font-size: 28px; line-height: 1; color: {color:text}; font-family: Trebuchet, 'Trebuchet MS', serif; font-weight: bold;">{company_name}</span></a>
+                    <a class="header-logo" href="#" target="_blank" style="font-size: 28px; line-height: 1; color: white; text-decoration: none;"><span style="font-size: 28px; line-height: 1; color: {color:text}; font-family: {font:text_font}; font-weight: bold;">{company_name}</span></a>
                   {/if}
                 </td>
               </tr>
@@ -57,7 +58,7 @@
     <tr>
       <td width="15" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td valign="top" align="left" class="content" style="border-collapse: collapse;">
-        <h1 style="color: {color:text}; font-family: Trebuchet, 'Trebuchet MS', serif; margin: 0; font-size: 78px; line-height: 90px;">
+        <h1 style="color: {color:text}; font-family: {font:text_font}; margin: 0; font-size: 78px; line-height: 90px;">
           {if link_url}
             <a href="{link_url}" style="color: {color:text}; text-decoration: none; font-size: 78px; line-height: 90px;"><span style="color: {color:text}; font-size: 78px; line-height: 90px;">{heading}</span></a>
           {else}
@@ -74,7 +75,7 @@
     <tr>
       <td width="15" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td valign="top" align="left" style="border-collapse: collapse;">
-        <div class="content-body" style="color: {color:text}; font-family: Trebuchet, 'Trebuchet MS', serif; font-size: 12px; line-height: 20px;">
+        <div class="content-body" style="color: {color:text}; font-family: {font:text_font}; font-size: 12px; line-height: 20px;">
           {subheading}
         </div>
       </td>
@@ -86,7 +87,7 @@
         <td width="15" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
         <td valign="top" align="left" style="border-collapse: collapse;">
           <div class="content-readmore">
-            <a href="{link_url}" style="color: {color:text}; font-family: Trebuchet, 'Trebuchet MS', serif; font-size: 12px; line-height: 20px; text-decoration: none;"><span style="color: {color:text}; font-size: 12px; line-height: 20px;">&gt; Read more</span></a>
+            <a href="{link_url}" style="color: {color:text}; font-family: {font:text_font}; font-size: 12px; line-height: 20px; text-decoration: none;"><span style="color: {color:text}; font-size: 12px; line-height: 20px;">&gt; Read more</span></a>
           </div>
         </td>
         <td width="15" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
@@ -119,7 +120,7 @@
           <tr>
             <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
             <td class="content" valign="top" align="left" style="border-collapse: collapse;">
-              <h2 style="color: {color:text_second}; margin: 0; font-family: Trebuchet, 'Trebuchet MS', serif; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
+              <h2 style="color: {color:text_second}; margin: 0; font-family: {font:text_font}; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
                 {if column1:link_url}
                   <a href="{column1:link_url}" style="text-decoration: none; color: {color:text_second}; font-size: 28px; line-height: 32px; font-weight: bold;"><span style="color: {color:text_second}; font-size: 28px; line-height: 32px; font-weight: bold;">{column1:title}</span></a>
                 {else}
@@ -135,7 +136,7 @@
           <tr>
             <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
             <td class="content" valign="top" align="left" style="border-collapse: collapse;">
-              <div class="content-body" style="color: {color:text_second}; font-family: Trebuchet, 'Trebuchet MS', serif; font-size: 12px; line-height: 20px;">
+              <div class="content-body" style="color: {color:text_second}; font-family: {font:text_font}; font-size: 12px; line-height: 20px;">
                 {column1:body}
               </div>
             </td>
@@ -146,8 +147,8 @@
             <tr>
               <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
               <td class="content" valign="top" align="left" style="border-collapse: collapse;">
-                <div class="content-body" style="color: {color:text};  font-family: Trebuchet, 'Trebuchet MS', serif; font-size: 12px; line-height: 20px;">
-                  <a href="{column1:link_url}" style="display: block; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-decoration: none; color: {color:text_second} !important;"><span style="color: {color:text_second}; font-size: 12px; line-height: 12px;">> {column1:link_title}</span></a>
+                <div class="content-body" style="color: {color:text};  font-family: {font:text_font}; font-size: 12px; line-height: 20px;">
+                  <a href="{column1:link_url}" style="display: block; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-decoration: none; color: {color:text_second} !important;font-weight: bold;"><span style="color: {color:text_second}; font-size: 12px; line-height: 12px;font-weight: bold;">> {column1:link_title}</span></a>
                 </div>
               </td>
               <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
@@ -160,7 +161,7 @@
       <td width="348" valign="top" align="left" style="border-collapse: collapse;">
         {if column1:image}
           <div class="image" style="page-break-before: avoid; display: block; margin-top: 0 !important;">
-            {column1:link_tag}<span style="color:{color:text}">{column1:image(348x460)}</span>{/column1:link_tag}
+            {column1:link_tag}<span style="color:{color:text}">{column1:image(348x460#)}</span>{/column1:link_tag}
           </div>
         {/if}
       </td>
@@ -176,11 +177,11 @@
   <table class="duo" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
     <tr>
       <td colspan="3" width="347" valign="top" align="left" class="content" style="border-collapse: collapse;">
-        {column1:link_tag}{column1:image(347x398)}{/column1:link_tag}
+        {column1:link_tag}{column1:image(347x398#)}{/column1:link_tag}
       </td>
       <td width="5" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>      
       <td colspan="3" width="348" valign="top" align="left" class="content" style="border-collapse: collapse;">
-        {column2:link_tag}{column2:image(348x398)}{/column2:link_tag}
+        {column2:link_tag}{column2:image(348x398#)}{/column2:link_tag}
       </td>
     </tr>
     <tr height="15">
@@ -195,7 +196,7 @@
     <tr>
       <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td valign="top" align="left" class="content" style="border-collapse: collapse;">
-        <h2 style="color: {color:text}; margin: 0; font-family: Trebuchet, 'Trebuchet MS', serif; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
+        <h2 style="color: {color:text}; margin: 0; font-family: {font:text_font}; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
           {if column1:link_url}
             <a href="{column1:link_url}" style="text-decoration: none; color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;"><span style="color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;">{column1:title}</span></a>
           {else}
@@ -207,7 +208,7 @@
       <td width="5" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="15" class="gutter" bgcolor="{color:background_second}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>     
       <td bgcolor="{color:background_second}" valign="top" align="left" class="content" style="border-collapse: collapse; color: {color:text_second};">
-        <h2 style="color: {color:text_second}; margin: 0; font-family: Trebuchet, 'Trebuchet MS', serif; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
+        <h2 style="color: {color:text_second}; margin: 0; font-family: {font:text_font}; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
           {if column2:link_url}
             <a href="{column1:link_url}" style="text-decoration: none; color: {color:text_second}; font-size: 28px; line-height: 32px; font-weight: bold;"><span style="color: {color:text_second}; font-size: 28px; line-height: 32px; font-weight: bold;">{column2:title}</span></a>
           {else}
@@ -247,7 +248,7 @@
     <tr>
       <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td valign="top" align="left" class="content" style="border-collapse: collapse;">
-        <div class="content-body" style="color: {color:text}; font-family: Trebuchet, 'Trebuchet MS', serif; font-size: 12px; line-height: 20px;">
+        <div class="content-body" style="color: {color:text}; font-family: {font:text_font}; font-size: 12px; line-height: 20px;">
           {column1:body}
         </div>
       </td>
@@ -255,7 +256,7 @@
       <td width="5" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="15" class="gutter" bgcolor="{color:background_second}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>     
       <td bgcolor="{color:background_second}" valign="top" align="left" class="content" style="border-collapse: collapse; color: {color:text_second};">
-          <div class="content-body" style="color: {color:text_second}; font-family: Trebuchet, 'Trebuchet MS', serif; font-size: 12px; line-height: 20px;">
+          <div class="content-body" style="color: {color:text_second}; font-family: {font:text_font}; font-size: 12px; line-height: 20px;">
             {column2:body}
           </div>
       </td>
@@ -272,17 +273,17 @@
     </tr>
     <tr>
       <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td valign="top" align="left" class="content" style="border-collapse: collapse; font-family: Trebuchet, 'Trebuchet MS', serif;">
+      <td valign="top" align="left" class="content" style="border-collapse: collapse; font-family: {font:text_font};">
         {if column1:link_url}
-          <a href="{column1:link_url}" style="display: block; font-size: 12px; line-height: 20px; letter-spacing: 1px; text-decoration: none; color: {color:text} !important;"><span style="font-family: Times, serif; color: {color:text};">> Read More</span></a>
+          <a href="{column1:link_url}" style="display: block; font-size: 12px; line-height: 20px; letter-spacing: 1px; text-decoration: none; color: {color:text} !important;font-weight: bold;"><span style="font-family: Times, serif; color: {color:text};font-weight: bold;">> {column1:link_title}</span></a>
         {/if}
       </td>
       <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="5" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="15" class="gutter" bgcolor="{color:background_second}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>     
-      <td bgcolor="{color:background_second}" valign="top" align="left" class="content" style="font-family: Trebuchet, 'Trebuchet MS', serif; border-collapse: collapse; color: {color:text_second};">
+      <td bgcolor="{color:background_second}" valign="top" align="left" class="content" style="font-family: {font:text_font}; border-collapse: collapse; color: {color:text_second};">
           {if column2:link_url}
-            <a href="{column2:link_url}" style="display: block; font-size: 12px; line-height: 20px; letter-spacing: 1px; text-decoration: none; color: {color:text_second} !important;"><span style="font-family: Times, serif; color: {color:text_second};">> Read More</span></a>
+            <a href="{column2:link_url}" style="display: block; font-size: 12px; line-height: 20px; letter-spacing: 1px; text-decoration: none; color: {color:text_second} !important;font-weight: bold;"><span style="font-family: Times, serif; color: {color:text_second};font-weight: bold;">> {column2:link_title}</span></a>
           {/if}
       </td>
       <td width="15" class="gutter" bgcolor="{color:background_second}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
@@ -309,7 +310,7 @@
       <td width="230" colspan="3" valign="top" align="left" class="content" style="border-collapse: collapse;">
         {if column1:image}
           <div class="image" style="page-break-before: avoid; display: block;">
-            {column1:link_tag}<span style="color:{color:text}">{column1:image(230x156)}</span>{/column1:link_tag}
+            {column1:link_tag}<span style="color:{color:text}">{column1:image(230x230#)}</span>{/column1:link_tag}
           </div>
         {/if}
       </td>
@@ -317,7 +318,7 @@
       <td width="230" colspan="3" bgcolor="{color:background_second}" valign="top" align="left" class="content" style="border-collapse: collapse;">
         {if column2:image}
           <div class="image" style="page-break-before: avoid; display: block;">
-            {column2:link_tag}<span style="color:{color:text}">{column2:image(230x156)}</span>{/column2:link_tag}
+            {column2:link_tag}<span style="color:{color:text}">{column2:image(230x230#)}</span>{/column2:link_tag}
           </div>
         {/if}
       </td>
@@ -325,7 +326,7 @@
       <td width="230" colspan="3" valign="top" align="left" class="content" style="border-collapse: collapse;">
         {if column3:image}
           <div class="image" style="page-break-before: avoid; display: block;">
-            {column3:link_tag}<span style="color:{color:text}">{column3:image(230x156)}</span>{/column3:link_tag}
+            {column3:link_tag}<span style="color:{color:text}">{column3:image(230x230#)}</span>{/column3:link_tag}
           </div>
         {/if}
       </td>
@@ -346,7 +347,7 @@
     <tr>
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td valign="top" align="left" class="content" style="border-collapse: collapse;">
-        <h2 style="color: {color:text}; font-family: Trebuchet, 'Trebuchet MS', serif; margin: 0; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
+        <h2 style="color: {color:text}; font-family: {font:text_font}; margin: 0; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
           {if column1:link_url}
             <a href="{column1:link_url}" style="text-decoration: none; color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;"><span style="color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;">{column1:title}</span></a>
           {else}
@@ -358,7 +359,7 @@
       <td width="5" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="10" class="gutter" bgcolor="{color:background_second}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td bgcolor="{color:background_second}" valign="top" align="left" class="content" style="border-collapse: collapse; color: {color:text_second};">
-        <h2 style="color: {color:text_second}; font-family: Trebuchet, 'Trebuchet MS', serif; margin: 0; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
+        <h2 style="color: {color:text_second}; font-family: {font:text_font}; margin: 0; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
           {if column2:link_url}
             <a href="{column2:link_url}" style="text-decoration: none; color: {color:text_second}; font-size: 28px; line-height: 32px; font-weight: bold;"><span style="color: {color:text_second}; font-size: 28px; line-height: 32px; font-weight: bold;">{column2:title}</span></a>
           {else}
@@ -370,7 +371,7 @@
       <td width="5" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td valign="top" align="left" class="content" style="border-collapse: collapse;">
-        <h2 style="color: {color:text}; font-family: Trebuchet, 'Trebuchet MS', serif; margin: 0; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
+        <h2 style="color: {color:text}; font-family: {font:text_font}; margin: 0; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
           {if column3:link_url}
             <a href="{column3:link_url}" style="text-decoration: none; color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;"><span style="color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;">{column3:title}</span></a>
           {else}
@@ -422,7 +423,7 @@
     <tr>
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td valign="top" align="left" class="content" style="border-collapse: collapse;">
-        <div class="content-body" style="color: {color:text}; font-family: Trebuchet, 'Trebuchet MS', serif; font-size: 12px; line-height: 20px;">
+        <div class="content-body" style="color: {color:text}; font-family: {font:text_font}; font-size: 12px; line-height: 20px;">
           {column1:body}
         </div>
       </td>
@@ -430,7 +431,7 @@
       <td width="5" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="10" class="gutter" bgcolor="{color:background_second}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td bgcolor="{color:background_second}" valign="top" align="left" class="content" style="border-collapse: collapse; color: {color:text_second};">
-        <div class="content-body" style="color: {color:text_second}; font-family: Trebuchet, 'Trebuchet MS', serif; font-size: 12px; line-height: 20px;">
+        <div class="content-body" style="color: {color:text_second}; font-family: {font:text_font}; font-size: 12px; line-height: 20px;">
           {column2:body}
         </div>
       </td>
@@ -438,7 +439,7 @@
       <td width="5" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td valign="top" align="left" class="content" style="border-collapse: collapse;">
-        <div class="content-body" style="color: {color:text}; font-family: Trebuchet, 'Trebuchet MS', serif; font-size: 12px; line-height: 20px;">
+        <div class="content-body" style="color: {color:text}; font-family: {font:text_font}; font-size: 12px; line-height: 20px;">
           {column3:body}
         </div>
       </td>
@@ -461,7 +462,7 @@
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td valign="top" align="left" class="content" style="border-collapse: collapse;">
         {if column1:link_url}
-          <a href="{column1:link_title}" style="text-decoration: none; color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;"><span style="color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;">> Read More</span></a>
+          <a href="{column1:link_title}" style="text-decoration: none; color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;"><span style="color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;">> {column1:link_title}</span></a>
         {/if}
       </td>
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
@@ -469,7 +470,7 @@
       <td width="10" class="gutter" bgcolor="{color:background_second}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td bgcolor="{color:background_second}" valign="top" align="left" class="content" style="border-collapse: collapse; color: {color:text_second};">
         {if column2:link_url}
-          <a href="{column2:link_title}" style="text-decoration: none; color: {color:text_second}; font-size: 12px; line-height: 20px; font-weight: bold;"><span style="color: {color:text_second}; font-size: 12px; line-height: 20px; font-weight: bold;">> Read More</span></a>
+          <a href="{column2:link_title}" style="text-decoration: none; color: {color:text_second}; font-size: 12px; line-height: 20px; font-weight: bold;"><span style="color: {color:text_second}; font-size: 12px; line-height: 20px; font-weight: bold;">> {column2:link_title}</span></a>
         {/if}
       </td>
       <td width="10" class="gutter" bgcolor="{color:background_second}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>      
@@ -477,7 +478,7 @@
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td valign="top" align="left" class="content" style="border-collapse: collapse;">
         {if column3:link_url}
-          <a href="{column3:link_title}" style="text-decoration: none; color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;"><span style="color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;">> Read More</span></a>
+          <a href="{column3:link_title}" style="text-decoration: none; color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;"><span style="color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;">> {column3:link_title}</span></a>
         {/if}
       </td>
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
@@ -517,7 +518,7 @@
     <tr>
       <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td valign="top" align="left" class="content" style="border-collapse: collapse;">
-        <h2 style="color: white; font-family: Trebuchet, 'Trebuchet MS', serif; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
+        <h2 style="color: white; font-family: {font:text_font}; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
           {if link_url}
             <a href="{link_url}" style="text-decoration: none; color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;"><span style="color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;">{title}</span></a>
           {else}
@@ -533,7 +534,7 @@
     <tr>
       <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td valign="top" align="left" class="content" style="border-collapse: collapse;">
-        <div class="content-body" style="color: {color:text}; font-family: Trebuchet, 'Trebuchet MS', serif; font-size: 12px; line-height: 20px;">
+        <div class="content-body" style="color: {color:text}; font-family: {font:text_font}; font-size: 12px; line-height: 20px;">
           {body}
         </div>
       </td>
