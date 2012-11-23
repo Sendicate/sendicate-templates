@@ -9,6 +9,10 @@
 <meta name="font:Button_Font" content="'Times New Roman', Times, serif"/>
 <meta name="color:Button_Text" content="#ffffff"/>
 <meta name="color:Button_Background" content="#000000"/>
+<meta name="text:Body_Font_Size" content="12px"/>
+<meta name="text:Title_Font_Size" content="30px"/>
+<meta name="text:Heading_Font_Size" content="44px"/>
+<meta name="text:Subheading_Font_Size" content="18px"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{subject} - {company_name}</title>
@@ -36,7 +40,7 @@
 				        {if logo}
                         	{logo(300x}
                         {else}
-                        	<h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px;  margin: 0;">{company_name}</h1>
+                        
                         {/if}
 			        </td>			        
 		        </tr>
@@ -55,16 +59,16 @@
 <tr>
   <td valign="top" align="left" style="border-collapse: collapse;">
   				        {if link_url}
-                        	<h1 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 44px; line-height: 50px; margin: 0;"><a href="{link_url}" style="text-decoration: none; color: {color:Headline_Color} !important; font-family: {font:Headline_Font};">{heading}</a></h1>
+                        	<h1 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: {text:Heading_Font_Size}; line-height: 1; margin: 0;"><a href="{link_url}" style="text-decoration: none; color: {color:Headline_Color} !important; font-family: {font:Headline_Font};">{heading}</a></h1>
                         {else}
-                        	<h1 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 44px; line-height: 50px; margin: 0;">{heading}</h1>
+                        	<h1 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: {text:Heading_Font_Size}; line-height: 1; margin: 0;">{heading}</h1>
                         {/if}
   				      </td>
   				    </tr>
   <tr height="5"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>
   <tr>
   <td style="border-collapse: collapse;">
-  				        <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: 18px; line-height: 1.5; margin: 0 0 20px;">
+  				        <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: {text:Subheading_Font_Size}; line-height: 1.2; margin: 0 0 20px;">
                     {subheading}
                   </div>
   			        </td>
@@ -95,14 +99,14 @@
    			      </tr>
   <tr height="25"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>{/if}
   <!-- ONE COL HED --><tr>
-  <td class="content" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family:{font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px; line-height: 1; margin: 0;">
+  <td class="content" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family:{font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: {text:Title_Font_Size}; line-height: 1; margin: 0;">
     {column1:title}
      </h2></td>
    			      </tr>
   <tr height="5"><td class="gutter" style="border-collapse: collapse;"> </td></tr>
   <!-- ONE COL BODY --><tr>
   <td class="content" valign="top" align="left" style="border-collapse: collapse;">
-   				        <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: 12px; line-height: 1.5; margin: 0 0 20px;">
+   				        <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: {text:Body_Font_Size}; line-height: 1.5; margin: 0 0 20px;">
                     {column1:body}
                   </div>
    			        </td>
@@ -113,8 +117,8 @@
     <!-- ONE COL READ MORE --><tr>
   <td class="content" valign="top" align="left" style="border-collapse: collapse;">
 
-               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important; padding: 0;"><div style="padding: 5px 19px; ">
-                                 <a href="{column1:link_url}" style="font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column1:link_title}</a>
+               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: {text:Body_Font_Size}; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important; padding: 0;"><div style="padding: 5px 19px; ">
+                                 <a href="{column1:link_url}" style="font-size: {text:Body_Font_Size}; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column1:link_title}</a>
                                </div></td></tr></table>
                   {/if}
   <!-- ONE COL BOTTOM SPACING --><tr height="35" class="gutter"><td colspan="3" style="border-collapse: collapse;"> </td></tr>
@@ -126,9 +130,9 @@
 {block:two_column}
 <!-- SENDICATE TWO COL STARTS --><table class="duo" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
 <!-- TWO COL HED --><tr>
-<td class="content" width="324" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px; line-height: 1; margin: 0;">{column1:title}</span></h2></td>
+<td class="content" width="324" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: {text:Title_Font_Size}; line-height: 1; margin: 0;">{column1:title}</span></h2></td>
  				      <td class="gutter" style="border-collapse: collapse;"> </td>
- 			        <td class="content" width="324" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px; line-height: 1; margin: 0;">{column2:title}</span></h2></td>
+ 			        <td class="content" width="324" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: {text:Title_Font_Size}; line-height: 1; margin: 0;">{column2:title}</span></h2></td>
  			      </tr>
 <tr height="5"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>
 <!-- TWO COL IMAGE --><tr>
@@ -139,13 +143,13 @@
 <tr height="5"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>
 <!-- TWO COL BODY --><tr>
 <td class="content" width="324" valign="top" align="left" style="border-collapse: collapse;">
- 				        <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: 12px; line-height: 1.5; margin: 0 0 20px;">
+ 				        <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: {text:Body_Font_Size}; line-height: 1.5; margin: 0 0 20px;">
                   {column1:body}
                 </div>
  			        </td>
  			        <td class="gutter" style="border-collapse: collapse;"> </td>
  			        <td class="content" width="324" valign="top" align="left" style="border-collapse: collapse;">
- 			          <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: 12px; line-height: 1.5; margin: 0 0 20px;">
+ 			          <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: {text:Body_Font_Size}; line-height: 1.5; margin: 0 0 20px;">
                   {column2:body}
                 </div>
  			        </td>   
@@ -156,8 +160,8 @@
   
     {if column1:link_title}
 
-               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important; padding: 0;"><div style="padding: 5px 19px; ">
-                                 <a href="{column1:link_url}" style="font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column1:link_title}</a>
+               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: {text:Body_Font_Size}; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important; padding: 0;"><div style="padding: 5px 19px; ">
+                                 <a href="{column1:link_url}" style="font-size: {text:Body_Font_Size}; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column1:link_title}</a>
                                </div></td></tr></table>
                   {/if}
 </td>
@@ -165,8 +169,8 @@
  			        <td class="content" width="324" valign="top" align="left" style="border-collapse: collapse;">
            {if column2:link_title}
 
-               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important; padding: 0;"><div style="padding: 5px 19px; ">
-                                 <a href="{column2:link_url}" style="font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column2:link_title}</a>
+               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: {text:Body_Font_Size}; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important; padding: 0;"><div style="padding: 5px 19px; ">
+                                 <a href="{column2:link_url}" style="font-size: {text:Body_Font_Size}; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column2:link_title}</a>
                                </div></td></tr></table>
                   {/if}
 </td>
@@ -179,12 +183,12 @@
 {block:three_column}
 <!-- SENDICATE THREE COL STARTS --><table class="trio" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
 <!-- THREE COL HED --><tr>
-<td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px; line-height: 1; margin: 0;">{column1:title}</span></h2></td>
+<td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: {text:Title_Font_Size}; line-height: 1; margin: 0;">{column1:title}</span></h2></td>
   				      <td class="gutter" style="border-collapse: collapse;"> </td>
-  			        <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px; line-height: 1; margin: 0;">{column2:title}</span></h2></td>
+  			        <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: {text:Title_Font_Size}; line-height: 1; margin: 0;">{column2:title}</span></h2></td>
 
   				      <td class="gutter" style="border-collapse: collapse;"> </td>
-  			        <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px; line-height: 1; margin: 0;">{column3:title}</span></h2></td>
+  			        <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: {text:Title_Font_Size}; line-height: 1; margin: 0;">{column3:title}</span></h2></td>
   			      </tr>
 <tr height="20"><td class="gutter" colspan="5" style="border-collapse: collapse;"> </td></tr>
 <!-- THREE COL IMAGE --><tr>
@@ -197,19 +201,19 @@
 <tr height="5"><td class="gutter" colspan="5" style="border-collapse: collapse;"> </td></tr>
 <!-- THREE COL BODY --><tr>
 <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;">
-  				        <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: 12px; line-height: 1.5; margin: 0 0 20px;">
+  				        <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: {text:Body_Font_Size}; line-height: 1.5; margin: 0 0 20px;">
                    {column1:body}
                  </div>
   			        </td>
   			        <td class="gutter" style="border-collapse: collapse;"> </td>
   				      <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;">
-  				        <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: 12px; line-height: 1.5; margin: 0 0 20px;">
+  				        <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: {text:Body_Font_Size}; line-height: 1.5; margin: 0 0 20px;">
                    {column2:body}
                  </div>
   			        </td>
   			        <td class="gutter" style="border-collapse: collapse;"> </td>
   			        <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;">
-  			          <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: 12px; line-height: 1.5; margin: 0 0 20px;">
+  			          <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: {text:Body_Font_Size}; line-height: 1.5; margin: 0 0 20px;">
                    {column3:body}
                  </div>
   			        </td>   
@@ -219,8 +223,8 @@
 <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;">
   				        {if column1:link_title}
 
-               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: 12px; line-height: 16px; font-family: 'Gotham',sans-serif; font-weight: bold; text-decoration: none; color: #d45e1d !important; padding: 0;"><div style="padding: 5px 19px; ">
-                                 <a href="{column1:link_url}" style="font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column1:link_title}</a>
+               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: {text:Body_Font_Size}; line-height: 16px; font-family: 'Gotham',sans-serif; font-weight: bold; text-decoration: none; color: #d45e1d !important; padding: 0;"><div style="padding: 5px 19px; ">
+                                 <a href="{column1:link_url}" style="font-size: {text:Body_Font_Size}; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column1:link_title}</a>
                                </div></td></tr></table>
                   {/if}
 </td>
@@ -228,8 +232,8 @@
   			        <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;">
   			                 {if column2:link_title}
 
-               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important; padding: 0;"><div style="padding: 5px 19px; ">
-                                 <a href="{column2:link_url}" style="font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column2:link_title}</a>
+               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: {text:Body_Font_Size}; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important; padding: 0;"><div style="padding: 5px 19px; ">
+                                 <a href="{column2:link_url}" style="font-size: {text:Body_Font_Size}; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column2:link_title}</a>
                                </div></td></tr></table>
                   {/if}
 </td>
@@ -237,8 +241,8 @@
   			        <td class="content" width="204" valign="top" align="left" style="border-collapse: collapse;">
                              {if column3:link_title}
 
-               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important; padding: 0;"><div style="padding: 5px 19px; ">
-                                 <a href="{column3:link_url}" style="font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column3:link_title}</a>
+               				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: {text:Body_Font_Size}; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important; padding: 0;"><div style="padding: 5px 19px; ">
+                                 <a href="{column3:link_url}" style="font-size: {text:Body_Font_Size}; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">{column3:link_title}</a>
                                </div></td></tr></table>
                   {/if}
 </td>
@@ -257,14 +261,14 @@
    			      </tr>
   <tr height="25"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>
   <!-- VIDEO HED --><tr>
-  <td class="content" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: 30px; line-height: 1; margin: 0;">
+  <td class="content" valign="top" align="left" style="border-collapse: collapse;"><h2 style="color: {color:Headline_Color} !important; font-family: {font:Headline_Font}; font-weight: normal; text-decoration: none; font-size: {text:Title_Font_Size}; line-height: 1; margin: 0;">
     {title}
     </h2></td>
    			      </tr>
   <tr height="5"><td class="gutter" style="border-collapse: collapse;"> </td></tr>
   <!-- VIDEO BODY --><tr>
   <td class="content" valign="top" align="left" style="border-collapse: collapse;">
-   				        <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: 12px; line-height: 1.5; margin: 0 0 20px;">
+   				        <div class="content-body" style="color: {color:Body_Font_Color}; font-family: {font:Body_Font}; font-size: {text:Body_Font_Size}; line-height: 1.5; margin: 0 0 20px;">
                     {body}
                   </div>
    			        </td>
@@ -274,8 +278,8 @@
   
   <!-- VIDEO READ MORE --><tr>
   <td class="content" valign="top" align="left" style="border-collapse: collapse;">
-   				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: 12px; line-height: 16px; font-family: 'Gotham',sans-serif; font-weight: bold; text-decoration: none; color: #d45e1d !important; padding: 0;"><div style="padding: 5px 19px; ">
-                     <a href="{link_url}" style="font-size: 12px; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">Watch Now</a>
+   				        <table class="more" bgcolor="{color:Button_Background}" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0;"><tr><td style="border-collapse: collapse; font-size: {text:Body_Font_Size}; line-height: 16px; font-family: 'Gotham',sans-serif; font-weight: bold; text-decoration: none; color: #d45e1d !important; padding: 0;"><div style="padding: 5px 19px; ">
+                     <a href="{link_url}" style="font-size: {text:Body_Font_Size}; line-height: 16px; font-family: {font:Button_Font}; font-weight: bold; text-decoration: none; color: {color:Button_Text} !important;">Watch Now</a>
                    </div></td></tr></table>
   </td>
    			      </tr>
