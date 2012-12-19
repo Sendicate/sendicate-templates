@@ -10,6 +10,10 @@
 <meta name="color:dividing_line" content="#000000"/>
 <meta name="color:dotted_line_color" content="#000000"/>
 <meta name="font:body_font" content="Times, serif"/>
+<meta name="text:Title_Font_Size" content="28px"/>
+<meta name="text:Body_Font_Size" content="14px"/>
+<meta name="text:Heading_Font_Size" content="40px"/>
+<meta name="text:Subheading_Font_Size" content="18px"/>
 <title>{subject} - {company_name}</title>
 <style>
   #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
@@ -56,14 +60,10 @@
 <td valign="top" align="center" style="border-collapse: collapse;">
   {if image}
     <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
-      {if link_url}
-      <a href="{link_url}">{image(672x)}</a>
-      {else}
-      {image(672x)}
-      {/if}
+      {link_tag}{image(672x)}{/link_tag}
     </div>
   {/if}
-  <h1 style="color: {color:text_color}; font-family: {font:body_font}; font-size: 40px; line-height: 40px; font-weight: normal; margin: 0 40px;">
+  <h1 style="color: {color:text_color}; font-family: {font:body_font}; font-size: {text:Heading_Font_Size}; line-height: 1; font-weight: normal; margin: 0 40px;">
     {if link_url}
     <a href="{link_url}" style="text-decoration: none; color: {color:text_color}"><span style="color: {color:text_color}; font-family: {font:body_font};">{heading}</span></a>
     {else}
@@ -75,7 +75,7 @@
 <tr height="30"><td class="gutter" style="border-collapse: collapse;"> </td></tr>
 <tr>
 <td valign="middle" align="center" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;">
-                <table cellpadding="30" style="border-collapse: collapse;"><tr><td align="center" class="content-body" style="border-collapse: collapse; color: {color:reversed_text_color}; font-family: {font:body_font}; font-style: italic; font-size: 18px; line-height: 20px; margin: 0;">{subheading}</td></tr></table>
+                <table cellpadding="30" style="border-collapse: collapse;"><tr><td align="center" class="content-body" style="border-collapse: collapse; color: {color:reversed_text_color}; font-family: {font:body_font}; font-style: italic; font-size: {text:Subheading_Font_Size}; line-height: 1; margin: 0;">{subheading}</td></tr></table>
 </td>
             </tr>
 <tr height="35" class="gutter"><td style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
@@ -90,31 +90,27 @@
 
 {if column1:image}
   <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
-    {if column1:link_url}
-    <a href="{column1:link_url}">{column1:image(672x)}</a>
-    {else}
-    {column1:image(672x)}
-    {/if}
+    {column1:link_tag}{column1:image(672x)}{/column1:link_tag}
   </div>
 {/if}
 
-              <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: 28px; line-height: 25px; font-weight: normal; padding-left: 60px; padding-right: 60px; margin-top: 0; margin-bottom: 20px;">
+              <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; padding-left: 60px; padding-right: 60px; margin-top: 0; margin-bottom: 20px;">
                 {if column1:link_url}
-                <a href="{column1:link_url}" style="text-decoration: none; font-size: 82px; line-height: 25px; font-weight: normal; color: {color:text_color}"><span style="font-size: 28px; line-height: 25px; font-weight: normal; color: {color:text_color}; font-family: {font:body_font};">{column1:title}</span></a>
+                <a href="{column1:link_url}" style="text-decoration: none; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color}"><span style="font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color}; font-family: {font:body_font};">{column1:title}</span></a>
                 {else}
                 {column1:title}
                 {/if}
 
               </h2>
 
-              <div class="content-body" style="color: {color:text_color}; font-family: {font:body_font}; font-size: 14px; line-height: 1.5;">
+              <div class="content-body" style="color: {color:text_color}; font-family: {font:body_font}; font-size: {text:Body_Font_Size}; line-height: 1.5;">
                 {column1:body}
               </div>
 
               {if column1:link_url}
               <br>
   <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
-<td valign="top" style="border-collapse: collapse;"><a href="{column1:link_url}" style="display: block; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column1:link_title}</span></a></td>
+<td valign="top" style="border-collapse: collapse;"><a href="{column1:link_url}" style="display: block; font-size: {text:Body_Font_Size}; line-height: 1; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column1:link_title}</span></a></td>
   </tr></table>
               {/if}
 </td></tr>
@@ -140,22 +136,22 @@
     </div>
   {/if}
 
-  <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: 28px; line-height: 25px; font-weight: normal; padding-left: 2px; padding-right: 2px; margin-top: 0; margin-bottom: 20px;">
+  <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; padding-left: 2px; padding-right: 2px; margin-top: 0; margin-bottom: 20px;">
   {if column1:link_url}
-  <a href="{column1:link_url}" style="text-decoration: none; font-size: 28px; line-height: 25px; font-weight: normal; color: {color:text_color}"><span style="font-size: 28px; line-height: 25px; font-weight: normal; color: {color:text_color}; font-family: {font:body_font};">{column1:title}</span></a>
+  <a href="{column1:link_url}" style="text-decoration: none; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color}"><span style="font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color}; font-family: {font:body_font};">{column1:title}</span></a>
   {else}
   {column1:title}
   {/if}
   </h2>
 
-  <div class="content-body" style="color: {color:text_color}; font-family: {font:body_font}; font-size: 14px; line-height: 1.5;">
+  <div class="content-body" style="color: {color:text_color}; font-family: {font:body_font}; font-size: {text:Body_Font_Size}; line-height: 1.5;">
     {column1:body}
   </div>
 
   {if column1:link_url}
   <br>
   <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
-<td valign="top" style="border-collapse: collapse;"><a href="{column1:link_url}" style="display: block; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column1:link_title}</span></a></td>
+<td valign="top" style="border-collapse: collapse;"><a href="{column1:link_url}" style="display: block; font-size: {text:Body_Font_Size}; line-height: 1; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column1:link_title}</span></a></td>
   </tr></table>
   {/if}
 </td>
@@ -178,26 +174,24 @@
     </div>
   {/if}
 
-  <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: 28px; line-height: 25px; font-weight: normal; padding-left: 2px; padding-right: 2px; margin-top: 0; margin-bottom: 20px;">
+  <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; padding-left: 2px; padding-right: 2px; margin-top: 0; margin-bottom: 20px;">
   {if column2:link_url}
-  <a href="{column2:link_url}" style="text-decoration: none; font-size: 28px; line-height: 25px; font-weight: normal; color: {color:text_color}"><span style="font-size: 28px; line-height: 25px; font-weight: normal; color: {color:text_color};  font-family: {font:body_font};">{column2:title}</span></a>
+  <a href="{column2:link_url}" style="text-decoration: none; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color}"><span style="font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color};  font-family: {font:body_font};">{column2:title}</span></a>
   {else}
   {column2:title}
   {/if}
   </h2>
 
-  <div class="content-body" style="color: {color:text_color}; font-family: {font:body_font}; font-size: 14px; line-height: 1.5;">
+  <div class="content-body" style="color: {color:text_color}; font-family: {font:body_font}; font-size: {text:Body_Font_Size}; line-height: 1.5;">
     {column2:body}
   </div>
 
   {if column2:link_url}
   <br>
   <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
-<td valign="top" style="border-collapse: collapse;"><a href="{column2:link_url}" style="display: block; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column2:link_title}</span></a></td>
+<td valign="top" style="border-collapse: collapse;"><a href="{column2:link_url}" style="display: block; font-size: {text:Body_Font_Size}; line-height: 1; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column2:link_title}</span></a></td>
   </tr></table>
   {/if}
-
-
 
 </td>
             </tr>
@@ -226,20 +220,20 @@
 
   <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: 22px; line-height: 25px; font-weight: normal; padding-left: 2px; padding-right: 2px; margin-top: 0; margin-bottom: 20px;">
   {if column1:link_url}
-  <a href="{column1:link_url}" style="text-decoration: none; font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text_color}"><span style="font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text_color};  font-family: {font:body_font};">{column1:title}</span></a>
+  <a href="{column1:link_url}" style="text-decoration: none; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color}"><span style="font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color};  font-family: {font:body_font};">{column1:title}</span></a>
   {else}
   {column1:title}
   {/if}
   </h2>
 
-  <div class="content-body" style="color: {color:text_color}; font-family: {font:body_font}; font-size: 14px; line-height: 1.5;">
+  <div class="content-body" style="color: {color:text_color}; font-family: {font:body_font}; font-size: {text:Body_Font_Size}; line-height: 1.5;">
     {column1:body}
   </div>
 
   {if column1:link_url}
   <br>
   <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
-<td valign="top" style="border-collapse: collapse;"><a href="{column1:link_url}" style="display: block; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column1:link_title}</span></a></td>
+<td valign="top" style="border-collapse: collapse;"><a href="{column1:link_url}" style="display: block; font-size: {text:Body_Font_Size}; line-height: 1; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column1:link_title}</span></a></td>
   </tr></table>
   {/if}
 
@@ -263,22 +257,22 @@
     </div>
   {/if}
 
-  <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: 22px; line-height: 25px; font-weight: normal; padding-left: 2px; padding-right: 2px; margin-top: 0; margin-bottom: 20px;">
+  <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; padding-left: 2px; padding-right: 2px; margin-top: 0; margin-bottom: 20px;">
   {if column2:link_url}
-  <a href="{column2:link_url}" style="text-decoration: none; font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text_color}"><span style="font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text_color}; font-family: {font:body_font};">{column2:title}</span></a>
+  <a href="{column2:link_url}" style="text-decoration: none; font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text_color}"><span style="font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color}; font-family: {font:body_font};">{column2:title}</span></a>
   {else}
   {column2:title}
   {/if}
   </h2>
 
-  <div class="content-body" style="color: {color:text_color}; font-family: {font:body_font}; font-size: 14px; line-height: 1.5;">
+  <div class="content-body" style="color: {color:text_color}; font-family: {font:body_font}; font-size: {text:Body_Font_Size}; line-height: 1.5;">
     {column2:body}
   </div>
 
   {if column2:link_url}
   <br>
   <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
-<td valign="top" style="border-collapse: collapse;"><a href="{column2:link_url}" style="display: block; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column2:link_title}</span></a></td>
+<td valign="top" style="border-collapse: collapse;"><a href="{column2:link_url}" style="display: block; font-size: {text:Body_Font_Size}; line-height: 1; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column2:link_title}</span></a></td>
   </tr></table>
   {/if}
 
@@ -300,22 +294,22 @@
     </div>
   {/if}
 
-  <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: 22px; line-height: 25px; font-weight: normal; padding-left: 2px; padding-right: 2px; margin-top: 0; margin-bottom: 20px;">
+  <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; padding-left: 2px; padding-right: 2px; margin-top: 0; margin-bottom: 20px;">
   {if column3:link_url}
-  <a href="{column2:link_url}" style="text-decoration: none; font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text_color}"><span style="font-size: 22px; line-height: 25px; font-weight: normal; color: {color:text_color};  font-family: {font:body_font};">{column3:title}</span></a>
+  <a href="{column2:link_url}" style="text-decoration: none; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color}"><span style="font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color};  font-family: {font:body_font};">{column3:title}</span></a>
   {else}
   {column3:title}
   {/if}
   </h2>
 
-  <div class="content-body" style="color: {color:text_color}; font-family: {font:body_font}; font-size: 14px; line-height: 1.5;">
+  <div class="content-body" style="color: {color:text_color}; font-family: {font:body_font}; font-size: {text:Body_Font_Size}; line-height: 1.5;">
     {column3:body}
   </div>
 
   {if column3:link_url}
   <br>
   <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
-<td valign="top" style="border-collapse: collapse;"><a href="{column3:link_url}" style="display: block; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column3:link_title}</span></a></td>
+<td valign="top" style="border-collapse: collapse;"><a href="{column3:link_url}" style="display: block; font-size: {text:Body_Font_Size}; line-height: 1; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column3:link_title}</span></a></td>
   </tr></table>
   {/if}
 
@@ -337,11 +331,7 @@
 <tr>
 <td class="content" color="{color:text_color}" valign="top" align="center" style="border-collapse: collapse;">
                 <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
-                {if link_url}
-                  <a href="{link_url}">{image(672x)}</a>
-                {else}
-                  {image(672x)}
-                {/if}
+                {link_tag}{image(672x)}{/link_tag}
                 </div>
               </td>
             </tr>
@@ -360,22 +350,18 @@
 <tr>
 <td class="content" color="{color:text_color}" valign="top" align="center" style="border-collapse: collapse;">
                 <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
-                {if link_url}
-                  <a href="{link_url}">{image(672x)}</a>
-                {else}
-                  {image(672x)}
-                {/if}
+                {link_tag}{image(672x)}{/link_tag}
                 </div>
-                <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: 28px; line-height: 25px; font-weight: normal; padding-left: 60px; padding-right: 60px; margin-top: 0; margin-bottom: 20px;">
+                <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; padding-left: 60px; padding-right: 60px; margin-top: 0; margin-bottom: 20px;">
 
                 {if link_url}
-                  <a href="{link_url}" style="text-decoration: none; font-size: 28px; line-height: 25px; font-weight: normal; color: {color:text_color}"><span style="font-size: 28px; line-height: 25px; font-weight: normal; color: {color:text_color}; font-family: {font:body_font};">{title}</span></a>
+                  <a href="{link_url}" style="text-decoration: none; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color}"><span style="font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color}; font-family: {font:body_font};">{title}</span></a>
                 {else}
                   {title}
                 {/if}
                 </h2>
 
-                <div class="content-body" style="color: {color:text_color}; font-family: {font:body_font}; font-size: 14px; line-height: 1.5;">
+                <div class="content-body" style="color: {color:text_color}; font-family: {font:body_font}; font-size: {text:Body_Font_Size}; line-height: 1.5;">
                   {body}
                 </div>
               </td>
@@ -386,6 +372,21 @@
 </table>
 <!-- SENDICATE VIDEO COL ENDS -->
 {/block:video}
+
+<!-- social buttons -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr>
+    <td align="center">
+        {if facebook_link}
+        <a href="{facebook_link}"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/190/original/f-icon.png" width="28" heigh="28" style="border:none; outline:none; text-decoration:none;"></a>
+        {/if}
+        {if twitter_link}
+        <a href="{twitter_link}"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/191/original/t-icon.png" width="28" heigh="28" style="border:none; outline:none; text-decoration:none; margin-left:5px;"></a>
+        {/if}
+    </td>
+</tr>
+</table>
+<!-- end social buttons -->
 
 </td>
         <td class="gutter" width="20" style="border-collapse: collapse;"> </td>
