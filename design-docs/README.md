@@ -124,7 +124,7 @@ The variables image, link_url, and title are accessible wrapped in {block:image}
 | :----- | :----- |
 | {block:image} {/block:image}  | Defines section |
 | {image} | Image tag.  {title} is used for alt text |
-| {title} | Title text |
+| {title} | Alt text |
 | {link_url} | URL |
 
 #### Video
