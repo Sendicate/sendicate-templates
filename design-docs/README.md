@@ -360,13 +360,13 @@ Output:
 
 #CSS Inlining
 
-CSS should be inlined for the most consistent email client rendering.  Sendicate inlines CSS automatically for anything between style tags.  The follow will be inlined, for example:
+CSS should be inlined for the most consistent email client rendering.  Sendicate inlines CSS automatically for code between `style` tags.  The following will be inlined, for example:
 
     <style type="text/css">
        body{margin:0;padding:0;}
     </style>
 
-To exclude code from inlining add inline=“false” to the style tag:
+To exclude code from inlining `add inline=“false”` to the `style` tag:
 
     <style type="text/css" inline="false">
        @media only screen and (max-device-width: 480px) {...}
