@@ -213,7 +213,7 @@ Assume that current time is Tuesday, 17 July 2012 09:54:45
 
 ## Link Tag
 
-Using the Link Tag is makes it easier to conditionallty wrap elements in <a> tags.  For example, instead of using an {if} statement to conditionally show a link:
+Using the Link Tag is makes it easier to conditionallty wrap elements in `<a>` tags.  For example, instead of using an {if} statement to conditionally show a link:
 
     {if {column1:link_url}<a href="{column1:link_url}">{/if}
         {column1:title}
@@ -360,13 +360,32 @@ Output:
 
 #CSS Inlining
 
-CSS should be inlined for the most consistent email client rendering.  Sendicate inlines CSS automatically for code between `style` tags.  The following will be inlined, for example:
+CSS should be inlined for the most consistent email client rendering.  Sendicate inlines CSS automatically for code between `<style>` tags.  
+    
+Here is an example of CSS and HTML within Sendicate:
 
+
+    <html><head>
     <style type="text/css">
-       body{margin:0;padding:0;}
+    	body{margin:0;padding:0;}
+    	h1{color:#CCCCCC;}
     </style>
+    </head>
+    <body>
+    	<h1>Hello</h1>
+    </body>
+    </html>
 
-To exclude code from inlining `add inline=“false”` to the `style` tag:
+Here is the code after inlining.  
+
+    <html><head>
+    </head>
+    <body style="margin:0;padding:0">
+    	<h1 style="color:#CCCCCC">Hello</h1>
+    </body>
+    </html>
+
+Note that the `<style>` tag and content is removed.  To keep the CSS and exclude code from inlining add `inline="false"` to the `<style>` tag:
 
     <style type="text/css" inline="false">
        @media only screen and (max-device-width: 480px) {...}
