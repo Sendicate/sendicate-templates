@@ -2,8 +2,9 @@
 
 Signup forms make it easy for people to subscribe to your Sendicate mailing list.  Options can be opening your subscriber list in Sendicate then by clicking “Embed Subscribe Form” in the right sidebar.  There are 2 main ways to collect subscribers:
 
-* [Link to Signup Page](#link-to-signup-page)
+* [Link to signup page](#link-to-signup-page)
 * [Signup form embed code](#signup-form-embed-code)
+* [Styling signup form](#styling-signup-form)
 
 ## Link to Signup Page
 
@@ -22,3 +23,12 @@ Each list has its own embed code.  To access the list embed code in Sendicate cl
         <input id="subscriber_email" name="subscriber[email]" type="text" /> <br /> 
         <input name="commit" type="submit" value="Subscribe" /> 
     </form> 
+
+## Styling Signup Form
+
+Inline CSS can be added to style colors, width, height, etc.  Javascript has also been added to show "Email Address" in the form as default text.  An example is below:
+
+    <form accept-charset="UTF-8" action="https://www.sendicate.net/subscribe/xxxxxx" method="post">
+        <input id="subscriber_email" name="subscriber[email]" type="text" value="Email Address" style="width: 130px !important; color: #CCCCCC; padding: 5px 2px 5px 2px; background-color: #F8EDE8; border: none !important;" onclick="if ( this.value == 'Email Address' ) { this.value = ''; }" onblur="if ( this.value == '' ) { this.value = 'Email Address'; }"/> 
+        <input name="commit" type="submit" value="Subscribe" style="background-color: #F8EDE8; color: #CCCCCC; padding: 5px; border: none !important;" />
+    </form>
