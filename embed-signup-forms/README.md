@@ -1,10 +1,14 @@
 # Embed & Signup forms
 
-Signup forms make it easy for people to subscribe to your Sendicate mailing list.  Options can be opening your subscriber list in Sendicate then by clicking “Embed Subscribe Form” in the right sidebar.  There are 2 main ways to collect subscribers:
+Signup forms make it easy for people to subscribe to your Sendicate mailing list.  Options can be opening your subscriber list in Sendicate then by clicking “Embed Subscribe Form” in the right sidebar.  Outside of the API there are 2 main ways to collect subscribers:
 
 * [Link to signup page](#link-to-signup-page)
 * [Signup form embed code](#signup-form-embed-code)
-* [Styling signup form](#styling-signup-form)
+
+For customization options refer to:
+
+* [Customize subscribe page design](#customize-subscribe-page-design)
+* [Styling the embed code](#styling-the-embed-code)
 
 ## Link to Signup Page
 
@@ -24,7 +28,20 @@ Each list has its own embed code.  To access the list embed code in Sendicate cl
         <input name="commit" type="submit" value="Subscribe" /> 
     </form> 
 
-## Styling Signup Form
+## Customize Subscribe Page Design
+
+Each list in Sendicate can have its own look and feel.  To customize Sendicate’s subscribe forms click Manage, Subscribers, your list, then "embed subscribe form" on the sidebar.   The following can be customized:
+
+| Item | Description |
+| :----- | :----- |
+| Header Image  | Upload an image for the header.  If no image is chosen the “logo” image will be used from the Account section |
+| Title | The heading title|
+| Description text | Descpription paragraph|
+| Background color | Hex value/color picker of the page background color|
+| Background image | Upload an image for the page background.  Images will be tiled. |
+| Success redirect| Upon successfully adding a subscriber Sendicate can redirect the user to a page on your website.  Enter a full URL |
+
+## Styling the Embed Code
 
 Inline CSS can be added to style colors, width, height, etc.  Javascript has also been added to show "Email Address" in the form as default text.  An example is below:
 
