@@ -12,13 +12,13 @@ For customization options refer to:
 
 ## Link to Signup Page
 
-The simplest approach is directing users to the list signup page.  This can be found at the bottom of the embed code page mentioned above.  The link is in the following format where “xxxxxx” is the list ID that can be seen in the URL.
+The simplest approach is directing users to the list signup page.  This can be found at the bottom of the embed code page mentioned above.  The link is in the following format where “xxxxxx” is the list ID that can be seen in the URL or listed in the embed code section.
 
     https://www.sendicate.net/subscribe/xxxxxx
 
 ##  Signup Form Embed Code   
 
-Each list has its own embed code.  To access the list embed code in Sendicate click Manage, Subscribers, your list, then "embed subscribe form" on the sidebar.  Using the embed code offers the best integration as the subscriber enters their details into a form hosted on your site that is submitted to Sendicate directly.  Email is a required field, name is optional.   The code is a simple unstyled form.  All the inputs and ID’s need to match exactly for the form to submit properly.  The “xxxxxx” needs to be updated with the appropriate list ID found in the URL of your list.
+Each list has its own embed code.  To access the list embed code in Sendicate click Manage, Subscribers, your list, then "embed subscribe form" on the sidebar.  Using the embed code offers the best integration as the subscriber enters their details into a form hosted on your site that is submitted to Sendicate directly.  Email is a required field, name is optional.   This example is a simple unstyled form (for a [styled example see below](#signup-form-embed-code).  All the inputs and ID’s need to match exactly for the form to submit properly.  The “xxxxxx” needs to be updated with the appropriate list ID found in the URL of your list, or listed in the embed code section.
 
     <form accept-charset="UTF-8" action="https://www.sendicate.net/subscribe/xxxxxx" method="post"> 
         <label for="subscriber_name">Name</label> 
