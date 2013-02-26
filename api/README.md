@@ -126,6 +126,8 @@ Returns a single subscribers list
 | title | title of list | string |
 | subscribers_count | subscribers count of list | integer |
 
+TODO: Custom fields
+
 
 #### Create a List
 
@@ -139,6 +141,8 @@ Creates a new subscribers list
 |-----------|-------------|------|
 | title | title of list | string |
 
+TODO: Custom fields
+
 
 #### Edit a List
 
@@ -150,6 +154,8 @@ Updates a single lists properties
 | parameter | description | type |
 |-----------|-------------|------|
 | title | title of list | string |
+
+TODO: Custom fields
 
 #### Delete a List
 
@@ -182,6 +188,8 @@ Returns a list of subscribers from a selected subscriber list
 | delivered_count | delivered messages count | integer |
 | opened_count | opened messages count | integer |
 | clicked_count | clicked messages count | integer |
+
+TODO: Custom fields, joined date.
 
 #### Add Subscribers
 
@@ -217,7 +225,7 @@ Get details of subscriber
 | opened_count | opened messages count | integer |
 | clicked_count | clicked messages count | integer |
 
-TODO: Get lists that the subscriber belongs to, and get mailing history
+TODO: Custom fields, get lists that the subscriber belongs to, and get mailing history
 
 #### Update Subscriber
 
