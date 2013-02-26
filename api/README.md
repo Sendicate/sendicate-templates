@@ -15,7 +15,7 @@ An overview of Sendicate's API.
 
 ### Base url
 
-All URLs referenced in this documentation begin with the following url: 'https://api.sendicate.net/'
+All URLs referenced in this documentation begin with the following url: `https://api.sendicate.net/`
 
 ### Output formats
 
