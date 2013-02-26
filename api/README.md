@@ -196,6 +196,8 @@ Add subscriber to subscribers list
 | email | email of subscriber | string |
 | name | name of subscriber | string |
 
+TODO: Allow for custom fields
+
 #### View Subscriber
 
 ~~~~
@@ -215,6 +217,8 @@ Get details of subscriber
 | opened_count | opened messages count | integer |
 | clicked_count | clicked messages count | integer |
 
+TODO: Get lists that the subscriber belongs to, and get mailing history
+
 #### Update Subscriber
 
 ~~~~
@@ -226,6 +230,8 @@ Update properties of subscribers
 | parameter | description | type |
 |-----------|-------------|------|
 | name | name of subscriber | string |
+
+TODO: Update additional fields
 
 #### Delete Subscriber
 
@@ -247,3 +253,5 @@ GET /v1/custom_fields.json
 ~~~~
 
 Get list of custom fields for account.
+
+TODO: Get custom fields settings for each list
