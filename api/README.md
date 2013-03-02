@@ -17,14 +17,23 @@ An overview of Sendicate's API.
 
 All URLs referenced in this documentation begin with the following url: 'https://api.sendicate.net/'
 
-### Output formats
+### Request and Response Content Type
 
-We support json.
+POST requests must set the Content-type header to application/json
 
+GET requests return a Content-type of JSON
+
+~~~~
+curl -H "Content-type: application/json" -X POST -d '{"email":"foo@bar.com"}' https://api.sendicate.net/v1/lists/LIST_ID/subscribers.json?token=API_TOKEN
+~~~~
 
 ### Authentication
 
 Sendicate uses tokens for API authentication. You can obtain your token from Account page. You should provide token on each request using one of the following ways.
+
+~~~~
+curl https://api.sendicate.net/v1/lists.json?token=YOUR_TOKEN
+~~~~
 
 ### Token Param
 
@@ -44,8 +53,9 @@ The following status codes are returned by API requests:
 |---------|------|-------|
 | 200 | Success | Request was fulfilled |
 | 201 | Success | A new resource was created |
-| 400 | Error | The request cannot be fulfilled |
+| 400 | Error | Bad request format |
 | 404 | Error | Resource not found |
+| 422 | Validation errors |
 | 500 | Error | An internal server error occurred |
 
 ### Success Codes
@@ -66,14 +76,15 @@ Success codes have the following codes:
 
 If you make a request with an invalid API key you'll receive a 401.
 
-If you make a request with invalid parameters, you'll receive a 400 with errors.
+If you make a request with invalid parameters, you'll receive a 400.
+
+If you make a request with invalid data, you'll receive a 422 with errors.
 
 ~~~~
 {"title":["can't be blank"]}
 ~~~~
 
 If you try to request a resource that does not exist, you'll receive a 404.
-
 
 ## API Endpoints
 
