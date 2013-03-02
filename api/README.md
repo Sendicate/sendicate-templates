@@ -15,7 +15,7 @@ An overview of Sendicate's API.
 
 ### Base url
 
-All URLs referenced in this documentation begin with the following url: 'https://api.sendicate.net/'
+All URLs referenced in this documentation begin with the following url: `https://api.sendicate.net/`
 
 ### Request and Response Content Type
 
@@ -137,6 +137,8 @@ Returns a single subscribers list
 | title | title of list | string |
 | subscribers_count | subscribers count of list | integer |
 
+TODO: Custom fields
+
 
 #### Create a List
 
@@ -150,6 +152,8 @@ Creates a new subscribers list
 |-----------|-------------|------|
 | title | title of list | string |
 
+TODO: Custom fields
+
 
 #### Edit a List
 
@@ -161,6 +165,8 @@ Updates a single lists properties
 | parameter | description | type |
 |-----------|-------------|------|
 | title | title of list | string |
+
+TODO: Custom fields
 
 #### Delete a List
 
@@ -194,6 +200,8 @@ Returns a list of subscribers from a selected subscriber list
 | opened_count | opened messages count | integer |
 | clicked_count | clicked messages count | integer |
 
+TODO: Custom fields, joined date.
+
 #### Add Subscribers
 
 ~~~~
@@ -206,6 +214,8 @@ Add subscriber to subscribers list
 |-----------|-------------|------|
 | email | email of subscriber | string |
 | name | name of subscriber | string |
+
+TODO: Allow for custom fields
 
 #### View Subscriber
 
@@ -226,6 +236,8 @@ Get details of subscriber
 | opened_count | opened messages count | integer |
 | clicked_count | clicked messages count | integer |
 
+TODO: Custom fields, get lists that the subscriber belongs to, and get mailing history
+
 #### Update Subscriber
 
 ~~~~
@@ -237,6 +249,8 @@ Update properties of subscribers
 | parameter | description | type |
 |-----------|-------------|------|
 | name | name of subscriber | string |
+
+TODO: Update additional fields
 
 #### Delete Subscriber
 
@@ -258,3 +272,5 @@ GET /v1/custom_fields.json
 ~~~~
 
 Get list of custom fields for account.
+
+TODO: Get custom fields settings for each list
