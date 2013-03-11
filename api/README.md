@@ -7,9 +7,10 @@ An overview of Sendicate's API.
 * [Response Status Codes](#response-status-codes)
 * [API Endpoints](#api-endpoints)
     * [Lists](#lists)
-    * [Subscribers](#subscribers)
-    * [Custom Fields](#custom-fields)
+    * [List Subscribers](#list-subscribers)
+    * [Fields](#fields)
 
+   
 
 ## API Intro
 
@@ -17,32 +18,22 @@ An overview of Sendicate's API.
 
 All URLs referenced in this documentation begin with the following url: `https://api.sendicate.net/`
 
-### Request and Response Content Type
+### Output formats
 
-POST requests must set the Content-type header to application/json
+We support json.
 
-GET requests return a Content-type of JSON
-
-~~~~
-curl -H "Content-type: application/json" -X POST -d '{"email":"foo@bar.com"}' https://api.sendicate.net/v1/lists/LIST_ID/subscribers.json?token=API_TOKEN
-~~~~
 
 ### Authentication
 
 Sendicate uses tokens for API authentication. You can obtain your token from Account page. You should provide token on each request using one of the following ways.
-
-~~~~
-curl https://api.sendicate.net/v1/lists.json?token=YOUR_TOKEN
-~~~~
 
 ### Token Param
 
 The token can be found by logging into your Sendicate account and going to Manage, then Account, then scrolling down to API Access.
 
 The token is required and should be passed as a request param `token=YOUR_TOKEN`
-~~~~
-curl https://api.sendicate.net/v1/lists.json?token=YOUR_TOKEN
-~~~~
+
+    curl https://api.sendicate.net/v1/lists.json?token=YOUR_TOKEN
 
 
 ## Response Status Codes
@@ -53,16 +44,15 @@ The following status codes are returned by API requests:
 |---------|------|-------|
 | 200 | Success | Request was fulfilled |
 | 201 | Success | A new resource was created |
-| 400 | Error | Bad request format |
+| 400 | Error | The request cannot be fulfilled |
 | 404 | Error | Resource not found |
-| 422 | Validation errors |
 | 500 | Error | An internal server error occurred |
 
 ### Success Codes
 
 Success codes have the following codes:
 
-| code | description |
+| method | description |
 |-----------|-------------|
 | GET | Requests will return a "200 OK" response upon success. |
 | POST | Requests to create a resource we will return a "201 Created" upon success. |
@@ -72,205 +62,432 @@ Success codes have the following codes:
 
 
 
-### Errors Codes
+### Error Codes
 
-If you make a request with an invalid API key you'll receive a 401.
+If you make a request with an invalid API key you will receive a 401.
 
-If you make a request with invalid parameters, you'll receive a 400.
+If you make a request with invalid parameters, you will receive a 400 with errors.
 
-If you make a request with invalid data, you'll receive a 422 with errors.
+    {
+      "title": ["can"t be blank"]
+    }
 
-~~~~
-{"title":["can't be blank"]}
-~~~~
+If you try to request a resource that does not exist, you will receive a 404.
 
-If you try to request a resource that does not exist, you'll receive a 404.
 
 ## API Endpoints
 
 This section outlines the following API endpoints:
 
 - [Lists](#lists)
-	- [Show Lists](#show-lists)
-	- [List Details](#list-details)
-	- [Create a List](#create-a-list)
-	- [Edit a List](#edit-a-list)
-	- [Delete a List](#delete-a-list)
-- [Subscribers](#subscribers)
-	- [List Subscribers](#list-subscribers)
-	- [Add Subscribers](#add-subscribers)
-	- [View Subscriber](#view-subscriber)
-	- [Update Subscriber](#update-subscriber)
-	- [Delete Subscriber](#delete-subscriber)
-- [Custom Fields](#custom-fields)
-	- [Get All Custom Fields](#get-all-custom-fields)
+  - [Create a list](#create-a-list)
+  - [Show all lists](#show-all-lists)
+  - [Show a list](#show-a-list)
+  - [Update a list](#update-a-list)
+  - [Delete a list](#delete-a-list)
+- [List Subscribers](#list-subscribers)
+  - [Create a list subscriber](#create-a-list-subscriber)
+  - [Create or update many list subscribers](#create-or-update-many-list-subscribers)
+  - [Show all list subscribers](#show-all-list-subscribers)
+  - [Show a list subscriber](#show-a-list-subscriber)
+  - [Update a list subscriber](#update-a-list-subscriber)
+  - [Delete a list subscriber](#delete-a-list-subscriber)
+- [Fields](#fields)
+  - [Show All Fields](#show-all-fields)
+
 
 ### Lists
 
-Show and manage subscriber lists.
-
-#### Show Lists
-
-~~~~
-GET /v1/lists.json
-~~~~
-
-Returns a list of subscribers list under your account
-
-| parameter | description | type |
-|-----------|-------------|------|
-| id | id of list | string |
-| title | title of list | string |
-| subscribers_count | subscribers count of list | integer |
-
-#### List Details
-
-~~~~
-GET /v1/lists/:id.json
-~~~~
-
-Returns a single subscribers list
-
-| parameter | description | type |
-|-----------|-------------|------|
-| id | id of list | string |
-| title | title of list | string |
-| subscribers_count | subscribers count of list | integer |
-
-TODO: Custom fields
+Manage subscriber lists.
 
 
-#### Create a List
+#### Create a list
 
-~~~~
-POST /v1/lists.json
-~~~~
+Creates a new subscribers list.
 
-Creates a new subscribers list
+`POST` https://api.sendicate.net/v1/lists.json
 
-| parameter | description | type |
-|-----------|-------------|------|
-| title | title of list | string |
+##### Expected request body
 
-TODO: Custom fields
+    {
+      "title": "Newsletter"
+    }
 
+##### Expected response
 
-#### Edit a List
-
-~~~~
-PUT /v1/lists/:id.json
-~~~~
-Updates a single lists properties
-
-| parameter | description | type |
-|-----------|-------------|------|
-| title | title of list | string |
-
-TODO: Custom fields
-
-#### Delete a List
-
-~~~~
-DELETE /v1/lists/:id.json
-~~~~
-
-Deletes a list
+    HTTP/1.1 201 Created
+    Content-Type: application/json; charset=utf-8
+  
+    {
+      "id": "asdf"
+      "title": "Newsletter",
+      "subscribers_count": 0
+    }
 
 
-### Subscribers
+#### Show all lists
 
-Show and manage subscriber details
+Returns a list of all your subscriber lists. :turtle:s all the way down.
 
-#### List Subscribers
+`GET` https://api.sendicate.net/v1/lists.json
 
-~~~~
-GET /v1/lists/:list_id/subscribers.json
-~~~~
+##### Expected response
 
-Returns a list of subscribers from a selected subscriber list
+    HTTP/1.1 200 OK
+    Content-Type: application/json; charset=utf-8
 
-| parameter | description | type |
-|-----------|-------------|------|
-| id | id of subscriber | string |
-| email | email of subscriber | string |
-| name | name of subscriber | string |
-| status | subscriber's status | string |
-| unsubscribed_at | date when subscriber become unsubscribed | string |
-| delivered_count | delivered messages count | integer |
-| opened_count | opened messages count | integer |
-| clicked_count | clicked messages count | integer |
-
-TODO: Custom fields, joined date.
-
-#### Add Subscribers
-
-~~~~
-POST /v1/lists/:list_id/subscribers.json
-~~~~
-
-Add subscriber to subscribers list
-
-| parameter | description | type |
-|-----------|-------------|------|
-| email | email of subscriber | string |
-| name | name of subscriber | string |
-
-TODO: Allow for custom fields
-
-#### View Subscriber
-
-~~~~
-GET /v1/lists/:list_id/subscribers/:id.json
-~~~~
-
-Get details of subscriber
-
-| parameter | description | type |
-|-----------|-------------|------|
-| id | id of subscriber | string |
-| email | email of subscriber | string |
-| name | name of subscriber | string |
-| status | subscriber's status | string |
-| unsubscribed_at | date when subscriber become unsubscribed | string |
-| delivered_count | delivered messages count | integer |
-| opened_count | opened messages count | integer |
-| clicked_count | clicked messages count | integer |
-
-TODO: Custom fields, get lists that the subscriber belongs to, and get mailing history
-
-#### Update Subscriber
-
-~~~~
-PUT /v1/lists/:list_id/subscribers/:id.json
-~~~~
-
-Update properties of subscribers 
-
-| parameter | description | type |
-|-----------|-------------|------|
-| name | name of subscriber | string |
-
-TODO: Update additional fields
-
-#### Delete Subscriber
-
-~~~~
-DELETE /v1/lists/:list_id/subscribers/:id.json
-~~~~
-
-Remove subscriber from list
+    [
+      {
+        "id": "asdf",
+        "title": "Newsletter",
+        "subscribers_count": 1000
+      },
+      {
+        "id": "qwerty",
+        "title": "Beta",
+        "subscribers_count": 100
+      }
+    ]
 
 
-### Custom Fields
+#### Show a list
 
-Custom fields are useful for storing extra subscriber data, segmentation, etc.
+Returns the attributes of the requested list.
 
-#### Get All Custom Fields
+`GET` https://api.sendicate.net/v1/lists/:list_id.json
 
-~~~~
-GET /v1/custom_fields.json
-~~~~
+##### Parameters
 
-Get list of custom fields for account.
+`:list_id` The ID of the requested list.
 
-TODO: Get custom fields settings for each list
+##### Expected response
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json; charset=utf-8
+
+    {
+      "id": "asdf",
+      "title": "Newsletter",
+      "subscribers_count": 1000
+    }
+
+
+#### Update a list
+
+Updates attributes of the requested list.
+
+`PUT` https://api.sendicate.net/:list_id.json
+
+##### Parameters
+
+`:list_id` The ID of the requested list.
+
+##### Expected request body
+
+    {
+      "title": "Old Newsletter"
+    }
+
+##### Expected response
+
+  HTTP/1.1 200 OK
+  Content-Type: application/json; charset=utf-8
+  
+    {
+      "id": "asdf",
+      "title": "Old Newsletter",
+      "subscribers_count": 1000
+    }
+
+#### Delete a list
+
+Deletes the requested list.
+
+`DELETE` https://api.sendicate.net/:list_id.json
+
+##### Parameters
+
+`:list_id` The ID of the requested list.
+
+##### Expected response
+
+    HTTP/1.1 200 OK
+
+
+### List subscribers
+
+Manage subscribers in a list.
+
+
+#### Show all list subscribers
+
+Returns all subscribers in the requested list.
+
+`GET` /v1/lists/:list_id/subscribers.json?page=:page
+
+##### Parameters
+
+`:list_id` The ID of the requested list.
+
+`:page` The page of results to return. Default page: 1, default page size: 50)
+
+##### Expected response
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json; charset=utf-8
+
+    [
+      {
+        "email": "vanhalen@example.com",
+        "name": "van halen",
+        "status": "Subscribed",
+        "unsubscribed_at": null,
+        "delivered_count": 100,
+        "opened_count": 100,
+        "clicked_count": 100,
+        "joined_at": "2013-03-11 01:00:00 UTC",
+        "age": "<18" // This is an example of a custom field.
+      },
+      {
+        "email": "foo@example.com",
+        "name": "foo bar",
+        "status": "Subscribed",
+        "unsubscribed_at": null,
+        "delivered_count": 100,
+        "opened_count": 100,
+        "clicked_count": 100,
+        "joined_at": "2013-03-11 01:00:00 UTC"
+      }
+    ]
+
+
+#### Create a list subscriber
+
+Creates a subscriber and adds it to the requested list.
+
+`POST` https://api.sendicate.net/v1/lists/:list_id/subscribers.json
+
+##### Parameters
+
+`:list_id` The ID of the requested list.
+
+##### Expected request body
+
+    {
+      "email": "vanhalen@example.com",
+      "name": "van halen",
+      "age": "18-34" // This is an example of a custom field
+    }
+
+##### Expected response
+
+    HTTP/1.1 201 Created
+    Content-Type: application/json; charset=utf-8
+  
+    {
+      "email": "vanhalen@example.com",
+      "name": "van halen",
+      "status": "Subscribed",
+      "unsubscribed_at": null,
+      "delivered_count": 0,
+      "opened_count": 0,
+      "clicked_count": 0,
+      "joined_at": "2013-03-11 01:00:00 UTC",
+      "age": "18-34" // This is an example of a custom field
+    }
+
+
+#### Create or update many list subscribers
+
+Creates or updates many subscribers and adds them to the requested list. Only invalid email addresses will cause an import to fail. Errors on other fields will be reported and ignored, but will not cause an import to fail. Existing subscribers will be updated.
+
+`POST` https://api.sendicate.net/v1/lists/:list_id/subscribers.json
+
+##### Parameters
+
+`:list_id` The ID of the requested list.
+
+##### Expected request body
+
+    [
+      {
+        "email": "vanhalen@example.com",
+        "name": "van halen",
+        "age": "18-34" // This is an example of a valid custom field
+      },
+      {
+        "email": "foo@example.com",
+        "name": "foo bar",
+        "color": "blue" // This is an example of an invalid field that does not exist
+      }
+    ]
+
+##### Expected response with errors
+
+    HTTP/1.1 200 Ok
+    Content-Type: application/json; charset=utf-8
+  
+    {
+      "imported": 2,
+      "updated": 0,
+      "failed": 0,
+      "errors": [
+        {
+          "data": {
+            "email": "foo@example.com",
+            "name": "foo bar",
+            "color": "blue"
+          },
+          "errors": [
+            {
+              "field": "color",
+              "code": "invalid",
+              "message": "color is not a valid field"
+            }
+          ],
+          "status": "imported"
+        }
+      ]  
+    }
+
+##### Expected response with failure
+
+  HTTP/1.1 422 Unprocessable entity
+  Content-Type: application/json; charset=utf-8
+  
+    {
+      "imported": 1,
+      "updated": 0,
+      "failed": 1,
+      "errors": [
+        {
+          "data": {
+            "email": "foo",
+            "name": "foo bar"
+          },
+          "errors": [
+            {
+              "field": "color",
+              "code": "invalid",
+              "message": "color is not a valid field"
+            }
+          ],
+          "status": "imported"
+        }
+      ]
+    }
+    
+
+#### Show a list subscriber
+
+Returns the attributes of the requested list subscriber.
+
+`GET` https://api.sendicate.net/v1/lists/:list_id/subscribers/:subscriber_email.json
+
+##### Parameters
+
+`:list_id` The ID of the requested list.
+
+`:subscriber_email` The email address of the requested list subscriber.
+
+##### Expected response
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json; charset=utf-8
+
+    {
+      "email": "vanhalen@example.com",
+      "name": "van halen",
+      "status": "Subscribed",
+      "unsubscribed_at": null,
+      "delivered_count": 0,
+      "opened_count": 0,
+      "clicked_count": 0,
+      "joined_at": "2013-03-11 01:00:00 UTC",
+      "age": "18-34" // This is an example of a custom field
+    }
+
+#### Update a list subscriber
+
+Updates attributes of the requested list subscriber.
+
+`PUT` https://api.sendicate.net/v1/lists/:list_id/subscribers/:subscriber_email.json
+
+##### Parameters
+
+`:list_id` The ID of the requested list.
+
+`:subscriber_email` The email address of the requested list subscriber.
+
+##### Expected request body
+
+    {
+      "name": "foo bar",
+      "age": "34+" // This is an example of a custom field
+    }
+
+##### Expected response
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json; charset=utf-8
+
+    {
+      "email": "vanhalen@example.com",
+      "name": "van halen",
+      "status": "Subscribed",
+      "unsubscribed_at": null,
+      "delivered_count": 0,
+      "opened_count": 0,
+      "clicked_count": 0,
+      "joined_at": "2013-03-11 01:00:00 UTC",
+      "age": "18-34" // This is an example of a custom field
+    }
+
+
+#### Delete a list subscriber
+
+Deletes the requested list subscriber.
+
+`DELETE` https://api.sendicate.net/v1/:list_id/subscribers/:subscriber_email.json
+
+##### Parameters
+
+`:list_id` The ID of the requested list.
+
+`:subscriber_email` The email address of the requested list subscriber.
+
+##### Expected response
+
+    HTTP/1.1 200 OK
+
+
+### Fields
+
+#### Show all fields
+
+Returns all default fields (email and name) and custom fields. Custom fields are useful for storing extra subscriber data, segmentation, etc.
+
+`GET` https://api.sendicate.net/v1/fields.json
+
+##### Expected response
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json; charset=utf-8
+
+    [
+      {
+        "name": "email",
+        "options": [],
+        "type": "text"
+      },
+      {
+        "name": "name",
+        "options: [],
+        "type": text"
+      },
+      {
+        "name": "Age",
+        "options": ["<18","18-34","34+"],
+        "type":"list"
+      }
+    ]
