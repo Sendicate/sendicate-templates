@@ -8,6 +8,7 @@
 <meta name="color:background" content="#000000"/>
 <meta name="color:dividing_lines_color" content="#ffffff"/>
 <meta name="color:heading_color" content="#ffffff"/>
+<meta name="color:link_color" content="#EA2028"/>
 <meta name="font:body_font" content="Trebuchet, 'Trebuchet MS', serif"/>
 <meta name="font:heading_font" content="Trebuchet, 'Trebuchet MS', serif"/>
 <meta name="font:read_more_link_font" content="Times, serif"/>
@@ -19,9 +20,8 @@
   .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
   .ExternalClass p { line-height: 1.5;}
   .yshortcuts, .yshortcuts a span, span.yshortcuts, .content-body span {color:{color:body_text_color} !important;text-decoration: none !important;border: 0 !important;}
-
-
-  #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;background: {color:background};}
+#backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;background: {color:background};}
+a {color: {color:link_color};}
 </style>
 </head>
 <body style="width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: white; font-family: {font:body_font}; background-color: {color:background}; margin: 0; padding: 0;" bgcolor="{color:background}">
@@ -342,6 +342,21 @@
 </table>
 <!-- SENDICATE IMAGE COL ENDS -->
 {/block:image}
+
+<!-- social buttons -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
+<tr>
+    <td align="center">
+        {if facebook_link}
+        <a href="{facebook_link}"><img src="https://s3.amazonaws.com/sendicate-app/assets/designs/f-icon.png" width="28" heigh="28" style="border:none; outline:none; text-decoration:none;"></a>
+        {/if}
+        {if twitter_link}
+        <a href="{twitter_link}"><img src="https://s3.amazonaws.com/sendicate-app/assets/designs/t-icon.png" width="28" heigh="28" style="border:none; outline:none; text-decoration:none; margin-left:5px;"></a>
+        {/if}
+    </td>
+</tr>
+</table>
+<!-- end social buttons -->
 
 
 </td>
