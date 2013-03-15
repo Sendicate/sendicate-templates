@@ -56,9 +56,11 @@ a {color: {color:link_color};}
 <tr height="10"><td class="gutter" style="border-collapse: collapse;"> </td></tr>
 <tr>
 <td valign="top" align="left" width="320" class="content" style="border-collapse: collapse;" color="{color:heading_color}">
-                <h1 style="color: {color:heading_color}; font-family: {font:heading_font}; margin-top: 0; margin-bottom: 20px; font-size: 40px; line-height: 50px; font-weight: bold;">
-                  {heading}</h1>
-
+                {if link_url}
+                <a href="{link_url}" style="text-decoration: none; color: {color:heading_color}; font-family: {font:heading_font}; margin-top: 0; margin-bottom: 20px; font-size: 40px; line-height: 50px; font-weight: bold;"><h1 style="color: {color:heading_color}; font-family: {font:heading_font}; margin-top: 0; margin-bottom: 20px; font-size: 40px; line-height: 50px; font-weight: bold;">{heading}</h1></a>
+                {else}
+                <h1 style="color: {color:heading_color}; font-family: {font:heading_font}; margin-top: 0; margin-bottom: 20px; font-size: 40px; line-height: 50px; font-weight: bold;">{heading}</h1>
+                {/if}
   {if image}
     <div class="image" style="page-break-before: avoid; display: block; margin-top: 0 !important; margin-bottom: 20px; border: 3px solid white;">
       {link_tag}<span style="color:{color:body_text_color}">{image(314x)}</span>{/link_tag}
