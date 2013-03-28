@@ -12,6 +12,7 @@
 <meta name="font:body_font" content="Trebuchet, 'Trebuchet MS', serif"/>
 <meta name="font:heading_font" content="Trebuchet, 'Trebuchet MS', serif"/>
 <meta name="font:read_more_link_font" content="Times, serif"/>
+<meta name="dropdown:logo_alignment" content="left,center,right"/>
 <title>{subject} - {company_name}</title>
 <style type="text/css">
   #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
@@ -34,7 +35,7 @@ a {color: {color:link_color};}
           <table class="header" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
 <tr height="40" class="gutter"><td style="border-collapse: collapse; font-size: 1px; line-height: 1px; color: {color:body_text_color};"> </td></tr>
 <tr>
-<td valign="middle" align="left" style="border-collapse: collapse; font-size: 28px; line-height: 1; color: {color:heading_color};">
+<td valign="middle" align="{dropdown:logo_alignment}" style="border-collapse: collapse; font-size: 28px; line-height: 1; color: {color:heading_color};">
   <a class="header-logo" href="{company_website_url}" target="_blank" style="font-size: 28px; line-height: 1; color: {color:heading_color}; text-decoration: none;">
   {if logo}
     {logo(500x180>)}
@@ -63,7 +64,7 @@ a {color: {color:link_color};}
                 {/if}
   {if image}
     <div class="image" style="page-break-before: avoid; display: block; margin-top: 0 !important; margin-bottom: 20px; border: 3px solid white;">
-      {link_tag}<span style="color:{color:body_text_color}">{image(314x)}</span>{/link_tag}
+      {link_tag}<span style="color:{color:body_text_color}">{image(314x>)}</span>{/link_tag}
     </div>
     </div>
   {/if}
@@ -71,7 +72,7 @@ a {color: {color:link_color};}
               </td>
               <td class="gutter" style="border-collapse: collapse;"> </td>
               <td valign="top" align="left" width="320" style="border-collapse: collapse;">
-                <div class="content-body" style="color: {color:body_text_color}; text-indent: 70px; font-family: {font:body_font}; margin-top: 5px; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
+                <div class="content-body" style="color: {color:body_text_color}; font-family: {font:body_font}; margin-top: 5px; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
                   {subheading}
                 </div>
               </td>
@@ -96,11 +97,11 @@ a {color: {color:link_color};}
   </h2>
   {if column1:image}
     <div class="image" style="page-break-before: avoid; display: block; margin-top: 0 !important; margin-bottom: 20px; border: 3px solid white;">
-      {column1:link_tag}<span style="color:{color:body_text_color}">{column1:image(659x)}</span>{/column1:link_tag}
+      {column1:link_tag}<span style="color:{color:body_text_color}">{column1:image(659x>)}</span>{/column1:link_tag}
     </div>
   {/if}
 
-  <div class="content-body" style="color: {color:body_text_color}; text-indent: 70px; font-family: {font:body_font}; margin-top: 0; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
+  <div class="content-body" style="color: {color:body_text_color}; font-family: {font:body_font}; margin-top: 0; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
     {column1:body}
   </div>
 
@@ -136,7 +137,7 @@ a {color: {color:link_color};}
     </div>
   {/if}
 
-  <div class="content-body" style="color: {color:body_text_color}; text-indent: 70px; font-family: {font:body_font}; margin-top: 0; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
+  <div class="content-body" style="color: {color:body_text_color}; font-family: {font:body_font}; margin-top: 0; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
     {column1:body}
   </div>
 
@@ -166,7 +167,7 @@ a {color: {color:link_color};}
     </div>
   {/if}
 
-  <div class="content-body" style="color: {color:body_text_color}; text-indent: 70px; font-family: {font:body_font}; margin-top: 0; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
+  <div class="content-body" style="color: {color:body_text_color}; font-family: {font:body_font}; margin-top: 0; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
     {column2:body}
   </div>
 
@@ -203,7 +204,7 @@ a {color: {color:link_color};}
     </div>
   {/if}
 
-  <div class="content-body" style="color: {color:body_text_color}; text-indent: 70px; font-family: {font:body_font}; margin-top: 0; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
+  <div class="content-body" style="color: {color:body_text_color}; font-family: {font:body_font}; margin-top: 0; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
     {column1:body}
   </div>
 
@@ -232,7 +233,7 @@ a {color: {color:link_color};}
     </div>
   {/if}
 
-  <div class="content-body" style="color: {color:body_text_color}; text-indent: 70px; font-family: {font:body_font}; margin-top: 0; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
+  <div class="content-body" style="color: {color:body_text_color}; font-family: {font:body_font}; margin-top: 0; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
     {column2:body}
   </div>
 
@@ -263,7 +264,7 @@ a {color: {color:link_color};}
     </div>
   {/if}
 
-  <div class="content-body" style="color: {color:body_text_color}; text-indent: 70px; font-family: {font:body_font}; margin-top: 0; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
+  <div class="content-body" style="color: {color:body_text_color}; font-family: {font:body_font}; margin-top: 0; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
     {column3:body}
   </div>
 
@@ -305,7 +306,7 @@ a {color: {color:link_color};}
     </div>
   {/if}
 
-                <div class="content-body" style="color: {color:body_text_color}; text-indent: 70px;font-family: {font:body_font}; margin-top: 0; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
+                <div class="content-body" style="color: {color:body_text_color};font-family: {font:body_font}; margin-top: 0; margin-bottom: 20px; font-size: 12px; line-height: 20px;">
                   {body}
                 </div>
 
@@ -332,7 +333,7 @@ a {color: {color:link_color};}
 <tr>
 <td class="content" valign="top" align="left" style="border-collapse: collapse;">
     <div class="image" style="page-break-before: avoid; display: block; margin-top: 0 !important; margin-bottom: 0 !important; border: 3px solid white;">
-      {link_tag}<span style="color:{color:body_text_color}">{image(659x)}</span>{link_tag}
+      {link_tag}<span style="color:{color:body_text_color}">{image(659x>)}</span>{link_tag}
     </div>
 </td>
             </tr>
