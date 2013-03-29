@@ -86,12 +86,11 @@ This section outlines the following API endpoints:
   - [Update a list](#update-a-list)
   - [Delete a list](#delete-a-list)
 - [List Subscribers](#list-subscribers)
-  - [Create a list subscriber](#create-a-list-subscriber)
-  - [Create or update many list subscribers](#create-or-update-many-list-subscribers)
+  - [Create or update list subscribers](#create-or-update-list-subscribers)
   - [Show all list subscribers](#show-all-list-subscribers)
-  - [Show a list subscriber](#show-a-list-subscriber)
-  - [Update a list subscriber](#update-a-list-subscriber)
   - [Delete a list subscriber](#delete-a-list-subscriber)
+- [Subscribers](#subscribers)
+  - [Show a subscriber](#show-a-subscriber)
 - [Fields](#fields)
   - [Show All Fields](#show-all-fields)
 
@@ -261,43 +260,7 @@ Returns all subscribers in the requested list.
     ]
 
 
-#### Create a list subscriber
-
-Creates a subscriber and adds it to the requested list.
-
-`POST` https://api.sendicate.net/v1/lists/:list_id/subscribers.json
-
-##### Parameters
-
-`:list_id` The ID of the requested list.
-
-##### Expected request body
-
-    {
-      "email": "vanhalen@example.com",
-      "name": "van halen",
-      "age": "18-34" // This is an example of a custom field
-    }
-
-##### Expected response
-
-    HTTP/1.1 201 Created
-    Content-Type: application/json; charset=utf-8
-  
-    {
-      "email": "vanhalen@example.com",
-      "name": "van halen",
-      "status": "Subscribed",
-      "unsubscribed_at": null,
-      "delivered_count": 0,
-      "opened_count": 0,
-      "clicked_count": 0,
-      "joined_at": "2013-03-11 01:00:00 UTC",
-      "age": "18-34" // This is an example of a custom field
-    }
-
-
-#### Create or update many list subscribers
+#### Create or update list subscribers
 
 Creates or updates many subscribers and adds them to the requested list. Only invalid email addresses will cause an import to fail. Errors on other fields will be reported and ignored, but will not cause an import to fail. Existing subscribers will be updated.
 
@@ -307,7 +270,15 @@ Creates or updates many subscribers and adds them to the requested list. Only in
 
 `:list_id` The ID of the requested list.
 
-##### Expected request body
+##### Expected request body for one subscriber
+
+    {
+      "email": "vanhalen@example.com",
+      "name": "van halen",
+      "age": "18-34" // This is an example of a valid custom field
+    }
+
+##### Expected request body for many subscribers
 
     [
       {
@@ -376,72 +347,6 @@ Creates or updates many subscribers and adds them to the requested list. Only in
         }
       ]
     }
-    
-
-#### Show a list subscriber
-
-Returns the attributes of the requested list subscriber.
-
-`GET` https://api.sendicate.net/v1/lists/:list_id/subscribers/:subscriber_email.json
-
-##### Parameters
-
-`:list_id` The ID of the requested list.
-
-`:subscriber_email` The email address of the requested list subscriber.
-
-##### Expected response
-
-    HTTP/1.1 200 OK
-    Content-Type: application/json; charset=utf-8
-
-    {
-      "email": "vanhalen@example.com",
-      "name": "van halen",
-      "status": "Subscribed",
-      "unsubscribed_at": null,
-      "delivered_count": 0,
-      "opened_count": 0,
-      "clicked_count": 0,
-      "joined_at": "2013-03-11 01:00:00 UTC",
-      "age": "18-34" // This is an example of a custom field
-    }
-
-#### Update a list subscriber
-
-Updates attributes of the requested list subscriber.
-
-`PUT` https://api.sendicate.net/v1/lists/:list_id/subscribers/:subscriber_email.json
-
-##### Parameters
-
-`:list_id` The ID of the requested list.
-
-`:subscriber_email` The email address of the requested list subscriber.
-
-##### Expected request body
-
-    {
-      "name": "foo bar",
-      "age": "34+" // This is an example of a custom field
-    }
-
-##### Expected response
-
-    HTTP/1.1 200 OK
-    Content-Type: application/json; charset=utf-8
-
-    {
-      "email": "vanhalen@example.com",
-      "name": "van halen",
-      "status": "Subscribed",
-      "unsubscribed_at": null,
-      "delivered_count": 0,
-      "opened_count": 0,
-      "clicked_count": 0,
-      "joined_at": "2013-03-11 01:00:00 UTC",
-      "age": "18-34" // This is an example of a custom field
-    }
 
 
 #### Delete a list subscriber
@@ -459,6 +364,39 @@ Deletes the requested list subscriber.
 ##### Expected response
 
     HTTP/1.1 200 OK
+
+
+### Subscribers
+
+Manage individual subscribers.
+
+
+#### Show a subscriber
+
+Returns the attributes of the requested subscriber.
+
+`GET` https://api.sendicate.net/v1/subscribers/:subscriber_email.json
+
+##### Parameters
+
+`:subscriber_email` The email address of the requested subscriber.
+
+##### Expected response
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json; charset=utf-8
+
+    {
+      "email": "vanhalen@example.com",
+      "name": "van halen",
+      "status": "Subscribed",
+      "unsubscribed_at": null,
+      "delivered_count": 0,
+      "opened_count": 0,
+      "clicked_count": 0,
+      "joined_at": "2013-03-11 01:00:00 UTC",
+      "age": "18-34" // This is an example of a custom field
+    }
 
 
 ### Fields
