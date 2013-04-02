@@ -36,6 +36,11 @@ The token is required and should be passed as a request param `token=YOUR_TOKEN`
     curl https://api.sendicate.net/v1/lists.json?token=YOUR_TOKEN
 
 
+### Clients
+
+- [Sendicate gem](https://github.com/Sendicate/sendicate-ruby)
+
+
 ## Response Status Codes
 
 The following status codes are returned by API requests:
