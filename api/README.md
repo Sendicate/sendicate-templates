@@ -40,6 +40,11 @@ You should provide an API token on each request using either the HTTP authorizat
     curl https://api.sendicate.net/v1/lists?token=YOUR_API_TOKEN
 
 
+### Clients
+
+- [Sendicate gem](https://github.com/Sendicate/sendicate-ruby)
+
+
 ## Response Status Codes
 
 The following status codes are returned by API requests:

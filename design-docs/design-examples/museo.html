@@ -15,6 +15,7 @@
 <meta name="text:Body_Font_Size" content="14px"/>
 <meta name="text:Heading_Font_Size" content="40px"/>
 <meta name="text:Subheading_Font_Size" content="18px"/>
+<meta name="color:image_border_color" content="#dedede"/>
 <title>{subject} - {company_name}</title>
 <style>
   #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
@@ -61,8 +62,8 @@
 <tr>
 <td valign="top" align="center" style="border-collapse: collapse;">
   {if image}
-    <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
-      {link_tag}{image(672x)}{/link_tag}
+    <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid {color:image_border_color};">
+      {link_tag}{image(672x>)}{/link_tag}
     </div>
   {/if}
   <h1 style="color: {color:text_color}; font-family: {font:body_font}; font-size: {text:Heading_Font_Size}; line-height: 1; font-weight: normal; margin: 0 40px;">
@@ -91,8 +92,8 @@
 <tr><td valig="top" align="center" class="content" color="{color:text_color}" style="border-collapse: collapse;">
 
 {if column1:image}
-  <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
-    {column1:link_tag}{column1:image(672x)}{/column1:link_tag}
+  <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid {color:image_border_color};">
+    {column1:link_tag}{column1:image(672x>)}{/column1:link_tag}
   </div>
 {/if}
 
@@ -131,9 +132,9 @@
   {if column1:image}
     <div class="image" style="display: block; margin-bottom: 20px;">
       {if column1:link_url}
-      <a href="{column1:link_url}">{column1:image(320x)}</a>
+      <a href="{column1:link_url}">{column1:image(320x>)}</a>
       {else}
-      {column1:image(318x)} 
+      {column1:image(318x>)} 
       {/if}
     </div>
   {/if}
@@ -169,9 +170,9 @@
   {if column2:image}
     <div class="image" style="display: block; margin-bottom: 20px;">
       {if column2:link_url}
-      <a href="{column2:link_url}">{column2:image(320x)}</a>
+      <a href="{column2:link_url}">{column2:image(320x>)}</a>
       {else}
-      {column2:image(318x)}
+      {column2:image(318x>)}
       {/if}
     </div>
   {/if}
@@ -211,11 +212,11 @@
 <!-- COL ONE --><td width="180" valign="top" align="center" class="content" color="{color:text_color}" style="border-collapse: collapse;">
 
  {if column1:image}
-    <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
+    <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid {color:image_border_color};">
       {if column1:link_url}
-      <a href="{column1:link_url}">{column1:image(178x)}</a>
+      <a href="{column1:link_url}">{column1:image(178x>)}</a>
       {else}
-      {column1:image(178x)}
+      {column1:image(178x>)}
       {/if}
     </div>
   {/if}
@@ -250,11 +251,11 @@
               <td width="180" valign="top" align="center" class="content" color="{color:text_color}" style="border-collapse: collapse;">
 
   {if column2:image}
-    <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
+    <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid {color:image_border_color};">
       {if column2:link_url}
-      <a href="{column2:link_url}">{column2:image(178x)}</a>
+      <a href="{column2:link_url}">{column2:image(178x>)}</a>
       {else}
-      {column2:image(178x)}
+      {column2:image(178x>)}
       {/if}
     </div>
   {/if}
@@ -287,11 +288,11 @@
               <td width="180" valign="top" align="center" class="content" color="{color:text_color}" style="border-collapse: collapse;">
 
   {if column3:image}
-    <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
+    <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid {color:image_border_color};">
       {if column3:link_url}
-      <a href="{column3:link_url}">{column3:image(178x)}</a>
+      <a href="{column3:link_url}">{column3:image(178x>)}</a>
       {else}
-      {column3:image(178x)}
+      {column3:image(178x>)}
       {/if}
     </div>
   {/if}
@@ -332,8 +333,8 @@
 <table class="uno imagecol" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
 <tr>
 <td class="content" color="{color:text_color}" valign="top" align="center" style="border-collapse: collapse;">
-                <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
-                {link_tag}{image(672x)}{/link_tag}
+                <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid {color:image_border_color};">
+                {link_tag}{image(672x>)}{/link_tag}
                 </div>
               </td>
             </tr>
