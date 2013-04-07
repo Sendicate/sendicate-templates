@@ -101,6 +101,8 @@ This section outlines the following API endpoints:
   - [Delete a list subscriber](#delete-a-list-subscriber)
 - [Subscribers](#subscribers)
   - [Show a subscriber](#show-a-subscriber)
+  - [Update a subscriber](#update-a-subscriber)
+  - [Unsubscribe a subscriber](#unsubscribe-a-subscriber)
 - [Fields](#fields)
   - [Show All Fields](#show-all-fields)
 
@@ -263,6 +265,7 @@ Returns all subscribers in the requested list.
         "opened_count": 100,
         "clicked_count": 100,
         "joined_at": "2013-03-11 01:00:00 UTC",
+        "subscribed": true,
         "age": "<18" // This is an example of a custom field.
       },
       {
@@ -274,6 +277,7 @@ Returns all subscribers in the requested list.
         "opened_count": 100,
         "clicked_count": 100,
         "joined_at": "2013-03-11 01:00:00 UTC"
+        "subscribed": true
       }
     ]
 
@@ -421,7 +425,69 @@ Returns the attributes of the requested subscriber.
       "opened_count": 0,
       "clicked_count": 0,
       "joined_at": "2013-03-11 01:00:00 UTC",
+      "subscribed": true,
       "age": "18-34" // This is an example of a custom field
+    }
+
+
+#### Update a subscriber
+
+Updates attributes of the requested subscriber.
+
+`PUT` https://api.sendicate.net/v1/subscribers/:subscriber_email
+
+##### Parameters
+
+`:subscriber_email` The email address of the requested list subscriber.
+
+##### Expected request
+
+    Accept: application/json
+    Authorization: token YOUR_API_TOKEN
+    Content-Type: application/json
+
+    {
+      "name": "foo bar",
+      "age": "18-34" // This is an example of a custom field
+    }
+
+##### Expected response
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json; charset=utf-8
+
+    {
+      "email": "vanhalen@example.com",
+      "name": "foo bar",
+      "status": "Subscribed",
+      "unsubscribed_at": null,
+      "delivered_count": 0,
+      "opened_count": 0,
+      "clicked_count": 0,
+      "joined_at": "2013-03-11 01:00:00 UTC",
+      "subscribed": true,
+      "age": "18-34" // This is an example of a custom field
+    }
+
+
+#### Unsubscribe a subscriber
+
+To unsubscribe a subscriber, submit a request to update the subscriber with a `subscribed` attribute value of `false`.
+
+`PUT` https://api.sendicate.net/v1/subscribers/:subscriber_email
+
+##### Parameters
+
+`:subscriber_email` The email address of the requested list subscriber.
+
+##### Expected request
+
+    Accept: application/json
+    Authorization: token YOUR_API_TOKEN
+    Content-Type: application/json
+
+    {
+      "subscribed": false
     }
 
 
