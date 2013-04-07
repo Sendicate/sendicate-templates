@@ -18,22 +18,26 @@ An overview of Sendicate's API.
 
 All URLs referenced in this documentation begin with the following url: `https://api.sendicate.net/`
 
-### Output formats
+### Required HTTP header fields
 
-We support json.
+The Content-Type and Accept header fields must have a value of `application/json`
 
+    Content-Type: application/json
+    Accept: application/json
 
 ### Authentication
 
-Sendicate uses tokens for API authentication. You can obtain your token from Account page. You should provide token on each request using one of the following ways.
+Sendicate uses tokens for API authentication. Your API token can be found by logging into your Sendicate account and going to Manage, then Account, then scrolling down to API Access.
 
-### Token Param
+You should provide an API token on each request using either the HTTP authorization header field or the token query string parameter.
 
-The token can be found by logging into your Sendicate account and going to Manage, then Account, then scrolling down to API Access.
+#### HTTP authorization header field
 
-The token is required and should be passed as a request param `token=YOUR_TOKEN`
+    Authorization: token YOUR_API_TOKEN
 
-    curl https://api.sendicate.net/v1/lists.json?token=YOUR_TOKEN
+#### Token query string parameter
+
+    curl https://api.sendicate.net/v1/lists?token=YOUR_API_TOKEN
 
 
 ## Response Status Codes
@@ -46,6 +50,7 @@ The following status codes are returned by API requests:
 | 201 | Success | A new resource was created |
 | 400 | Error | The request cannot be fulfilled |
 | 404 | Error | Resource not found |
+| 422 | Error | Validation failure |
 | 500 | Error | An internal server error occurred |
 
 ### Success Codes
@@ -104,10 +109,14 @@ Manage subscriber lists.
 
 Creates a new subscribers list.
 
-`POST` https://api.sendicate.net/v1/lists.json
+`POST` https://api.sendicate.net/v1/lists
 
-##### Expected request body
+##### Expected request
 
+    Accept: application/json
+    Authorization: token YOUR_API_TOKEN
+    Content-Type: application/json
+    
     {
       "title": "Newsletter"
     }
@@ -128,7 +137,7 @@ Creates a new subscribers list.
 
 Returns a list of all your subscriber lists. :turtle:s all the way down.
 
-`GET` https://api.sendicate.net/v1/lists.json
+`GET` https://api.sendicate.net/v1/lists
 
 ##### Expected response
 
@@ -153,7 +162,7 @@ Returns a list of all your subscriber lists. :turtle:s all the way down.
 
 Returns the attributes of the requested list.
 
-`GET` https://api.sendicate.net/v1/lists/:list_id.json
+`GET` https://api.sendicate.net/v1/lists/:list_id
 
 ##### Parameters
 
@@ -175,13 +184,17 @@ Returns the attributes of the requested list.
 
 Updates attributes of the requested list.
 
-`PUT` https://api.sendicate.net/:list_id.json
+`PUT` https://api.sendicate.net/:list_id
 
 ##### Parameters
 
 `:list_id` The ID of the requested list.
 
-##### Expected request body
+##### Expected request
+
+    Accept: application/json
+    Authorization: token YOUR_API_TOKEN
+    Content-Type: application/json
 
     {
       "title": "Old Newsletter"
@@ -189,8 +202,8 @@ Updates attributes of the requested list.
 
 ##### Expected response
 
-  HTTP/1.1 200 OK
-  Content-Type: application/json; charset=utf-8
+    HTTP/1.1 200 OK
+    Content-Type: application/json; charset=utf-8
   
     {
       "id": "asdf",
@@ -202,7 +215,7 @@ Updates attributes of the requested list.
 
 Deletes the requested list.
 
-`DELETE` https://api.sendicate.net/:list_id.json
+`DELETE` https://api.sendicate.net/:list_id
 
 ##### Parameters
 
@@ -222,7 +235,7 @@ Manage subscribers in a list.
 
 Returns all subscribers in the requested list.
 
-`GET` /v1/lists/:list_id/subscribers.json?page=:page
+`GET` /v1/lists/:list_id/subscribers?page=:page
 
 ##### Parameters
 
@@ -264,13 +277,17 @@ Returns all subscribers in the requested list.
 
 Creates or updates many subscribers and adds them to the requested list. Only invalid email addresses will cause an import to fail. Errors on other fields will be reported and ignored, but will not cause an import to fail. Existing subscribers will be updated.
 
-`POST` https://api.sendicate.net/v1/lists/:list_id/subscribers.json
+`POST` https://api.sendicate.net/v1/lists/:list_id/subscribers
 
 ##### Parameters
 
 `:list_id` The ID of the requested list.
 
-##### Expected request body for one subscriber
+##### Expected request for one subscriber
+
+    Accept: application/json
+    Authorization: token YOUR_API_TOKEN
+    Content-Type: application/json
 
     {
       "email": "vanhalen@example.com",
@@ -278,7 +295,11 @@ Creates or updates many subscribers and adds them to the requested list. Only in
       "age": "18-34" // This is an example of a valid custom field
     }
 
-##### Expected request body for many subscribers
+##### Expected request for many subscribers
+
+    Accept: application/json
+    Authorization: token YOUR_API_TOKEN
+    Content-Type: application/json
 
     [
       {
@@ -323,8 +344,8 @@ Creates or updates many subscribers and adds them to the requested list. Only in
 
 ##### Expected response with failure
 
-  HTTP/1.1 422 Unprocessable entity
-  Content-Type: application/json; charset=utf-8
+    HTTP/1.1 422 Unprocessable entity
+    Content-Type: application/json; charset=utf-8
   
     {
       "imported": 1,
@@ -338,9 +359,9 @@ Creates or updates many subscribers and adds them to the requested list. Only in
           },
           "errors": [
             {
-              "field": "color",
+              "field": "email",
               "code": "invalid",
-              "message": "color is not a valid field"
+              "message": "Invalid email address"
             }
           ],
           "status": "imported"
@@ -351,9 +372,9 @@ Creates or updates many subscribers and adds them to the requested list. Only in
 
 #### Delete a list subscriber
 
-Deletes the requested list subscriber.
+Remove the requested subscriber from the list.
 
-`DELETE` https://api.sendicate.net/v1/:list_id/subscribers/:subscriber_email.json
+`DELETE` https://api.sendicate.net/v1/:list_id/subscribers/:subscriber_email
 
 ##### Parameters
 
@@ -375,7 +396,7 @@ Manage individual subscribers.
 
 Returns the attributes of the requested subscriber.
 
-`GET` https://api.sendicate.net/v1/subscribers/:subscriber_email.json
+`GET` https://api.sendicate.net/v1/subscribers/:subscriber_email
 
 ##### Parameters
 
@@ -405,7 +426,7 @@ Returns the attributes of the requested subscriber.
 
 Returns all default fields (email and name) and custom fields. Custom fields are useful for storing extra subscriber data, segmentation, etc.
 
-`GET` https://api.sendicate.net/v1/fields.json
+`GET` https://api.sendicate.net/v1/fields
 
 ##### Expected response
 
