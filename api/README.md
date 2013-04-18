@@ -242,7 +242,7 @@ Manage subscribers in a list.
 
 Returns all subscribers in the requested list.
 
-`GET` /v1/lists/:list_id/subscribers?page=:page
+`GET` https://api.sendicate.net/v1/lists/:list_id/subscribers?page=:page
 
 ##### Parameters
 
@@ -383,7 +383,7 @@ Creates or updates many subscribers and adds them to the requested list. Only in
 
 Remove the requested subscriber from the list.
 
-`DELETE` https://api.sendicate.net/v1/:list_id/subscribers/:subscriber_email
+`DELETE` https://api.sendicate.net/v1/lists/:list_id/subscribers/:subscriber_email
 
 ##### Parameters
 
