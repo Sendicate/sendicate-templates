@@ -1,0 +1,499 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="image:logo" content=""/>
+<meta name="font:Font" content="Georgia, serif"/>
+<meta name="color:Horizontal_Line" content="#CCCCCC"/>
+<meta name="dropdown:One_Col_Alignment" content="left,center,right"/>
+<title>{subject} - {company_name}</title>
+<style>
+  #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+  body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+  .ExternalClass {width:100%;} 
+  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} 
+  #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+  img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; display:block;}
+  a img {border:none;}
+  table, table td {border-collapse: collapse;}
+  .image {display:block;}
+  
+  .tableframe {
+  border-width: 1px; 
+  border-color: #cccccc; 
+  border-style: solid;
+  }
+  .heading  {    
+  	  font-family: {font:Font};
+  	  font-weight: bold;
+  	  font-size: 40px;
+    	letter-spacing: .03em;
+    	line-height:1em;
+  	  margin-top: 20px;
+  	  width: 500px;
+  	  l 
+  	}
+  	
+  	.heading a {
+    	  text-decoration: none;
+    	  color:#000001;
+    	}
+  	
+  	.subheading {	  
+    	  font-family: {font:Font};
+    	  font-size: 14px;
+      	letter-spacing: .05em;
+    	  margin: 20px;
+    	  width: 500px;
+    	}
+
+  
+	.onecol .title h2 {	  
+	  font: bold 24px {font:Font};
+	  letter-spacing: .05em;
+
+	  margin: 0;
+	}
+	.onecol .body td {
+	  font: 14px {font:Font};
+	  letter-spacing: .05em;
+
+	}
+
+	 .more  {
+    background-color:#000001; 
+
+	}
+
+	 .more .morebg  {
+
+    padding-right:20px;
+	}
+	 .more .morebgarrow  {
+    padding-left:10px;
+    padding-right:10px;
+
+	}
+	.more a {
+	  color: #ffffff;
+	  font: bold 14px {font:Font};
+	  text-decoration: none;
+	}
+	
+
+
+	.twocolumn .title h2, .threecolumn .title h2 {
+	  font: bold 24px {font:Font};
+	  margin: 0;
+	}
+
+	.twocolumn .body, .threecolumn .body {
+	  font: 14px {font:Font};
+	  margin: 0;
+	  padding: 30px 0;
+	}
+
+.gutter {
+  line-height: 0px;
+ 	  height: 15px;
+}
+
+  </style>
+</head>
+<body>
+	<table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
+	<tr height="5" class="gutter">
+		<td>&nbsp;</td>
+	</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center" width="740" class="tableframe">
+					<tr>
+						<td width="20" valign="top" class="gutter"></td>
+						<td valign="top">
+							<!--  MASTHEAD STARTS -->
+							<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+								<tr height="5" class="gutter">
+									<td>&nbsp;</td>
+								</tr>
+								<tr>
+									<td valign="top" align="center">{image:logo(300x>)}</td> 
+		        				</tr>
+								<tr height="10" class="gutter">
+									<td>&nbsp;</td>
+								</tr>
+							</table>
+							<!-- MASTHEAD ENDS -->
+
+							{block:headline}
+  							<!-- Headline STARTS -->
+  							<table class="headline" width="100%" cellpadding="0" cellspacing="0" border="0">
+  							  <tr height="5" class="gutter">
+  								  <td style="border-top-width: 1px; border-top-color: {color:Horizontal_Line}; border-top-style: solid;">&nbsp;</td>
+  							  </tr>
+   							{if image}
+								  <tr>
+  									<td class="content" valign="top">
+										  <div class="image" style="display: block;">{link_tag}{image(700x)}{/link_tag}</div>
+									  </td>
+   			      		</tr>
+  								<tr height="5">
+  								  <td class="gutter">&nbsp;</td>
+								  </tr>
+								{/if}  
+								  <tr>
+  									<td align="center">
+                      
+                      
+                      <div class="heading">{link_tag}{heading}{/link_tag}</div>
+                      <div class="subheading">{subheading}</div>
+                      
+  				      		</td>
+  				    		</tr>
+  								<tr height="5" class="gutter">
+									  <td>&nbsp;</td>
+								  </tr>
+  							</table>
+  							<!-- Headline ENDS -->
+							{/block:headline}
+
+							{block:image}
+  							<!-- IMAGE STARTS -->
+  							<table class="imagesection" width="100%" cellpadding="0" cellspacing="0" border="0">
+  								<tr>
+  									<td class="content" valign="top" align="center">
+										<div class="image">{link_tag}{image(700x>)}{/link_tag}</div>
+									</td>
+   								</tr>
+								<tr height="5" class="gutter">
+									<td>&nbsp;</td>
+								</tr>
+  							</table>
+							<!-- IMAGE ENDS -->
+							{/block:image}
+
+							{block:one_column}
+							<!-- ONE COL STARTS -->
+  							<table class="onecol" width="100%" cellpadding="0" cellspacing="0" border="0">
+  							<tr height="5" class="gutter">
+								  <td style="border-top-width: 1px; border-top-color: {color:Horizontal_Line}; border-top-style: solid;">&nbsp;</td>
+							  </tr>
+  							{if column1:image}
+								  <tr>
+  									<td class="content" valign="top"><div class="image">{column1:link_tag}{column1:image(700x>)}{/column1:link_tag}</div></td>
+   			      		</tr>
+								{/if}
+								{if column1:title}
+  								<tr height="5" class="gutter">
+  								  <td>&nbsp;</td>
+  							  </tr>
+  								<tr class="title">
+    									<td class="content" valign="top" align="{dropdown:One_Col_Alignment}">
+  										<h2>{column1:title}</h2>
+  									</td>
+     			      	</tr>
+    							<tr height="5">
+  									<td class="gutter">&nbsp;</td>
+  								</tr>
+								{/if}
+								{if column1:body}
+								  <tr class="body">
+  								  <td class="content" valign="top" align="{dropdown:One_Col_Alignment}">
+   				        		<div class="content-body">{column1:body}</div>
+   			        		</td>
+   		        		</tr>
+  								<tr height="5">
+									  <td class="gutter">&nbsp;</td>
+								  </tr>
+								{/if}
+								{if column1:link_title}
+    							<tr>
+  									<td class="content" valign="top" align="{dropdown:One_Col_Alignment}">
+  										<table class="more" cellpadding="0" cellspacing="0" border="0" height="40">
+  											<tr>
+  											  <td width="16" valign="top">&nbsp;</td>
+  											  <td class="morebg"><a href="{column1:link_url}">{column1:link_title}</a></td>
+  											  <td class="morebgarrow"><a href="{column1:link_url}"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/260/original/icon-arrow.png" width="16" height="13" border="0"></a></td>
+  											</tr>
+  										</table>
+									  </td>
+								  </tr>
+								  <tr height="5" class="gutter">
+  								  <td>&nbsp;</td>
+  							  </tr>
+                {/if}
+
+  							</table>
+  							<!-- ONE COL ENDS -->
+							{/block:one_column}
+							
+							{block:two_column}
+              <!-- TWO COL STARTS -->
+              <table class="twocolumn" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+              <tr height="5" class="gutter">
+							  <td colspan="3" style="border-top-width: 1px; border-top-color: {color:Horizontal_Line}; border-top-style: solid;">&nbsp;</td>
+						  </tr>
+              <!-- TWO COL TITLE -->
+              <tr class="title">
+                <td class="content" width="324" valign="top" align="left">
+                  <h2>{column1:title}</h2>
+                </td>
+                <td class="gutter">&nbsp;</td>
+                <td class="content" width="324" valign="top" align="left">
+                  <h2>{column2:title}</h2>
+                </td>
+              </tr>
+              <tr height="5">
+                <td class="gutter" colspan="3">&nbsp;</td>
+              </tr>
+              <!-- TWO COL IMAGE -->
+              <tr>
+                <td class="content" width="324" valign="top" align="left">
+                  {if column1:image}
+                  <div class="image">{column1:link_tag}{column1:image(322x)}{/column1:link_tag}</div>
+                  {/if}
+                </td>
+                <td class="gutter" style="border-collapse: collapse;">&nbsp;</td>
+                <td class="content" width="324" valign="top" align="left">
+                  {if column2:image}
+                  <div class="image">{column2:link_tag}{column2:image(322x)}{/column2:link_tag}</div>
+                  {/if}
+                </td>
+              </tr>
+              <tr height="5">
+                <td class="gutter" colspan="3">&nbsp;</td>
+              </tr>
+              <!-- TWO COL BODY -->
+              <tr class="body">
+                <td class="content" width="324" valign="top" align="left">
+                  <div class="content-body">
+                    {column1:body}
+                  </div>
+                </td>
+                <td class="gutter">&nbsp;</td>
+                <td class="content" width="324" valign="top" align="left">
+                  <div class="content-body">
+                    {column2:body}
+                  </div>
+                </td>   
+            </tr>
+            <tr height="5">
+              <td class="gutter" colspan="3">&nbsp;</td>
+            </tr>
+            <!-- TWO COL READ MORE -->
+            <tr>
+              <td class="content" width="324" valign="top" align="left">
+                  {if column1:link_title}
+									<table class="more" cellpadding="0" cellspacing="0" border="0" height="40">
+										<tr>
+										  <td width="16" valign="top">&nbsp;</td>
+										  <td class="morebg"><a href="{column1:link_url}">{column1:link_title}</a></td>
+										  <td class="morebgarrow"><a href="{column1:link_url}"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/260/original/icon-arrow.png" width="16" height="13" border="0"></a></td>
+										</tr>
+									</table>
+                  {/if}
+              </td>
+              <td class="gutter">&nbsp;</td>
+              <td class="content" width="324" valign="top" align="left">
+                  {if column2:link_title}
+									<table class="more" cellpadding="0" cellspacing="0" border="0" height="40">
+										<tr>
+										  <td width="16" valign="top">&nbsp;</td>
+										  <td class="morebg"><a href="{column2:link_url}">{column2:link_title}</a></td>
+										  <td class="morebgarrow"><a href="{column2:link_url}"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/260/original/icon-arrow.png" width="16" height="13" border="0"></a></td>
+										</tr>
+									</table>
+                  {/if}
+              </td>
+            </tr>
+            <!-- TWO COL BOTTOM SPACING -->
+            <tr height="5" class="gutter">
+              <td colspan="3">&nbsp;</td>
+            </tr>
+          </table>
+          <!-- SENDICATE TWO COL ENDS -->
+          {/block:two_column}
+          
+          		{block:three_column}
+              <!-- THREE COL STARTS -->
+              <table class="threecolumn" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+                <tr class="gutter">
+								  <td colspan="5" style="border-top-width: 1px; border-top-color: {color:Horizontal_Line}; border-top-style: solid;">&nbsp;</td>
+							  </tr>
+              <!-- THREE COL TITLE -->
+              <tr class="title">
+                <td class="content" width="200" valign="top" align="left">
+                  <h2>{column1:title}</h2>
+                </td>
+                <td class="gutter">&nbsp;</td>
+                <td class="content" width="200" valign="top" align="left">
+                  <h2>{column2:title}</h2>
+                </td>
+                <td class="gutter">&nbsp;</td>
+                <td class="content" width="200" valign="top" align="left">
+                  <h2>{column3:title}</h2>
+                </td>
+              </tr>
+              <tr height="5">
+                <td class="gutter" colspan="5">&nbsp;</td>
+              </tr>
+              <!-- THREE COL IMAGE -->
+              <tr>
+                <td class="content" width="200" valign="top" align="left">
+                  {if column1:image}
+                  <div class="image">{column1:link_tag}{column1:image(200x)}{/column1:link_tag}</div>
+                  {/if}
+                </td>
+                <td class="gutter" style="border-collapse: collapse;">&nbsp;</td>
+                <td class="content" width="200" valign="top" align="left">
+                  {if column2:image}
+                  <div class="image">{column2:link_tag}{column2:image(200x)}{/column2:link_tag}</div>
+                  {/if}
+                </td>
+                <td class="gutter" style="border-collapse: collapse;">&nbsp;</td>
+                <td class="content" width="200" valign="top" align="left">
+                  {if column3:image}
+                  <div class="image">{column3:link_tag}{column3:image(200x)}{/column3:link_tag}</div>
+                  {/if}
+                </td>
+              </tr>
+              <tr height="5">
+                <td class="gutter" colspan="5">&nbsp;</td>
+              </tr>
+              <!-- THREE COL BODY -->
+              <tr class="body">
+                <td class="content" width="200" valign="top" align="left">
+                  <div class="content-body">
+                    {column1:body}
+                  </div>
+                </td>
+                <td class="gutter">&nbsp;</td>
+                <td class="content" width="200" valign="top" align="left">
+                  <div class="content-body">
+                    {column2:body}
+                  </div>
+                </td> 
+                <td class="gutter">&nbsp;</td>
+                <td class="content" width="200" valign="top" align="left">
+                  <div class="content-body">
+                    {column3:body}
+                  </div>
+                </td>  
+            </tr>
+            <tr height="5">
+              <td class="gutter" colspan="5">&nbsp;</td>
+            </tr>
+            <!-- THREE COL READ MORE -->
+            <tr>
+              <td class="content" width="200" valign="top" align="left">
+                  {if column1:link_title}
+									<table class="more" cellpadding="0" cellspacing="0" border="0" height="40">
+										<tr>
+										  <td width="16" valign="top">&nbsp;</td>
+										  <td class="morebg"><a href="{column1:link_url}">{column1:link_title}</a></td>
+										  <td class="morebgarrow"><a href="{column1:link_url}"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/260/original/icon-arrow.png" width="16" height="13" border="0"></a></td>
+										</tr>
+									</table>
+                  {/if}
+              </td>
+              <td class="gutter">&nbsp;</td>
+              <td class="content" width="200" valign="top" align="left">
+                  {if column2:link_title}
+									<table class="more" cellpadding="0" cellspacing="0" border="0" height="40">
+										<tr>
+										  <td width="16" valign="top">&nbsp;</td>
+										  <td class="morebg"><a href="{column2:link_url}">{column2:link_title}</a></td>
+										  <td class="morebgarrow"><a href="{column2:link_url}"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/260/original/icon-arrow.png" width="16" height="13" border="0"></a></td>
+										</tr>
+									</table>
+                  {/if}
+              </td>
+              <td class="gutter">&nbsp;</td>
+              <td class="content" width="200" valign="top" align="left">
+                  {if column3:link_title}
+									<table class="more" cellpadding="0" cellspacing="0" border="0" height="40">
+										<tr>
+										  <td width="16" valign="top">&nbsp;</td>
+										  <td class="morebg"><a href="{column3:link_url}">{column3:link_title}</a></td>
+										  <td class="morebgarrow"><a href="{column3:link_url}"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/260/original/icon-arrow.png" width="16" height="13" border="0"></a></td>
+										</tr>
+									</table>
+                  {/if}
+              </td>
+            </tr>
+            <!-- THREE COL BOTTOM SPACING -->
+            <tr height="5" class="gutter">
+              <td colspan="5">&nbsp;</td>
+            </tr>
+          </table>
+          <!-- SENDICATE THREE COL ENDS -->
+          {/block:three_column}          
+							
+							{block:video}
+							<!-- VIDEO STARTS -->
+  							<table class="onecol" width="100%" cellpadding="0" cellspacing="0" border="0">
+  							  <tr class="gutter">
+  								  <td style="border-top-width: 1px; border-top-color: {color:Horizontal_Line}; border-top-style: solid;">&nbsp;</td>
+  							  </tr>
+  								{if image}
+								<tr>
+  									<td class="content" valign="top"><div class="image">{link_tag}{image(700x)}{/link_tag}</div></td>
+   			      				</tr>
+  								<tr height="5">
+									<td class="gutter">&nbsp;</td>
+								</tr>
+								{/if}
+								{if title}
+								<tr class="title">
+  									<td class="content" valign="top" align="left">
+										<h2>{title}</h2>
+									</td>
+   			      				</tr>
+  								<tr height="5">
+									<td class="gutter">&nbsp;</td>
+								</tr>
+								{/if}
+								{if body}
+								<tr class="body">
+  									<td class="content" valign="top">
+   				        				<div class="content-body">{body}</div>
+   			        				</td>
+   		        				</tr>
+  								<tr height="5">
+									<td class="gutter">&nbsp;</td>
+								</tr>
+								{/if}
+									<tr>
+  									<td class="content" valign="top" align="left">
+    									<table class="more" cellpadding="0" cellspacing="0" border="0" height="40">
+    										<tr>
+    										  <td width="16" valign="top">&nbsp;</td>
+    										  <td class="morebg"><a href="{link_url}">Watch Now</a></td>
+    										  <td class="morebgarrow"><a href="{link_url}"><img src="https://s3.amazonaws.com/sendicate-app/uploads/p/uploaded_assets/attachments/000/000/260/original/icon-arrow.png" width="16" height="13" border="0"></a></td>
+    										</tr>
+    									</table>
+									  </td>
+								  </tr>
+  							<tr height="5" class="gutter">
+									<td>&nbsp;</td>
+								</tr>
+  							</table>
+  							<!-- ONE COL ENDS -->
+							{/block:video}
+							
+                          	<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="font-family: arial,helvetica,sans-serif; font-size: x-small;"><br>
+              You are receiving this email because you have expressed interest in receiving news and invitations to events <br>produced/and or associated with STATE PR. To be removed from this list, click below.<br><br>
+                            </td></tr></table>
+
+						</td>
+						<td width="20" class="gutter">&nbsp;</td>
+					</tr>
+											
+				</table>
+			</td>
+		</tr>
+		
+	</table>
+</body>
+</html>
