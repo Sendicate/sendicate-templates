@@ -7,6 +7,8 @@ Signup forms make it easy for people to subscribe to your Sendicate mailing list
 
 For customization options refer to:
 
+* [Customize form fields](#customize-form-fields)
+* [Custom fields](#custom-fields)
 * [Customize subscribe page design](#customize-subscribe-page-design)
 * [Styling the embed code](#styling-the-embed-code)
 
@@ -18,7 +20,7 @@ The simplest approach is directing users to the list signup page.  This can be f
 
 ##  Signup Form Embed Code   
 
-Each list has its own embed code.  To access the list embed code in Sendicate click Manage, Subscribers, your list, then "embed subscribe form" on the sidebar.  Using the embed code offers the best integration as the subscriber enters their details into a form hosted on your site that is submitted to Sendicate directly.  Email is a required field, name is optional.   This example is a simple unstyled form (for a [styled example see below](#signup-form-embed-code).  All the inputs and ID’s need to match exactly for the form to submit properly.  The “xxxxxx” needs to be updated with the appropriate list ID found in the URL of your list, or listed in the embed code section.
+Each list has its own embed code.  To access the list embed code in Sendicate click Manage, Subscribers, your list, then "customize sign up form" on the sidebar.  Using the embed code offers the best integration as the subscriber enters their details into a form hosted on your site that is submitted to Sendicate directly.  Email is a required field, name is optional.   This example is a simple un-styled form (for a [styled example see below](#signup-form-embed-code).  All the inputs and ID’s need to match exactly for the form to submit properly.  The “xxxxxx” needs to be updated with the appropriate list ID found in the URL of your list, or listed in the embed code section.
 
     <form accept-charset="UTF-8" action="https://www.sendicate.net/subscribe/xxxxxx" method="post"> 
         <label for="subscriber_name">Name</label> 
@@ -27,6 +29,34 @@ Each list has its own embed code.  To access the list embed code in Sendicate cl
         <input id="subscriber_email" name="subscriber[email]" type="text" /> <br /> 
         <input name="commit" type="submit" value="Subscribe" /> 
     </form> 
+
+## Customize Form Fields
+
+By default only the email is shown on subscribe forms.  To add additional form fields first add any [custom fields](#custom-fields) through the "Custom Fields" page or through the importer. Then the "Customize Form Fields" section will show all available custom fields.  The columns are:
+
+| Item | Description |
+| :----- | :----- |
+| Visible  | Checkbox to toggle if the form should be shown or hidden.  By default fields are hidden |
+| Field | The name of the custom field.  Use this name when using the API or embed codes. |
+| Label Text | This text label will be shown on the form.  By default it is the field name. |
+| Show as | Specify how different datatypes are shown.  Some fields have additional display options |
+| Required | Checkbox to toggle if the field is required.  If checked validation will be applied. |
+| Position | Drag/drop to change the order of the form fields. |
+
+## Custom Fields
+
+Custom fields allow Sendicate to be extended to track custom data for each subscriber.  Common data includes address, phone number, or customer status.
+
+## Custom Field Data Types
+
+| Item | Description |
+| :----- | :----- |
+| Text  | Checkbox to toggle if the form should be shown or hidden.  By default fields are hidden |
+| Number | The name of the custom field.  Use this name when using the API or embed codes. |
+| Date | This text label will be shown on the form.  By default it is the field name. |
+| List | Specify how different datatypes are shown.  Some fields have additional display options |
+| Email| Checkbox to toggle if the field is required.  If checked validation will be applied. |
+
 
 ## Customize Subscribe Page Design
 

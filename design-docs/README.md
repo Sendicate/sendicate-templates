@@ -186,8 +186,11 @@ These variables can be used anywhere in the the template code.
 | {company_website_url} | 'Website' on account page |
 | {unsubscribe_url} | Unsubscribe URL |
 
+### Custom Fields
 
-### Date/Time variables
+Any custom field data can be used as a template variable.
+
+### Date/Time Variables
 
 Assume that current time is Tuesday, 17 July 2012 09:54:45
 
