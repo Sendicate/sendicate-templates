@@ -5,7 +5,7 @@ Learn more about extending [Sendicate](http://www.sendicate.net).
 ## Sections
 
 * [Email template & design documentation](design-docs)
-* [Email design examples](design-examples)
+* [Email design examples](design-docs/design-examples)
 * [Signup forms & Custom Fields](subscribers)
 * [Compose emails](compose)
 * [API](api)
