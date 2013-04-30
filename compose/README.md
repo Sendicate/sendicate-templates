@@ -1,5 +1,7 @@
 # Compose Emails
 
+Composing and sending an email is easy with Sendicate.  Here is some extended info on the fields and sections:
+
 ## Who are we sending to?
 
 | Item | Description |
@@ -22,7 +24,7 @@ To schedule an email choose "schedule email" form the options menu.  There are t
 
 The timezone can be set on the "account" page.
 
-## Compose another section?
+## Compose a section
 
 There are 6 types of blocks for use in templates and composing.  Each section can have its own bespoke styling and layout allowing for flexible templates.  The 6 section blocks are:
 
@@ -36,6 +38,18 @@ There are 6 types of blocks for use in templates and composing.  Each section ca
 | Video | Insert a Youtube or Vimeo link to embed a video, along with title and body |
 
 "Edit section" has options to re-order or delete each section.
+
+Each section has the following basic elements. These vary per section:
+
+| Item | Description |
+| :----- | :----- |
+| Image  | Click the camera icon to upload an image.  Once an image has been uploaded it can be replaced or removed. |
+| Title | The title heading.  For an image, the title will be used as alt text to be shown if images are disabled |
+| Body | The main body content.  If text is selected a formatting toolbar appears with options for bold, italics, a list, or to create a link |
+| Link title | Paired with link URL, this creates the link text |
+| Link URL | Paired with link title, this creates the link |
+| Video URL | Insert a Youtube or Vimeo link to embed a video |
+
 
 ## Preview
 
