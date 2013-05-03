@@ -34,7 +34,7 @@ Add your facebook or twitter names to automatically add social buttons to the bo
 
 The Twitter field is your twitter account name, eg `sendicate`.
 
-The Facebook field is your Facebook short link, eg http://facebook.com/`sendicate`.
+The Facebook field is your Facebook short link, eg http://facebook.com/ `sendicate`.
 
 Check "tag links" to have your links automatically tagged with [Google Analytics link tracking](https://support.google.com/analytics/answer/1033863).
 
