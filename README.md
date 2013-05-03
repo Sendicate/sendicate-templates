@@ -8,7 +8,9 @@ Learn more about extending [Sendicate](http://www.sendicate.net).
 * [Email design examples](design-docs/design-examples)
 * [Signup forms & Custom Fields](subscribers)
 * [Compose emails](compose)
+* [Account](account)
 * [API](api)
+* [FAQ](FAQ)
 
 ## Support
 
