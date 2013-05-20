@@ -4,8 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="image:logo" content=""/>
-<meta name="font:Font" content="Georgia, serif"/>
-<meta name="color:Horizontal_Line" content="#CCCCCC"/>
+<meta name="font:Font" content="'Helvetica Neue', Helvetica, Arial, sans-serif"/>
+<meta name="color:Horizontal_Line" content="#000001"/>
+<meta name="text:Horizontal_Line_Size" content="1px"/>
 <meta name="dropdown:One_Col_Alignment" content="left,center,right"/>
 <title>{subject} - {company_name}</title>
 <style>
@@ -20,8 +21,8 @@
   .image {display:block;}
   
   .tableframe {
-  border-width: 1px; 
-  border-color: #cccccc; 
+  border-width: {text:Horizontal_Line_Size}; 
+  border-color: {color:Horizontal_Line}; 
   border-style: solid;
   }
   .heading  {    
@@ -99,6 +100,13 @@
  	  height: 15px;
 }
 
+.line {
+  border-top-width: {text:Horizontal_Line_Size}; 
+  border-top-color: {color:Horizontal_Line}; 
+  border-top-style: solid;
+}
+
+
   </style>
 </head>
 <body>
@@ -130,7 +138,7 @@
   							<!-- Headline STARTS -->
   							<table class="headline" width="100%" cellpadding="0" cellspacing="0" border="0">
   							  <tr height="5" class="gutter">
-  								  <td style="border-top-width: 1px; border-top-color: {color:Horizontal_Line}; border-top-style: solid;">&nbsp;</td>
+  								  <td class="line">&nbsp;</td>
   							  </tr>
    							{if image}
 								  <tr>
@@ -177,7 +185,7 @@
 							<!-- ONE COL STARTS -->
   							<table class="onecol" width="100%" cellpadding="0" cellspacing="0" border="0">
   							<tr height="5" class="gutter">
-								  <td style="border-top-width: 1px; border-top-color: {color:Horizontal_Line}; border-top-style: solid;">&nbsp;</td>
+								  <td class="line">&nbsp;</td>
 							  </tr>
   							{if column1:image}
 								  <tr>
@@ -232,7 +240,7 @@
               <!-- TWO COL STARTS -->
               <table class="twocolumn" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
               <tr height="5" class="gutter">
-							  <td colspan="3" style="border-top-width: 1px; border-top-color: {color:Horizontal_Line}; border-top-style: solid;">&nbsp;</td>
+							  <td colspan="3" class="line">&nbsp;</td>
 						  </tr>
               <!-- TWO COL TITLE -->
               <tr class="title">
@@ -319,7 +327,7 @@
               <!-- THREE COL STARTS -->
               <table class="threecolumn" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
                 <tr class="gutter">
-								  <td colspan="5" style="border-top-width: 1px; border-top-color: {color:Horizontal_Line}; border-top-style: solid;">&nbsp;</td>
+								  <td colspan="5" class="line">&nbsp;</td>
 							  </tr>
               <!-- THREE COL TITLE -->
               <tr class="title">
@@ -434,7 +442,7 @@
 							<!-- VIDEO STARTS -->
   							<table class="onecol" width="100%" cellpadding="0" cellspacing="0" border="0">
   							  <tr class="gutter">
-  								  <td style="border-top-width: 1px; border-top-color: {color:Horizontal_Line}; border-top-style: solid;">&nbsp;</td>
+  								  <td class="line">&nbsp;</td>
   							  </tr>
   								{if image}
 								<tr>
