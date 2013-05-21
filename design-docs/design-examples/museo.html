@@ -15,6 +15,7 @@
 <meta name="text:Body_Font_Size" content="14px"/>
 <meta name="text:Heading_Font_Size" content="40px"/>
 <meta name="text:Subheading_Font_Size" content="18px"/>
+<meta name="dropdown:Text_Alignment" content="center,left,right"/>
 <meta name="color:image_border_color" content="#dedede"/>
 <title>{subject} - {company_name}</title>
 <style>
@@ -45,8 +46,9 @@
                   {if logo}
                     {logo(450x200>)}
                   {else}
-                   <span style="font-size: 18px; line-height: 16px; color: {color:text_color}; font-family: {font:body_font};">{company_name}</span></a>
+                   <span style="font-size: 18px; line-height: 16px; color: {color:text_color}; font-family: {font:body_font};">{company_name}</span>
                   {/if}
+</a>
               </td>
             </tr>
 <tr height="15" class="gutter"><td style="border-collapse: collapse; font-size: 1px; line-height: 1px; color: {color:text_color}"> </td></tr>
@@ -89,7 +91,7 @@
 
 {block:one_column}
 <!-- SENDICATE ONE COL STARTS --><table class="uno" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
-<tr><td valig="top" align="center" class="content" color="{color:text_color}" style="border-collapse: collapse;">
+<tr><td valign="top" align="{dropdown:Text_Alignment}" class="content" color="{color:text_color}" style="border-collapse: collapse;">
 
 {if column1:image}
   <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid {color:image_border_color};">
@@ -97,7 +99,7 @@
   </div>
 {/if}
 
-              <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; padding-left: 60px; padding-right: 60px; margin-top: 0; margin-bottom: 20px;">
+              <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; margin-top: 0; margin-bottom: 20px;">
                 {if column1:link_url}
                 <a href="{column1:link_url}" style="text-decoration: none; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color}"><span style="font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color}; font-family: {font:body_font};">{column1:title}</span></a>
                 {else}
@@ -112,7 +114,7 @@
 
               {if column1:link_url}
               <br>
-  <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
+  <table class="more" cellpadding="5" cellspacing="0" border="0" align="{dropdown:Text_Alignment}" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
 <td valign="top" style="border-collapse: collapse;"><a href="{column1:link_url}" style="display: block; font-size: {text:Body_Font_Size}; line-height: 1; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column1:link_title}</span></a></td>
   </tr></table>
               {/if}
@@ -128,7 +130,7 @@
 <!-- SENDICATE TWO COL STARTS -->
 <table class="duo" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
 <tr>
-<!-- COL ONE --><td width="320" valign="top" align="center" class="content" color="{color:text_color}" style="border-collapse: collapse;">
+<!-- COL ONE --><td width="320" valign="top" align="{dropdown:Text_Alignment}" class="content" color="{color:text_color}" style="border-collapse: collapse;">
   {if column1:image}
     <div class="image" style="display: block; margin-bottom: 20px;">
       {if column1:link_url}
@@ -153,7 +155,7 @@
 
   {if column1:link_url}
   <br>
-  <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
+  <table class="more" cellpadding="5" cellspacing="0" border="0" align="{dropdown:Text_Alignment}" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
 <td valign="top" style="border-collapse: collapse;"><a href="{column1:link_url}" style="display: block; font-size: {text:Body_Font_Size}; line-height: 1; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column1:link_title}</span></a></td>
   </tr></table>
   {/if}
@@ -164,7 +166,7 @@
               <td width="5" class="gutter" style="border-collapse: collapse;"> </td>
 
               <!-- COL TWO -->
-              <td width="320" valign="top" align="center" class="content" color="{color:text_color}" style="border-collapse: collapse;">
+              <td width="320" valign="top" align="{dropdown:Text_Alignment}" class="content" color="{color:text_color}" style="border-collapse: collapse; padding-left:5px;">
 
 
   {if column2:image}
@@ -191,7 +193,7 @@
 
   {if column2:link_url}
   <br>
-  <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
+  <table class="more" cellpadding="5" cellspacing="0" border="0" align="{dropdown:Text_Alignment}" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
 <td valign="top" style="border-collapse: collapse;"><a href="{column2:link_url}" style="display: block; font-size: {text:Body_Font_Size}; line-height: 1; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column2:link_title}</span></a></td>
   </tr></table>
   {/if}
@@ -209,7 +211,7 @@
 <!-- SENDICATE THREE COL STARTS -->
 <table class="trio" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
 <tr>
-<!-- COL ONE --><td width="180" valign="top" align="center" class="content" color="{color:text_color}" style="border-collapse: collapse;">
+<!-- COL ONE --><td width="180" valign="top" align="{dropdown:Text_Alignment}" class="content" color="{color:text_color}" style="border-collapse: collapse;">
 
  {if column1:image}
     <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid {color:image_border_color};">
@@ -235,7 +237,7 @@
 
   {if column1:link_url}
   <br>
-  <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
+  <table class="more" cellpadding="5" cellspacing="0" border="0" align="{dropdown:Text_Alignment}" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
 <td valign="top" style="border-collapse: collapse;"><a href="{column1:link_url}" style="display: block; font-size: {text:Body_Font_Size}; line-height: 1; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column1:link_title}</span></a></td>
   </tr></table>
   {/if}
@@ -248,7 +250,7 @@
               <td class="gutter" style="border-collapse: collapse;"> </td>
 
               <!-- COL TWO -->
-              <td width="180" valign="top" align="center" class="content" color="{color:text_color}" style="border-collapse: collapse;">
+              <td width="180" valign="top" align="{dropdown:Text_Alignment}" class="content" color="{color:text_color}" style="border-collapse: collapse;">
 
   {if column2:image}
     <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid {color:image_border_color};">
@@ -274,7 +276,7 @@
 
   {if column2:link_url}
   <br>
-  <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
+  <table class="more" cellpadding="5" cellspacing="0" border="0" align="{dropdown:Text_Alignment}" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
 <td valign="top" style="border-collapse: collapse;"><a href="{column2:link_url}" style="display: block; font-size: {text:Body_Font_Size}; line-height: 1; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column2:link_title}</span></a></td>
   </tr></table>
   {/if}
@@ -285,7 +287,7 @@
               <td class="gutter" style="border-collapse: collapse;"> </td>
 
               <!-- COL THREE -->
-              <td width="180" valign="top" align="center" class="content" color="{color:text_color}" style="border-collapse: collapse;">
+              <td width="180" valign="top" align="{dropdown:Text_Alignment}" class="content" color="{color:text_color}" style="border-collapse: collapse;">
 
   {if column3:image}
     <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid {color:image_border_color};">
@@ -311,7 +313,7 @@
 
   {if column3:link_url}
   <br>
-  <table class="more" cellpadding="5" cellspacing="0" border="0" align="center" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
+  <table class="more" cellpadding="5" cellspacing="0" border="0" align="{dropdown:Text_Alignment}" bgcolor="{color:reversed_background_color}" style="border-collapse: collapse;"><tr>
 <td valign="top" style="border-collapse: collapse;"><a href="{column3:link_url}" style="display: block; font-size: {text:Body_Font_Size}; line-height: 1; letter-spacing: 1px; text-decoration: none; color: {color:reversed_text_color} !important; text-align: center; padding: 4px 10px;"><span style="font-family: {font:body_font}; color: {color:reversed_text_color};">{column3:link_title}</span></a></td>
   </tr></table>
   {/if}
@@ -351,11 +353,11 @@
 <!-- SENDICATE VIDEO COL STARTS -->
 <table class="uno video" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse: collapse;">
 <tr>
-<td class="content" color="{color:text_color}" valign="top" align="center" style="border-collapse: collapse;">
+<td class="content" color="{color:text_color}" valign="top" align="{dropdown:Text_Alignment}" style="border-collapse: collapse;">
                 <div class="image" style="display: block; margin-bottom: 20px; border: 1px solid #dedede;">
                 {link_tag}{image(672x)}{/link_tag}
                 </div>
-                <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; padding-left: 60px; padding-right: 60px; margin-top: 0; margin-bottom: 20px;">
+                <h2 style="color: {color:text_color}; font-family: {font:body_font}; padding-bottom: 10px; border-bottom-color: {color:dotted_line_color}; border-bottom-width: 1px; border-bottom-style: dotted; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; margin-top: 0; margin-bottom: 20px;">
 
                 {if link_url}
                   <a href="{link_url}" style="text-decoration: none; font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color}"><span style="font-size: {text:Title_Font_Size}; line-height: 1; font-weight: normal; color: {color:text_color}; font-family: {font:body_font};">{title}</span></a>
