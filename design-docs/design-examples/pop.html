@@ -71,6 +71,11 @@
 <tr height="35" class="divider"><td bgcolor="{color:dividing_lines}" style="border-collapse: collapse;"> </td></tr>
 <tr>
 <td valign="top" align="left" style="border-collapse: collapse;">
+   {if image}
+    <div class="image" style="display: block; margin-bottom: 10px; margin-top: 20px; border: 1px solid #dedede;">
+      {link_tag}{image(672x)}{/link_tag}
+    </div>
+    {/if}
                 <h1 style="color: {color:headings}; font-family: {font:headings}; font-size: 84px; line-height: 1; margin: 10px 0 10px;">
                   {if link_url}
                     <a href="{link_url}" style="color: {color:headings}; font-family: {font:headings}; text-decoration: none;">
