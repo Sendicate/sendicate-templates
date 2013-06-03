@@ -1,17 +1,7 @@
-# Sendicate Documentation & Examples
+# Sendicate Templates
 
-Learn more about extending [Sendicate](http://www.sendicate.net).
+Sendicate's default templates can be found here.
 
-## Sections
+## Template Docs
 
-* [Email template & design documentation](design-docs)
-* [Email design examples](design-docs/design-examples)
-* [Signup forms & Custom Fields](subscribers)
-* [Compose emails](compose)
-* [Account](account)
-* [API](api)
-* [FAQ](FAQ)
-
-## Support
-
-Contact us at support@sendicate.net
+For template documentation see the [template specs page](https://www.sendicate.net/docs/templates/) on the docs site.
