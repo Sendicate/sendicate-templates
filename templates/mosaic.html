@@ -85,29 +85,40 @@
 			.threecol-background {
 			background-color:{color:three_column_background};
 			}
-			.onecol-section, .onecol-section a {font-family:{font:body_font}; color:{color:one_column_font_color};
+			.onecol-title, .onecol-title a {font-family:{font:body_font}; color:{color:one_column_font_color};font-size:18px;text-decoration:none; font-weight:bold;
 			}
-			.twocol-section, .twocol-section a {font-family:{font:body_font}; color:{color:two_column_font_color};
+			.onecol-body {font-family:{font:body_font}; color:{color:one_column_font_color};font-size:14px;
 			}
-			.threecol-section, .threecol-section a {font-family:{font:body_font}; color:{color:three_column_font_color};
+			.twocol-title, .twocol-title a {font-family:{font:body_font}; color:{color:two_column_font_color};font-size:18px;font-weight:bold;text-decoration:none; 
 			}
-			.video-section, .video-section a {font-family:{font:body_font}; color:{color:video_font_font_color};
+			.twocol-body {font-family:{font:body_font}; color:{color:two_column_font_color};font-size:14px;
 			}
-			
-			.preheader-text, .preheader-text a {font-family:{font:body_font}; color:{color:preheader_font_color};
+			.threecol-title, .threecol-title a {font-family:{font:body_font}; color:{color:three_column_font_color};font-size:18px;font-weight:bold;text-decoration:none; 
+			}
+			.threecol-body {font-family:{font:body_font}; color:{color:three_column_font_color};font-size:14px;
+			}
+			.video-title, .video-title a {font-family:{font:body_font}; color:{color:video_font_color};font-size:18px;text-decoration:none; font-weight:bold;
+			}
+			.video-body {font-family:{font:body_font}; color:{color:video_font_color};font-size:14px;
+			}			
+			.preheader-text, {font-family:{font:body_font}; color:{color:preheader_font_color}; font-size: 11px; 
 		    }
+		    
+  		.preheader-text a {text-decoration:underline; font-weight:bold; color:{color:preheader_font_color};
+  		  }
 			
-			.headline-title, .headline-title a {font-family:{font:body_font}; color:{color:headline_font_color};
+			.headline-title, .headline-title a {font-family:{font:body_font}; color:{color:headline_font_color};font-size:28px; font-weight:bold;text-decoration:none; 
+			}
+			.headline-subheading, {font-family:{font:body_font}; color:{color:headline_font_color};font-size:17px;
 			}
 			.mob_button {
-			background-color: {color:button_color};	
+			background-color: {color:button_color};	-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
 			}
 			.mob_button a {font-size: 14px; font-family:{font:body_font}; color: {color:button_color_text}; text-decoration: none;
+			
 			}
-	
-	
-			
-			
+			.splitter {font-size:1px; line-height:1px;}
+
 	</style>
     
     <style type="text/css" inline="false"> 
@@ -234,10 +245,10 @@
 
                             <table border="0" cellpadding="10" cellspacing="0" class="container" width="640">
                                 <tr>
-                                    <td align="left" class="preheader-text" style="font-size: 11px" valign="top">{text:preview_text}</td>
+                                    <td align="left" class="preheader-text" valign="top">{text:preview_text}</td>
             
-                                    <td align="right" class="preheader-text" style="font-size:11px;" valign="top">
-                                        Email appearing a bit fuzzy? <a href="{web_url}" style="text-decoration:underline; font-weight:bold;">View it in your browser</a>
+                                    <td align="right" class="preheader-text" valign="top">
+                                        Email appearing a bit fuzzy? <a href="{web_url}">View it in your browser</a>
                                     </td>
                                 </tr>
                             </table>
@@ -258,7 +269,7 @@
                                 </tr>
                                 <tr>
                                     <td width="20" class="hide"></td>
-                                    <td width="600" class="w320p10" align="center">{image:logo(220x)}</td>
+                                    <td width="600" class="w320p10" align="center">{image:logo(220x>)}</td>
                                     
                                     <td width="20" class="hide"></td>
                                 </tr>
@@ -273,8 +284,9 @@
                 <!-- End of logo table -->
                 
                 
-                <!-- Headline section -->
+                
                 {block:headline}
+                <!-- Headline section -->
                 <table border="0" cellspacing="0" cellpadding="0" class="masthead-background">
                 	<tr>
                     	<td valign="top">
@@ -294,7 +306,7 @@
                                     	
                                         <table width="600" border="0" cellspacing="0" cellpadding="0" class="w320p10">
                                         	<tr>
-                                                <td class="headline-title" align="left" style="font-size:21px;"><strong>{heading}</strong>
+                                                <td class="headline-title" align="left">{link_tag}{heading}{/link_tag}
                                                 
                                                     {if subheading}
                                                     <table width="600" class="w280" border="0" cellspacing="0" cellpadding="0">
@@ -302,7 +314,7 @@
                                                             <td height="15"></td>
                                                         </tr>
                                                         <tr>
-                                                            <td align="left" class="headline-title" style="font-size:17px;">{subheading}</td>
+                                                            <td align="left" class="headline-subheading">{subheading}</td>
                                                         </tr>
                                                     </table>
                                                     {/if}
@@ -321,18 +333,22 @@
                         </td>
                     </tr>
                 </table>
-                {/block:headline}
-                <!-- End of headline section-->
                 
                 <!-- 2 pixel splitter -->
                 
                 <table width="640" border="0" cellspacing="0" cellpadding="0" class="container">
                 	<tr>
-                    	<td height="2" style="font-size:1px; line-height:1px;"></td>
+                    	<td height="2" class="splitter"></td>
                     </tr>
                 </table>
                 
                 <!-- end 2 px splitter -->
+                
+                <!-- End of headline section-->
+                {/block:headline}
+                
+                
+
                 
                 
                 <!-- 1 column -->
@@ -350,8 +366,7 @@
                                     <td width="600" class="container">
                                     	<table width="600" border="0" cellspacing="0" cellpadding="0" class="w320p10">
                                         	<tr>
-                                            	<td align="left" class="onecol-section" style="font-size:18px">
-                                    			<strong>{column1:title}</strong></td>
+                                            	<td align="left" class="onecol-title">{column1:link_tag}{column1:title}{/column1:link_tag}</td>
                                             </tr>
                                         </table>
                                     <td width="20" class="hide"></td>
@@ -365,7 +380,7 @@
                                     	<table width="640" border="0" cellspacing="0" cellpadding="0" class="container">
                                         	<tr>
                                             	<td width="20"></td>
-                                    			<td height="1" class="divider" style="font-size:1px; line-height:1px;"></td>
+                                    			<td height="1" class="divider splitter"></td>
                                                 <td width="20"></td>
                                             </tr>
                                         </table>
@@ -383,8 +398,6 @@
                                             <tr>
                                             	{if column1:image}
                                                 <td class="mobile-column" valign="top">
-                                       
-            										
                                                     <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="185">
                                                         <tr>
                                                             <td valign="top" align="center" class="w280">{column1:link_tag}{column1:image(185x)}{/column1:link_tag}</td>
@@ -392,21 +405,17 @@
                                                         
                                                     </table>
                                                 </td>
-                                                
-                        
                                                 <td class="hide" width="20"></td>
                                                 {/if}
                                                 <td class="mobile-column" valign="top">
-                                       
-            
                                                     <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column-20t">
                                                         <tr>
-                                                            <td valign="top" align="left" class="onecol-section" style="font-size:14px;">{column1:body}
+                                                            <td valign="top" align="left" class="onecol-body">{column1:body}
                                                             {if column1:link_title}<br><br>
                                                             
                                                             <table border="0" cellpadding="10" cellspacing="0">
                                                                 <tr>
-                                                                    <td align="center" class="mob_button" style="-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;" valign="top">
+                                                                    <td align="center" class="mob_button" valign="top">
                                                                         <a href="{column1:link_url}">{column1:link_title} &raquo;</a>
                                                                     </td>
                                                                 </tr>
@@ -432,23 +441,24 @@
            				</td>
                     </tr>
                 </table>
-                {/block:one_column}
-           		<!-- End of 1 column -->
-                
                 
                 <!-- 2 pixel splitter -->
                 
                 <table width="640" border="0" cellspacing="0" cellpadding="0" class="container">
                 	<tr>
-                    	<td height="2" style="font-size:1px; line-height:1px;"></td>
+                    	<td height="2" class="splitter"></td>
                     </tr>
                 </table>
                 
                 <!-- end 2 px splitter -->
+                <!-- End of 1 column -->
+                {/block:one_column}
+           		
+
                 
-                
-                <!-- 2 column section -->
+
                 {block:two_column}
+                <!-- 2 column section -->
                 <table border="0" cellspacing="0" cellpadding="0" class="twocol-background">
                 	<tr>
                     	<td valign="top">
@@ -467,20 +477,20 @@
                                                     <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="290">
                                                     	{if column1:title}
                                                         <tr>
-                                                            <td align="left" class="twocol-section" style="font-size:18px;"><strong>{column1:title}</strong></td>
+                                                            <td align="left" class="twocol-title">{column1:title}</td>
                                                         </tr>            
                                                         <tr>
                                                             <td height="15" valign="middle"></td>
                                                         </tr>
                                                         <tr>
-                                                            <td height="1" class="divider2" style="font-size:1px; line-height:1px;"></td>
+                                                            <td height="1" class="divider2 splitter"></td>
                                                         </tr>
                                                         <tr>
                                                             <td height="20"></td>
                                                         </tr>
-                        								{/if}
+                        								                {/if}
                                                         <tr>
-                                                            <td align="left" class="twocol-section" style="font-size:14px" valign="top">
+                                                            <td align="left" class="twocol-body" valign="top">
                                                         {if column1:image}
                                                         
                                                         {column1:link_tag}{column1:image(290x)}{/column1:link_tag}<br>       
@@ -515,20 +525,20 @@
                                                     <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="290">
                                                     	{if column2:title}
                                                         <tr>
-                                                            <td align="left" class="twocol-section" style="font-size:18px;"><strong>{column2:title}</strong></td>
+                                                            <td align="left" class="twocol-title">{column2:title}</td>
                                                         </tr>            
                                                         <tr>
                                                             <td height="15" valign="middle"></td>
                                                         </tr>
                                                         <tr>
-                                                            <td height="1" class="divider2" style="font-size:1px; line-height:1px;"></td>
+                                                            <td height="1" class="divider2 splitter"></td>
                                                         </tr>
                                                         <tr>
                                                             <td height="20"></td>
                                                         </tr>
                         								{/if}
                                                         <tr>
-                                                            <td align="left" class="twocol-section" style="font-size:14px" valign="top">
+                                                            <td align="left" class="twocol-body" valign="top">
                                                         {if column2:image}
                                                         
                                                         {column2:link_tag}{column2:image(290x)}{/column2:link_tag}<br>       
@@ -540,7 +550,7 @@
                                                             
                                                             <table border="0" cellpadding="10" cellspacing="0">
                                                                 <tr>
-                                                                    <td align="center" class="mob_button" style="-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;" valign="top">
+                                                                    <td align="center" class="mob_button" valign="top">
                                                                         <a href="{column2:link_url}">{column2:link_title} &raquo;</a>
                                                                     </td>
                                                                 </tr>
@@ -566,10 +576,6 @@
                         </td>
                     </tr>
                 </table>
-                {/block:two_column}
-                
-                <!-- End of 2 column section -->
-                
                 
                 <!-- 2 pixel splitter -->
                 
@@ -581,9 +587,12 @@
                 
                 <!-- end 2 px splitter -->
                 
-                <!-- 3 column section -->
+                <!-- End of 2 column section -->
+                {/block:two_column}
+
                 
                 {block:three_column}
+                <!-- 3 column section -->
                 <table border="0" cellspacing="0" cellpadding="0" class="threecol-background">
                 	<tr>
                     	<td valign="top">
@@ -602,20 +611,20 @@
                                                     <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="187">
                                                     	{if column1:title}
                                                         <tr>
-                                                            <td align="left" class="threecol-section" style="font-size:18px;"><strong>{column1:title}</strong></td>
+                                                            <td align="left" class="threecol-title"><strong>{column1:title}</strong></td>
                                                         </tr>            
                                                         <tr>
                                                             <td height="15" valign="middle"></td>
                                                         </tr>
                                                         <tr>
-                                                            <td height="1" class="divider3" style="font-size:1px; line-height:1px;"></td>
+                                                            <td height="1" class="divider3 splitter"></td>
                                                         </tr>
                                                         <tr>
                                                             <td height="20"></td>
                                                         </tr>
                         								{/if}
                                                         <tr>
-                                                            <td align="left" class="threecol-section" style="font-size:14px" valign="top">
+                                                            <td align="left" class="threecol-body" valign="top">
                                                        {if column1:image}
                                                         
                                                         {column1:link_tag}{column1:image(186x)}{/column1:link_tag}
@@ -632,7 +641,7 @@
                                                             
                                                             <table border="0" cellpadding="10" cellspacing="0">
                                                                 <tr>
-                                                                    <td align="center" class="mob_button" style="-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;" valign="top">
+                                                                    <td align="center" class="mob_button" valign="top">
                                                                         <a href="{column1:link_url}">{column1:link_title} &raquo;</a>
                                                                     </td>
                                                                 </tr>
@@ -655,20 +664,20 @@
                                                     <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="186">
                                                     	{if column2:title}
                                                         <tr>
-                                                            <td align="left" class="threecol-section" style="font-size:18px;"><strong>{column2:title}</strong></td>
+                                                            <td align="left" class="threecol-title">{column2:link_tag}{column2:title}{/column2:link_tag}</td>
                                                         </tr>            
                                                         <tr>
                                                             <td height="15" valign="middle"></td>
                                                         </tr>
                                                         <tr>
-                                                            <td height="1" class="divider3" style="font-size:1px; line-height:1px;"></td>
+                                                            <td height="1" class="divider3 splitter"></td>
                                                         </tr>
                                                         <tr>
                                                             <td height="20"></td>
                                                         </tr>
                         								{/if}
                                                         <tr>
-                                                            <td align="left" class="threecol-section" style="font-size:14px" valign="top">
+                                                            <td align="left" class="threecol-body" valign="top">
                                                        {if column2:image}
                                                         
                                                         {column2:link_tag}{column2:image(186x)}{/column2:link_tag}
@@ -685,7 +694,7 @@
                                                             
                                                             <table border="0" cellpadding="10" cellspacing="0">
                                                                 <tr>
-                                                                    <td align="center" class="mob_button" style="-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;" valign="top">
+                                                                    <td align="center" class="mob_button" valign="top">
                                                                         <a href="{column2:link_url}">{column2:link_title} &raquo;</a>
                                                                     </td>
                                                                 </tr>
@@ -708,20 +717,20 @@
                                                     <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="187">
                                                     	{if column3:title}
                                                         <tr>
-                                                            <td align="left" class="threecol-section" style="font-size:18px;"><strong>{column3:title}</strong></td>
+                                                            <td align="left" class="threecol-title"><strong>{column3:link_tag}{column3:title}{/column3:link_tag}</strong></td>
                                                         </tr>            
                                                         <tr>
                                                             <td height="15" valign="middle"></td>
                                                         </tr>
                                                         <tr>
-                                                            <td height="1" class="divider3" style="font-size:1px; line-height:1px;"></td>
+                                                            <td height="1" class="divider3 splitter"></td>
                                                         </tr>
                                                         <tr>
                                                             <td height="20"></td>
                                                         </tr>
                         								{/if}
                                                         <tr>
-                                                            <td align="left" class="threecol-section" style="font-size:14px" valign="top">
+                                                            <td align="left" class="threecol-body"valign="top">
                                                         {if column3:image}
                                                         
                                                         {column3:link_tag}{column3:image(186x)}{/column3:link_tag}
@@ -738,7 +747,7 @@
                                                             
                                                             <table border="0" cellpadding="10" cellspacing="0">
                                                                 <tr>
-                                                                    <td align="center" class="mob_button" style="-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;" valign="top">
+                                                                    <td align="center" class="mob_button" valign="top">
                                                                         <a href="{column3:link_url}">{column3:link_title} &raquo;</a>
                                                                     </td>
                                                                 </tr>
@@ -764,23 +773,23 @@
                         </td>
                     </tr>
                 </table>
-                {/block:three_column}
-                
-                <!-- End of 3 column section -->
-                
                 
                 <!-- 2 pixel splitter -->
                 
                 <table width="640" border="0" cellspacing="0" cellpadding="0" class="container">
                 	<tr>
-                    	<td height="2" style="font-size:1px; line-height:1px;"></td>
+                    	<td height="2" class="splitter"></td>
                     </tr>
                 </table>
                 
                 <!-- end 2 px splitter -->
                 
-                <!-- Video -->
+                <!-- End of 3 column section -->
+                {/block:three_column}
+                
+                
                  {block:video}
+                 <!-- Video -->
                 <table border="0" cellspacing="0" cellpadding="0" class="threecol-background">
                 	<tr>
                     	<td valign="top">
@@ -793,8 +802,8 @@
                                                 <td width="600" class="container">
                                                     <table width="600" border="0" cellspacing="0" cellpadding="0" class="w320p10">
                                                         <tr>
-                                                            <td align="left" class="video-section" style="font-size:18px;">
-                                                            <strong>{title}</strong></td>
+                                                            <td align="left" class="video-title" style="font-size:18px;">
+                                                            {title}</td>
                                                         </tr>
                                                     </table>
                                                 <td width="20" class="hide"></td>
@@ -807,7 +816,7 @@
                                     	<table width="640" border="0" cellspacing="0" cellpadding="0" class="container">
                                         	<tr>
                                             	<td width="20"></td>
-                                    			<td height="1" class="divider" style="font-size:1px; line-height:1px;"></td>
+                                    			<td height="1" class="divider splitter"></td>
                                                 <td width="20"></td>
                                             </tr>
                                         </table>
@@ -829,13 +838,13 @@
                                     <td width="600" class="w320p10">
                                         <table width="600" border="0" cellspacing="0" cellpadding="0" class="w280">
                                             <tr>
-                                                 <td align="left" class="video-section" style="font-size:14px;">{body}
+                                                 <td align="left" class="video-body">{body}
                                                             
                                                             <br><br>
                                                                         
                                                                         <table border="0" cellpadding="10" cellspacing="0">
                                                                             <tr>
-                                                                                <td align="center" class="mob_button" style="-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;" valign="top">
+                                                                                <td align="center" class="mob_button" valign="top">
                                                                                     <a href="{link_url}">Watch now &raquo;</a>
                                                                                 </td>
                                                                             </tr>
@@ -855,23 +864,19 @@
                          </td>
                     </tr>
                 </table>
-                {/block:video}
-           
-           		<!-- End of 1 column -->
-                
-                
                 <!-- 2 pixel splitter -->
-                
                 <table width="640" border="0" cellspacing="0" cellpadding="0" class="container">
                 	<tr>
-                    	<td height="2" style="font-size:1px; line-height:1px;"></td>
+                    	<td height="2" class="splitter"></td>
                     </tr>
                 </table>
-                
                 <!-- end 2 px splitter -->
+                	<!-- End of video -->
+                {/block:video}
+           
                 
-                <!-- image section -->
                 {block:image}
+                <!-- image section -->
                 <table border="0" cellspacing="0" cellpadding="0" class="onecol-background">
                 	<tr>
                     	<td valign="top">
@@ -890,17 +895,14 @@
                 
                 <table width="640" border="0" cellspacing="0" cellpadding="0" class="container">
                 	<tr>
-                    	<td height="2" style="font-size:1px; line-height:1px;"></td>
+                    	<td height="2" class="splitter"></td>
                     </tr>
                 </table>
+                <!-- end of image section-->
                 {/block:image}
-                <!-- End of headline section-->
-                
-                <!-- 2 pixel splitter -->
                 
                 
-                
-                <!-- end 2 px splitter -->
+
 </td>		
 
 </tr>
