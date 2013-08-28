@@ -1,0 +1,771 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="color:masthead_background" content="#ffffff"/>
+    <meta name="color:headline_background" content="#ffffff"/>
+    <meta name="color:image_section_background" content="#ffffff"/>
+    <meta name="color:one_column_background" content="#ffffff"/>
+    <meta name="color:two_column_background" content="#ffffff"/>
+    <meta name="color:three_column_background" content="#ffffff"/>
+    <meta name="color:video_background" content="#ffffff"/>
+    <meta name="color:title_font_color" content="#000001"/>
+    <meta name="color:body_font_color" content="#000001"/>
+    <meta name="color:button_color" content="#000001"/>
+    <meta name="color:button_color_text" content="#ffffff"/>
+    <meta name="font:title_font" content="Georgia, Times, 'Times New Roman', serif"/>
+    <meta name="font:body_font" content="Georgia, Times, 'Times New Roman', serif"/>  
+    <title>{subject}</title>
+    <style  type="text/css">
+    /* Client-specific Styles */
+        
+        #outlook a {padding:0;} 
+        
+        body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;} /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */ 
+        
+        .ReadMsgBody {width: 100%;} /* Force Hotmail/Gmail to display email at full width */
+        
+        .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */ 
+         
+        .backgroundTable {margin:0 auto; padding:0; width:100%; line-height: 100% !important;}      
+
+        table td {border-collapse: collapse;}
+        
+        .ExternalClass * {line-height: 115%;} /*Force hotmail/outlook.com to show a custom defined line-height*/
+        
+        .section-body {
+        font-size:13px; font-family:{font:body_font}; color:{color:body_font_color};
+        line-height:150%;
+        }
+        
+        .section-title, .section-title a {
+        font-size:20px; font-family:{font:title_font}; color:{color:title_font_color}; text-decoration:none;
+        line-height:100%;
+        }
+        
+        .section-headline-title, .section-headline-title a {
+        font-size:36px; font-family:{font:title_font}; color:{color:title_font_color}; text-decoration:none;
+        }
+        
+        .section-headline-background {
+            background-color:{color:headline_background};
+            
+        }
+        
+        .section-image-background {
+            background-color:{color:image_section_background};
+        }
+        
+        .section-onecolumn-background {
+            background-color:{color:one_column_background};
+        }
+        
+        .section-twocolumn-background {
+            background-color:{color:two_column_background};
+        }
+        
+        .section-three-background {
+            background-color:{color:three_column_background};
+        }       
+    
+        .section-video-background {
+            background-color:{color:video_background};
+        }       
+        
+        .masthead-background {
+            background-color:{color:masthead_background};
+        }
+        
+        .item-background {
+         
+        }
+        
+        .mob_button {
+            background-color: {color:button_color}; 
+            -moz-border-radius:5px;
+      -webkitborder-radius:5px;
+      border-radius:5px;
+      display:inline-block;
+      line-height:36px;
+      text-align:center;
+      width:150px;
+      -webkit-text-size-adjust:none;
+      font-size: 14px; 
+      font-family:{font:title_font}; 
+      color: {color:button_color_text}; 
+      text-decoration: none; 
+      font-weight:bold;
+        }
+
+        .footer { font-size:12px;color:#888888;font-family:Georgia,'Times New Roman',Times,serif;line-height:18px; }
+        .footer a { color:#888888; text-decoration:underline; font-weight:bold; }
+        </style>    
+    <style type="text/css" inline="false">
+    @media only screen and (max-width: 480px) {
+            img {
+                max-width:280px !important;
+                max-height:inherit !important;
+                height:auto !important;
+            }
+            table[class="container"], td[class="container"] {
+                width: 320px !important;
+                padding:0px !important
+                
+            }
+            
+            table[class="footer"], td[class="footer"] {
+                width: 320px !important;
+                padding:0 20px 0 20px !important;
+            }
+         
+            /* force container columns to (horizontal) blocks */
+            td[class="mobile-column"] {
+                display: block;
+            }
+            table[class="mob-column"] {
+                /* unset table align left/right */
+                float: none !important;
+                width: 100% !important;
+                padding-left:20px !important;
+                padding-right:20px !important;
+
+                /* change left/right padding and margins to top/bottom ones */
+                
+            }
+
+            /* remove bottom border for last column/row */
+            /table[id="last-mob-column"] {
+                border-bottom: none !important;
+                margin-bottom: 0;
+            }
+            
+
+            /* Forces padding on the icon tables and also creates spacing/diving lines */
+            
+            td[class="mobile-padding-border"] {
+                padding-left:20px !important;
+                padding-right:20px !important;
+                padding-bottom:10px !important;
+                border-bottom:1px solid #e5e5e5 !important;
+            }           
+            
+            
+            /* bump the font-size on mobiles */
+            td[class="mob_button"] {
+                font-size:14px !important;
+                height:auto !important;
+            }
+            /* add some spacing below the button on mobile */
+            table[class="mob_button_table"] {
+                margin-bottom:10px; !important;
+            }
+            /* center images */
+            img[class="mob-column-img"] {
+                float: left;                
+                margin-left: 95px;
+                max-width: 130px;
+            }
+            img[class="welcome-img"] {
+                float: left;                
+                margin-left: 70px;
+                max-width: 180px;
+            }
+            img[class="logo"] {   
+                max-width: 280px !important;
+                padding:0 20px 0 20px !important;
+                
+            }
+            
+            table[class="preheader-background"] {
+              display:none !important;
+            }
+            
+            table[class="hide"], span[class="hide"], img[class="hide"], td[class="hide"] {
+                display:none !important;
+            }
+            td[class="3colpad"] {
+                /*padding-left:37px !important;*/
+            }
+    }
+    </style>
+</head>
+
+<body bgcolor="#E4E4E4" style="-webkit-font-smoothing: antialiased;width:100% !important;background:#e4e4e4;-webkit-text-size-adjust:none;">
+    <table class="masthead-background" border="0" cellpadding="0" cellspacing="0" width="100%">       
+        <tr>
+            <td height="5" width="100%" class="container"></td>
+        </tr>
+        <tr>
+            <td align="center" width="100%">
+                <table border="0" cellpadding="0" cellspacing="0" class="container" width="620">
+                    <tr>
+                        <td align="center" class="container" valign="top" width="620">
+                        {logo}
+                        </td>
+                    </tr>
+
+                </table><!-- End of intro box table -->
+            </td>
+        </tr>
+
+        <tr>
+            <td height="5" width="100%" class="container"></td>
+        </tr>
+    </table>
+
+    {block:headline}
+    <!-- headline -->
+    <table border="0" cellpadding="0" cellspacing="0" class="section-headline-background" width="100%">
+            <tr>
+                <td height="5" width="100%" class="container"></td>
+            </tr>
+
+            <tr>
+                <td align="center"  width="100%">
+                    <table border="0" cellpadding="0" cellspacing="0" class="container" width="620">
+                        <tr>
+                            <td class="mobile-column" valign="top">
+                                <!-- ### INTRO COLUMN 1 ### -->
+
+                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="620">
+                                  {if image}
+                                  <tr>
+                                        <td align="left" valign="top">{link_tag}{image(620x)}{/link_tag}</td>
+                                    </tr>
+                                    <tr>
+                                        <td height="15"></td>
+                                    </tr>
+                                    {/if}
+                                    <tr>
+                                        <td align="left" class="mobile-padding section-headline-title" valign="top">{link_tag}{heading}{/link_tag}</td>
+                                    </tr>
+                                    <tr>
+                                        <td height="15"></td>
+                                    </tr>
+                                    {if subheading}
+                                    <tr>
+                                        <td align="left" class="mobile-padding section-body" valign="top">{subheading}</td>
+                                    </tr>
+                                    <tr>
+                                        <td height="20"></td>
+                                    </tr>
+                                    {/if}
+                                </table>
+                            </td>
+                        </tr>
+                    </table><!-- End of intro box table -->
+                </td>
+            </tr>
+
+            <tr>
+                <td height="5" width="100%" class="container"></td>
+            </tr>
+        </table>
+
+    <!-- /headline -->
+    {/block:headline}
+    
+       {block:image}
+    <!-- image -->
+<table border="0" cellpadding="0" cellspacing="0" class="section-image-background" width="100%">
+        <tr>
+            <td height="5" width="100%" class="container"></td>
+        </tr>
+
+        <tr>
+            <td align="center"  width="100%">
+                <table border="0" cellpadding="0" cellspacing="0" class="container" width="620">
+                    <tr>
+                        <td class="mobile-column" valign="top">
+                            <!-- ### INTRO COLUMN 1 ### -->
+
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="620">
+                              <tr>
+                                    <td align="left" valign="top">{link_tag}{image(620x>)}{/link_tag}</td>
+                                </tr>
+
+                            </table>
+                        </td>
+
+                       
+                    </tr>
+                </table><!-- End of intro box table -->
+            </td>
+        </tr>
+
+        <tr>
+            <td height="5" width="100%" class="container"></td>
+        </tr>
+    </table>
+    <!-- /image -->
+    {/block:image}
+    
+    {block:one_column}
+    <!-- one column -->
+<table border="0" cellpadding="0" cellspacing="0" class="section-onecolumn-background" width="100%">
+        <tr>
+            <td height="5" width="100%" class="container"></td>
+        </tr>
+
+        <tr>
+            <td align="center"  width="100%">
+                <table border="0" cellpadding="0" cellspacing="0" class="container" width="620">
+                    <tr>
+                        <td class="mobile-column" valign="top">
+                            <!-- ### INTRO COLUMN 1 ### -->
+
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="620">
+                              <tr>
+                                    <td align="left" valign="top">{column1:link_tag}{column1:image(620x)}{/column1:link_tag}</td>
+                                </tr>
+
+                                <tr>
+                                    <td height="10"></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="mobile-padding section-title" valign="top">{column1:link_tag}{column1:title}{/column1:link_tag}</td>
+                                </tr>
+
+                                <tr>
+                                    <td height="10"></td>
+                                </tr>
+
+                                <tr>
+                                    <td align="left" class="mobile-padding section-body" valign="top">{column1:body}</td>
+                                </tr>
+        
+                                {if column1:link_url}
+                                <tr>
+                                    <td height="5"></td>
+                                </tr>
+
+                                <tr>
+                                    <td align="left" class="mobile-padding">
+                                       <!-- button -->
+                                       <div><!--[if mso]>
+                                         <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{column1:link_url}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="14%" stroke="f" fillcolor="{color:button_color}">
+                                           <w:anchorlock/>
+                                           <center>
+                                         <![endif]-->
+                                             <a href="{column1:link_url}"
+                                       class="mob_button">{column1:link_title}</a>
+                                         <!--[if mso]>
+                                           </center>
+                                         </v:roundrect>
+                                       <![endif]--></div>
+                                       <!-- /button -->
+                                    </td>
+                                </tr>
+                                {/if}
+                            </table>
+                        </td>
+                    </tr>
+                </table><!-- End of intro box table -->
+            </td>
+        </tr>
+
+        <tr>
+            <td height="20" width="100%" class="container"></td>
+        </tr>
+    </table>
+    <!-- /one column -->
+    {/block:one_column}
+    
+
+    {block:two_column}
+    <!-- two column -->
+<table border="0" cellpadding="0" cellspacing="0" class="section-twocolumn-background" width="100%">
+        <tr>
+            <td height="5" width="100%" class="container"></td>
+        </tr>
+
+        <tr>
+            <td align="center" width="100%">
+                <table border="0" cellpadding="0" cellspacing="0" class="container" width="620">
+                    <tr>
+                        <td class="mobile-column" valign="top">
+                            <!-- ### COLUMN 1 ### -->
+
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="300">
+                                <tr>
+                                    <td align="left" valign="top">{column1:link_tag}{column1:image(300x)}{/column1:link_tag}</td>
+                                </tr>
+
+                                <tr>
+                                    <td height="10"></td>
+                                </tr>
+                                    <tr>
+                                    <td align="left" class="mobile-padding section-title" valign="top">{column1:link_tag}{column1:title}{/column1:link_tag}</td>
+                                </tr>
+
+                                <tr>
+                                    <td height="10" valign="middle"></td>
+                                </tr>
+
+                                <tr>
+                                    <td align="left" class="mobile-padding section-body" valign="top">{column1:body}</td>
+                                </tr>
+
+                                {if column1:link_url}
+                                <tr>
+                                    <td height="5"></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="mobile-padding">
+                                      <!-- button -->
+                                      <div><!--[if mso]>
+                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{column1:link_url}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="14%" stroke="f" fillcolor="{color:button_color}">
+                                          <w:anchorlock/>
+                                          <center>
+                                        <![endif]-->
+                                            <a href="{column1:link_url}"
+                                      class="mob_button">{column1:link_title}</a>
+                                        <!--[if mso]>
+                                          </center>
+                                        </v:roundrect>
+                                      <![endif]--></div>
+                                      <!-- /button -->
+                                    </td>
+                                </tr>
+                                {/if}
+                            </table>
+                        </td>
+
+                        <td class="mobile-column" valign="top" width="20">
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="20">
+                                <tr>
+                                    <td height="20" style="font-size:1px; line-height:1px;" width="20">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+
+                        <td class="mobile-column" valign="top">
+                            <!-- ### COLUMN 1 ### -->
+                            
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="300">
+                                <tr>
+                                    <td align="left" valign="top">{column2:link_tag}{column2:image(300x)}{/column2:link_tag}</td>
+                                </tr>
+
+                                <tr>
+                                    <td height="10"></td>
+                                </tr>
+                                
+                                   <tr>
+                                    <td align="left" class="mobile-padding section-title" valign="top">{column2:link_tag}{column2:title}{/column2:link_tag}</td>
+                                </tr>
+
+                                <tr>
+                                    <td height="10" valign="middle"></td>
+                                </tr>
+
+                                <tr>
+                                    <td align="left" class="mobile-padding section-body" valign="top">{column2:body}</td>
+                                </tr>
+
+
+                                {if column2:link_url}
+                                <tr>
+                                    <td height="5"></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="mobile-padding">
+                                      <!-- button -->
+                                      <div><!--[if mso]>
+                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{column2:link_url}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="14%" stroke="f" fillcolor="{color:button_color}">
+                                          <w:anchorlock/>
+                                          <center>
+                                        <![endif]-->
+                                            <a href="{column2:link_url}"
+                                      class="mob_button">{column2:link_title}</a>
+                                        <!--[if mso]>
+                                          </center>
+                                        </v:roundrect>
+                                      <![endif]--></div>
+                                      <!-- /button -->
+                                    </td>
+                                </tr>
+                                {/if}
+                            </table>
+
+                        </td>
+                    </tr>
+                </table><!-- End of intro box table -->
+            </td>
+        </tr>
+
+        <tr>
+            <td height="20" width="100%" class="container"></td>
+        </tr>
+    </table>
+    <!-- /two column -->
+    {/block:two_column}
+    
+    {block:three_column}
+    <!-- three column -->
+<table border="0" cellpadding="0" cellspacing="0" class="section-three-background" width="100%">
+        <tr>
+            <td height="5" width="100%" class="container"></td>
+        </tr>
+
+        <tr>
+            <td align="center" width="100%">
+                <table border="0" cellpadding="0" cellspacing="0" class="container" width="620">
+                    <tr>
+                        <td class="mobile-column" valign="top">
+                            <!-- ### COLUMN 1 ### -->
+
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" style="" width="193">
+                                <tr>
+                                    <td align="center" valign="top" class="3colpad">{column1:link_tag}{column1:image(193x193>)}{/column1:link_tag}</td>
+                                </tr>
+
+                                <tr>
+                                    <td height="10"></td>
+                                </tr>
+                                    <tr>
+                                    <td align="left" class="mobile-padding section-title" valign="top">{column1:link_tag}{column1:title}{/column1:link_tag}</td>
+                                </tr>
+
+                                <tr>
+                                    <td height="10" valign="middle"></td>
+                                </tr>
+
+                                <tr>
+                                    <td align="left" class="mobile-padding section-body" valign="top">{column1:body}</td>
+                                </tr>
+
+                                {if column1:link_url}
+                                <tr>
+                                    <td height="5"></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="mobile-padding">
+                                      <!-- button -->
+                                      <div><!--[if mso]>
+                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{column1:link_url}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="14%" stroke="f" fillcolor="{color:button_color}">
+                                          <w:anchorlock/>
+                                          <center>
+                                        <![endif]-->
+                                            <a href="{column1:link_url}"
+                                      class="mob_button">{column1:link_title}</a>
+                                        <!--[if mso]>
+                                          </center>
+                                        </v:roundrect>
+                                      <![endif]--></div>
+                                      <!-- /button -->
+                                    </td>
+                                </tr>
+                                {/if}
+                            </table>
+                        </td>
+
+                        <td class="mobile-column" valign="top" width="20">
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="20">
+                                <tr>
+                                    <td height="20" width="20">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+
+                        <td class="mobile-column" valign="top">
+                            <!-- ### COLUMN 2 ### -->
+
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="194">
+                                <tr>
+                                    <td align="center" valign="top" class="3colpad">{column2:link_tag}{column2:image(194x193>)}{/column2:link_tag}</td>
+                                </tr>
+
+                                <tr>
+                                    <td height="10"></td>
+                                </tr>
+                                
+                                   <tr>
+                                    <td align="left" class="mobile-padding section-title" valign="top">{column2:link_tag}{column2:title}{/column2:link_tag}</td>
+                                </tr>
+
+                                <tr>
+                                    <td height="10" valign="middle"></td>
+                                </tr>
+
+                                <tr>
+                                    <td align="left" class="mobile-padding section-body" valign="top">{column2:body}</td>
+                                </tr>
+
+
+                                {if column2:link_url}
+                                <tr>
+                                    <td height="5"></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="mobile-padding">
+                                      <!-- button -->
+                                      <div><!--[if mso]>
+                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{column2:link_url}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="14%" stroke="f" fillcolor="{color:button_color}">
+                                          <w:anchorlock/>
+                                          <center>
+                                        <![endif]-->
+                                            <a href="{column2:link_url}"
+                                      class="mob_button">{column2:link_title}</a>
+                                        <!--[if mso]>
+                                          </center>
+                                        </v:roundrect>
+                                      <![endif]--></div>
+                                      <!-- /button -->
+                                    </td>
+                                </tr>
+                                {/if}
+                            </table>
+                        </td>
+                        
+                        <td class="mobile-column" valign="top" width="20">
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="20">
+                                <tr>
+                                    <td height="20" width="20">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+
+                        <td class="mobile-column" valign="top">
+                            <!-- ### COLUMN 3 ### -->
+
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="193">
+                                <tr>
+                                    <td align="center" valign="top" class="3colpad">{column3:link_tag}{column3:image(193x193>)}{/column3:link_tag}</td>
+                                </tr>
+
+                                <tr>
+                                    <td height="10"></td>
+                                </tr>
+                                
+                                   <tr>
+                                    <td align="left" class="mobile-padding section-title" valign="top">{column3:link_tag}{column3:title}{/column3:link_tag}</td>
+                                </tr>
+
+                                <tr>
+                                    <td height="10" valign="middle"></td>
+                                </tr>
+
+                                <tr>
+                                    <td align="left" class="mobile-padding section-body" valign="top">{column3:body}</td>
+                                </tr>
+
+
+                                {if column3:link_url}
+                                <tr>
+                                    <td height="5"></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="mobile-padding">
+                                      <!-- button -->
+                                      <div><!--[if mso]>
+                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{column3:link_url}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="14%" stroke="f" fillcolor="{color:button_color}">
+                                          <w:anchorlock/>
+                                          <center>
+                                        <![endif]-->
+                                            <a href="{column3:link_url}"
+                                      class="mob_button">{column3:link_title}</a>
+                                        <!--[if mso]>
+                                          </center>
+                                        </v:roundrect>
+                                      <![endif]--></div>
+                                      <!-- /button -->
+                                    </td>
+                                </tr>
+                                {/if}
+                            </table>
+
+                        </td>
+                    </tr>
+                </table><!-- End of intro box table -->
+            </td>
+        </tr>
+
+        <tr>
+            <td height="20" width="100%" class="container"></td>
+        </tr>
+    </table>
+    <!-- /three column -->
+    {/block:three_column}
+    
+    
+     {block:video}
+    <!-- video -->
+<table border="0" cellpadding="0" cellspacing="0" class="section-video-background" width="100%">
+        <tr>
+            <td height="5" width="100%" class="container"></td>
+        </tr>
+
+        <tr>
+            <td align="center"  width="100%">
+                <table border="0" cellpadding="0" cellspacing="0" class="container" width="620">
+                    <tr>
+                        <td class="mobile-column" valign="top">
+                            <!-- ### INTRO COLUMN 1 ### -->
+
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mob-column" width="620">
+                              <tr>
+                                    <td align="left" valign="top">{link_tag}{image(620x)}{/link_tag}</td>
+                                </tr>
+
+                                <tr>
+                                    <td height="15"></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="mobile-padding section-title" valign="top">{link_tag}{title}{/link_tag}</td>
+                                </tr>
+
+                                <tr>
+                                    <td height="15" valign="middle"></td>
+                                </tr>
+
+                                <tr>
+                                    <td align="left" class="mobile-padding section-body" valign="top">{body}</td>
+                                </tr>
+                                <tr>
+                                    <td height="20"></td>
+                                </tr>
+
+                                <tr>
+                                    <td height="5"></td>
+                                </tr>
+
+                                <tr>
+                                    <td align="left" class="mobile-padding">
+                                       <!-- button -->
+                                       <div><!--[if mso]>
+                                         <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{column1:link_url}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="14%" stroke="f" fillcolor="{color:button_color}">
+                                           <w:anchorlock/>
+                                           <center>
+                                         <![endif]-->
+                                             <a href="{link_url}"
+                                       class="mob_button">WATCH NOW</a>
+                                         <!--[if mso]>
+                                           </center>
+                                         </v:roundrect>
+                                       <![endif]--></div>
+                                       <!-- /button -->
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table><!-- End of intro box table -->
+            </td>
+        </tr>
+
+        <tr>
+            <td height="5" width="100%" class="container"></td>
+        </tr>
+    </table>
+    <!-- /one column -->
+    {/block:video}
+    
+
+
+
+
+    
+</body>
+</html>
