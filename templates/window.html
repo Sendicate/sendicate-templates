@@ -9,6 +9,10 @@
 <meta name="color:background_second" content="#ee1c25"/>
 <meta name="color:text_second" content="#ffffff"/>
 <meta name="font:text_font" content="Trebuchet, 'Trebuchet MS', serif"/>
+<meta name="font:title_font" content="Trebuchet, 'Trebuchet MS', serif"/>
+<meta name="font:headline_font" content="Trebuchet, 'Trebuchet MS', serif"/>
+<meta name="color:link_color" content="#EA2028"/>
+<meta name="font:button_font" content="Trebuchet, 'Trebuchet MS', serif"/>
 <title>{subject} - {company_name}</title>
 <style type="text/css">
   #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
@@ -20,6 +24,7 @@
   img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
   a img {border:none;}
   table, table td {border-collapse: collapse;}
+  a {color: {color:link_color};}
   </style>
 </head>
 <body style="width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: white; font-family: {font:text_font}; background-color: {color:background}; margin: 0; padding: 0;" bgcolor="{color:background}">
@@ -37,9 +42,9 @@
               <tr>
                 <td valign="middle" align="left" style="border-collapse: collapse; font-size: 28px; line-height: 1; color: {color:text};">
                   {if logo}
-                    {logo(659x120>)}
+                    <a href="{company_website_url}">{logo(700x>)}</a>
                   {else}
-                    <a class="header-logo" href="#" target="_blank" style="font-size: 28px; line-height: 1; color: white; text-decoration: none;"><span style="font-size: 28px; line-height: 1; color: {color:text}; font-family: {font:text_font}; font-weight: bold;">{company_name}</span></a>
+                    <a class="header-logo" href="{company_website_url}" target="_blank" style="font-size: 28px; line-height: 1; color: white; text-decoration: none;"><span style="font-size: 28px; line-height: 1; color: {color:text}; font-family: {font:text_font}; font-weight: bold;">{company_name}</span></a>
                   {/if}
                 </td>
               </tr>
@@ -54,23 +59,22 @@
 {block:headline}
 <!-- SENDICATE LEDE STARTS -->
   <table class="lede" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+    {if heading}
     <tr height="10"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>
     <tr>
       <td width="15" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td valign="top" align="left" class="content" style="border-collapse: collapse;">
-        <h1 style="color: {color:text}; font-family: {font:text_font}; margin: 0; font-size: 78px; line-height: 90px;">
+      <td valign="top" align="left" class="content" style="color: {color:text}; font-family: {font:headline_font}; margin: 0; font-size: 68px; line-height: 76px;">
           {if link_url}
-            <a href="{link_url}" style="color: {color:text}; text-decoration: none; font-size: 78px; line-height: 90px;"><span style="color: {color:text}; font-size: 78px; line-height: 90px;">{heading}</span></a>
+            <a href="{link_url}" style="color: {color:text}; text-decoration: none; font-size: 68px; line-height: 76px;">{heading}</a>
           {else}
             {heading}
           {/if}
-        </h1>
       </td>
       <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
     </tr>
     <tr height="10"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>
-
-    <tr height="1"><td class="gutter" colspan="3" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px; color: white;"> </td></tr>
+    {/if}
+    <tr height="1"><td class="gutter" height="1" colspan="3" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;"> </td></tr>
     <tr height="10"><td class="gutter" colspan="3" style="border-collapse: collapse;"> </td></tr>
     <tr>
       <td width="15" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
@@ -120,7 +124,7 @@
           <tr>
             <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
             <td class="content" valign="top" align="left" style="border-collapse: collapse;">
-              <h2 style="color: {color:text_second}; margin: 0; font-family: {font:text_font}; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
+              <h2 style="color: {color:text_second}; margin: 0; font-family: {font:title_font}; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
                 {if column1:link_url}
                   <a href="{column1:link_url}" style="text-decoration: none; color: {color:text_second}; font-size: 28px; line-height: 32px; font-weight: bold;"><span style="color: {color:text_second}; font-size: 28px; line-height: 32px; font-weight: bold;">{column1:title}</span></a>
                 {else}
@@ -131,7 +135,7 @@
             <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
           </tr>
           <tr height="15" class="gutter"><td colspan="3" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
-          <tr height="1" class="gutter"><td colspan="3" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+          <tr height="1" class="gutter"><td colspan="3" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;"> </td></tr>
           <tr height="15" class="gutter"><td colspan="3" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
           <tr>
             <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
@@ -147,7 +151,7 @@
             <tr>
               <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
               <td class="content" valign="top" align="left" style="border-collapse: collapse;">
-                <div class="content-body" style="color: {color:text};  font-family: {font:text_font}; font-size: 12px; line-height: 20px;">
+                <div class="content-body" style="color: {color:text};  font-family: {font:button_font}; font-size: 12px; line-height: 20px;">
                   <a href="{column1:link_url}" style="display: block; font-size: 12px; line-height: 12px; letter-spacing: 1px; text-decoration: none; color: {color:text_second} !important;font-weight: bold;"><span style="color: {color:text_second}; font-size: 12px; line-height: 12px;font-weight: bold;">> {column1:link_title}</span></a>
                 </div>
               </td>
@@ -196,7 +200,7 @@
     <tr>
       <td width="15" width="347" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="317" valign="top" align="left" class="content" style="border-collapse: collapse;">
-        <h2 style="color: {color:text}; margin: 0; font-family: {font:text_font}; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
+        <h2 style="color: {color:text}; margin: 0; font-family: {font:title_font}; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
           {if column1:link_url}
             <a href="{column1:link_url}" style="text-decoration: none; color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;"><span style="color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;">{column1:title}</span></a>
           {else}
@@ -208,7 +212,7 @@
       <td width="5" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="15" class="gutter" bgcolor="{color:background_second}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>     
       <td width="318" bgcolor="{color:background_second}" valign="top" align="left" class="content" style="border-collapse: collapse; color: {color:text_second};">
-        <h2 style="color: {color:text_second}; margin: 0; font-family: {font:text_font}; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
+        <h2 style="color: {color:text_second}; margin: 0; font-family: {font:title_font}; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
           {if column2:link_url}
             <a href="{column1:link_url}" style="text-decoration: none; color: {color:text_second}; font-size: 28px; line-height: 32px; font-weight: bold;"><span style="color: {color:text_second}; font-size: 28px; line-height: 32px; font-weight: bold;">{column2:title}</span></a>
           {else}
@@ -228,13 +232,13 @@
       <td width="15" class="gutter" bgcolor="{color:background_second}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
     </tr>
     <tr height="1">
-      <td width="15" class="gutter" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="317" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="15" class="gutter" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="5" class="gutter" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="15" class="gutter" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="318" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="15" class="gutter" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
+      <td width="15" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;"> </td>
+      <td width="317" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;"> </td>
+      <td width="15" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;"> </td>
+      <td width="5" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;"> </td>
+      <td width="15" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;" bgcolor="{color:background_second}"> </td>
+      <td width="318" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;" bgcolor="{color:background_second}"> </td>
+      <td width="15" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;" bgcolor="{color:background_second}"> </td>
     </tr>
     <tr height="15">
       <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
@@ -273,17 +277,17 @@
     </tr>
     <tr>
       <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="317" valign="top" align="left" class="content" style="border-collapse: collapse; font-family: {font:text_font};">
+      <td width="317" valign="top" align="left" class="content" style="border-collapse: collapse; font-family: {font:button_font};">
         {if column1:link_url}
-          <a href="{column1:link_url}" style="display: block; font-size: 12px; line-height: 20px; letter-spacing: 1px; text-decoration: none; color: {color:text} !important;font-weight: bold;"><span style="font-family: Times, serif; color: {color:text};font-weight: bold;">> {column1:link_title}</span></a>
+          <a href="{column1:link_url}" style="display: block; font-size: 12px; line-height: 20px; letter-spacing: 1px; text-decoration: none; color: {color:text} !important;font-weight: bold;"><span style="font-family: {font:button_font}; color: {color:text};font-weight: bold;">> {column1:link_title}</span></a>
         {/if}
       </td>
       <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="5" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="15" class="gutter" bgcolor="{color:background_second}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>     
-      <td width="318" bgcolor="{color:background_second}" valign="top" align="left" class="content" style="font-family: {font:text_font}; border-collapse: collapse; color: {color:text_second};">
+      <td width="318" bgcolor="{color:background_second}" valign="top" align="left" class="content" style="font-family: {font:button_font}; border-collapse: collapse; color: {color:text_second};">
           {if column2:link_url}
-            <a href="{column2:link_url}" style="display: block; font-size: 12px; line-height: 20px; letter-spacing: 1px; text-decoration: none; color: {color:text_second} !important;font-weight: bold;"><span style="font-family: Times, serif; color: {color:text_second};font-weight: bold;">> {column2:link_title}</span></a>
+            <a href="{column2:link_url}" style="display: block; font-size: 12px; line-height: 20px; letter-spacing: 1px; text-decoration: none; color: {color:text_second} !important;font-weight: bold;"><span style="font-family: {font:button_font}; color: {color:text_second};font-weight: bold;">> {column2:link_title}</span></a>
           {/if}
       </td>
       <td width="15" class="gutter" bgcolor="{color:background_second}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
@@ -347,7 +351,7 @@
     <tr>
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="210" valign="top" align="left" class="content" style="border-collapse: collapse;">
-        <h2 style="color: {color:text}; font-family: {font:text_font}; margin: 0; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
+        <h2 style="color: {color:text}; font-family: {font:title_font}; margin: 0; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
           {if column1:link_url}
             <a href="{column1:link_url}" style="text-decoration: none; color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;"><span style="color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;">{column1:title}</span></a>
           {else}
@@ -359,7 +363,7 @@
       <td width="5" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="10" class="gutter" bgcolor="{color:background_second}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="210" bgcolor="{color:background_second}" valign="top" align="left" class="content" style="border-collapse: collapse; color: {color:text_second};">
-        <h2 style="color: {color:text_second}; font-family: {font:text_font}; margin: 0; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
+        <h2 style="color: {color:text_second}; font-family: {font:title_font}; margin: 0; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
           {if column2:link_url}
             <a href="{column2:link_url}" style="text-decoration: none; color: {color:text_second}; font-size: 28px; line-height: 32px; font-weight: bold;"><span style="color: {color:text_second}; font-size: 28px; line-height: 32px; font-weight: bold;">{column2:title}</span></a>
           {else}
@@ -371,7 +375,7 @@
       <td width="5" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="210" valign="top" align="left" class="content" style="border-collapse: collapse;">
-        <h2 style="color: {color:text}; font-family: {font:text_font}; margin: 0; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
+        <h2 style="color: {color:text}; font-family: {font:title_font}; margin: 0; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
           {if column3:link_url}
             <a href="{column3:link_url}" style="text-decoration: none; color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;"><span style="color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;">{column3:title}</span></a>
           {else}
@@ -395,17 +399,17 @@
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
     </tr>
     <tr height="1">
-      <td width="10" class="gutter" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="210" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="10" class="gutter" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="5" class="gutter" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="10" class="gutter" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="210" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="10" class="gutter" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>      
-      <td width="5" class="gutter" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="10" class="gutter" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="210" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td width="10" class="gutter" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
+      <td width="10" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;"> </td>
+      <td width="210" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;"> </td>
+      <td width="10" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;"> </td>
+      <td width="5" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;"> </td>
+      <td width="10" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;" bgcolor="{color:background_second}"> </td>
+      <td width="210" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;" bgcolor="{color:background_second}"> </td>
+      <td width="10" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;" bgcolor="{color:background_second}"> </td>      
+      <td width="5" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;"> </td>
+      <td width="10" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;"> </td>
+      <td width="210" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;"> </td>
+      <td width="10" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;"> </td>
     </tr>
     <tr height="10">
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
@@ -462,7 +466,7 @@
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="210" valign="top" align="left" class="content" style="border-collapse: collapse;">
         {if column1:link_url}
-          <a href="{column1:link_url}" style="text-decoration: none; color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;"><span style="color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;">> {column1:link_title}</span></a>
+          <a href="{column1:link_url}" style="font-family: {font:button_font};text-decoration: none; color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;"><span style="font-family: {font:button_font};color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;">> {column1:link_title}</span></a>
         {/if}
       </td>
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
@@ -470,7 +474,7 @@
       <td width="10" class="gutter" bgcolor="{color:background_second}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="210" bgcolor="{color:background_second}" valign="top" align="left" class="content" style="border-collapse: collapse; color: {color:text_second};">
         {if column2:link_url}
-          <a href="{column2:link_url}" style="text-decoration: none; color: {color:text_second}; font-size: 12px; line-height: 20px; font-weight: bold;"><span style="color: {color:text_second}; font-size: 12px; line-height: 20px; font-weight: bold;">> {column2:link_title}</span></a>
+          <a href="{column2:link_url}" style="font-family: {font:button_font};text-decoration: none; color: {color:text_second}; font-size: 12px; line-height: 20px; font-weight: bold;"><span style="font-family: {font:button_font};color: {color:text_second}; font-size: 12px; line-height: 20px; font-weight: bold;">> {column2:link_title}</span></a>
         {/if}
       </td>
       <td width="10" class="gutter" bgcolor="{color:background_second}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>      
@@ -478,7 +482,7 @@
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
       <td width="210" valign="top" align="left" class="content" style="border-collapse: collapse;">
         {if column3:link_url}
-          <a href="{column3:link_url}" style="text-decoration: none; color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;"><span style="color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;">> {column3:link_title}</span></a>
+          <a href="{column3:link_url}" style="font-family: {font:button_font};text-decoration: none; color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;"><span style="font-family: {font:button_font};color: {color:text}; font-size: 12px; line-height: 20px; font-weight: bold;">> {column3:link_title}</span></a>
         {/if}
       </td>
       <td width="10" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
@@ -517,19 +521,17 @@
     {/if}
     <tr>
       <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
-      <td valign="top" align="left" class="content" style="border-collapse: collapse;">
-        <h2 style="color: white; font-family: {font:text_font}; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
+      <td valign="top" align="left" class="content" style="color: white; font-family: {font:title_font}; page-break-after: avoid; font-size: 28px; line-height: 32px; font-weight: bold;">
           {if link_url}
             <a href="{link_url}" style="text-decoration: none; color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;"><span style="color: {color:text}; font-size: 28px; line-height: 32px; font-weight: bold;">{title}</span></a>
           {else}
             {title}
           {/if}
-        </h2>
       </td>
       <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
     </tr>
     <tr height="15" class="gutter"><td colspan="3" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
-    <tr height="1" class="gutter"><td colspan="3" bgcolor="{color:dividing_lines}" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
+    <tr height="1" class="gutter"><td colspan="3" style="border-bottom:1px solid {color:dividing_lines};font-size: 1px; line-height: 1px;"> </td></tr>
     <tr height="15" class="gutter"><td colspan="3" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td></tr>
     <tr>
       <td width="15" class="gutter" style="border-collapse: collapse; font-size: 1px; line-height: 1px;"> </td>
