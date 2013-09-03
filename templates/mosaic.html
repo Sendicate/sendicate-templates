@@ -884,7 +884,7 @@
                                 
                                 <tr>
                                     
-                                    <td class="expand" valign="middle" colspan="3" align="center">{link_tag}{image(640x)}{/link_tag}</td>
+                                    <td class="expand" valign="middle" align="center">{link_tag}{image(640x)}{/link_tag}</td>
                                    
                                 </tr>
                                 
@@ -900,6 +900,32 @@
                 </table>
                 <!-- end of image section-->
                 {/block:image}
+
+                {block:html}
+                <!-- html section -->
+                <table border="0" cellspacing="0" cellpadding="0" class="onecol-background">
+                  <tr>
+                      <td valign="top">
+                            <table border="0" cellspacing="0" cellpadding="0" class="container" width="640">
+                                
+                                <tr>
+                                    
+                                    <td class="expand" valign="middle" align="center">{body}</td>
+                                   
+                                </tr>
+                                
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                
+                <table width="640" border="0" cellspacing="0" cellpadding="0" class="container">
+                  <tr>
+                      <td height="2" class="splitter"></td>
+                    </tr>
+                </table>
+                <!-- end of html section-->
+                {/block:html}
                 
                 
 
